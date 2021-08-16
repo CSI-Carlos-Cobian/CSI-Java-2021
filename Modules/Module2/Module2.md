@@ -6,7 +6,7 @@
 </div>
 <br>
 
-# Module 2: Using Visual Studio Code
+# Module 2: Using Eclipse IDE
 
 ### Create a commit merging master into your current branch. `(1pts)`
 
@@ -17,14 +17,14 @@ Markdown is a lightweight markup language that you can use to add formatting ele
 
 <br>
 
-### Open Visual Studio Code. Make sure that your working directory to that of the course.
+### Open Eclipse IDE. Make sure that your working directory to that of the course.
 
 1. Go to `File` > `Open Folder`
 2. Select the directory you cloned your repository into `(CSI-Java-2021)`. 
 
 <br>
 
-### The first thing you will see on the left-most side of visual studio code is the file system for the class.
+### The first thing you will see on the left-most side of Eclipse IDE is the file system for the class.
 <img    src="VSLeftPanel.png" 
         title="Files available on the directory may vary from the time of the screenshot" 
         width="60%" 

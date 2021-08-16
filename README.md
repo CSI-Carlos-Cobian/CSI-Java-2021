@@ -56,3 +56,4 @@ At least 300 points.
 * Rock Paper Scissors
 * Conway's game of life
 * Markdown Writer
+* Gene data

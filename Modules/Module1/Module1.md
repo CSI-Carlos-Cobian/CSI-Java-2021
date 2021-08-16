@@ -73,8 +73,8 @@
 
 <br>
 
-## Install [GitHub Desktop](https://desktop.github.com/) (Mac and **JAVA Students**). 
-Any users that chose to use Visual Studio Code on Mac should download and install [GitHub Desktop](https://desktop.github.com/) as it is the easiest solution to the git dependency. XCode does not require this, as it is already integrated.
+## Install [GitHub Desktop](https://desktop.github.com/) (Alternate). 
+Any students may use [GitHub Desktop](https://desktop.github.com/) as it is the easiest solution to the git dependency.
 
 <br>
 
@@ -117,39 +117,24 @@ https://github.com/CSI-Carlos-Cobian/CSI-Java-2021
 
 # Set up your development environment
 
-## Install [Visual Studio Code](https://code.visualstudio.com/download) or [XCode](https://developer.apple.com/xcode/) `(1pts)`
-
-### Visual Studio works for both MAC and PC. XCode runs only on MAC. Use default settings.
-
-<br>
-
+## Install [Eclipse IDE](https://www.eclipse.org/downloads/) `(1pts)`
 
 ## Clone the repository into your machine `(1pts)`
-### Create a folder on your machine **(Windows)**. 
-You may name it whatever you please but I will use "Courses" as it is simple and descriptive.
-This will be your root folder. This means it is the top-level containing folder. You may place it anywhere but I suggest using your Documents or Desktop folder. 
-In here, you will clone the repositories for any courses that use GitHub. Currently Java, Python and hopefully NovaTech.
-<br>
-
-### Clone the project into the 'Classes' folder on your machine **(Windows)**.
-1. Go to your `Source Control` tab in Visual Studio(3rd).
-<img    src="SourceControl.png" 
-        title="SourceControl" 
-        width="3%" 
-        height="3%" />
-<br>
-
-2. Initialize Repository (if you have not done so).
-3. Click on the 3 dots (your git menu).
-4. `Clone` the forked repository.
-   - Select `Clone from GitHub`.
-   - Alternatively, enter the fork URL with format: github.com/CSI-Name-Lastname/CSI-Java-2021.
-5. When prompted by VS, select to open your new repo.
 
 <br>
 
-### Clone using GitHub Desktop **(Mac)**. 
-After signing in to GitHub, click on Clone and your fork should show up. **GitHub Desktop** automatically creates a folder on your Documents called <u>GitHub</u>. This is the equivalent of the 'Courses' folder mentioned above. Within this folder you will find a folder named <u>CSI-Java-2021</u> containing your cloned course.
+### Clone using Eclipse IDE
+You mahttp://www.eclipsecolorthemes.org/pluginy manage your git by using Eclipse's integrated solution. Press `ALT+SHIFT+Q`, release, and then press `Q` again to search eclipse for tools. Write `git` and select `Git Repositories`. Clone your fork using the following configuration as an example. Remember that `CSI-Carlos-Cobian` is to be replaced with **your** username.
+
+<img    src="GitEclipse.png" 
+        title="Create Account" 
+        width="60%" 
+        height="60%" />
+
+<br>
+
+### Clone using GitHub Desktop
+After signing in to GitHub, click on Clone and your fork should show up. **GitHub Desktop** automatically creates a folder on your Documents called <u>GitHub</u>.  Within this folder, you will find a folder named <u>CSI-Java-2021</u> containing your cloned course.
 
 <br>
 
@@ -157,7 +142,7 @@ After signing in to GitHub, click on Clone and your fork should show up. **GitHu
 You may clone a repository without forking it, but only `contributors` may push changes to it. When you fork a copy, it becomes your own. 
 <br>
 
-*You may also update your copy **(fork)** of the repository to reflect any changes I have made to the course without overwriting your individual changes.*
+*You may also update your copy **(fork)** of the repository to reflect any changes I have made to the course, without overwriting your individual changes.*
 
 <br>
 
@@ -166,16 +151,17 @@ You may update your fork on GitHub.com. When your fork is out of date, a banner 
 
 <br>
 
-To download fork updates to your **local** repository(PC).
-1. Go to your `Source Control` tab in Visual Studio(3rd).
-2. Click on the 3 dots (your git menu).
-3. Pull.
+To download fork updates to your **local** repository(PC) pull the changes from GitHub.
 
 <br>
 
-You may update both simultaneously from Visual Studio by selecting.
-1. `Source Control` > Branch > Merge Branch
-2. Select `upstream/main`
+<!-- You may update both simultaneously from Visual Studio by selecting. -->
+<!-- 
+`Source Control` > Branch > Merge Branch
+Select `upstream/main`  
+-->
+<!-- #TODO: Update for eclipse -->
+
 
 `upstream/main` represents the repository you've forked. 'Merging' it into you branch means that you're applying its updates into your branch.
 
@@ -208,12 +194,12 @@ What is the difference between a pull, and an upstream pull?
 
  - Answer:
 
-What part of these instructions was unclear or incomplete?
+Was any part of these instructions unclear or incomplete?
 
  - Answer:
 
 Lackluster responses may result in point deductions.
 -->
 
-* ### Save the file. Commit your changes and push them to your remote repository by the next class. `(1pts)`*(Free for first class. Consult me if you struggle too hard with Git.)*
+* ### Save the file. Commit your changes and push them to your remote repository by the next class. `(1pts)`*(Free for first class. Consult me if you struggle with Git.)*
 * ### You may complete the answers by issuing additional commits and pushing them before the next class.
