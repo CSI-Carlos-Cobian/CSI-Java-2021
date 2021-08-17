@@ -8,7 +8,7 @@
 
 # Module 2: Using Eclipse IDE
 
-### Create a commit merging master into your current branch(Fetch Upstream). `(1pts)`
+### Merge origin/master. This is the same as Fetching Upstream. Create a commit. `(1pts)`
 
 <br>
 
@@ -38,7 +38,14 @@
 
 <br>
 
-# Create a Java project and store it on this Module2 directory.
+**(Optional)**
+
+*Visual Studio Code <u>may</u> be used in class instead of Eclipse. To do so you must install [JDK](https://www.oracle.com/java/technologies/javase-jdk16-downloads.html). You will also be responsible for keeping a correct package structure. This is not complicated but requires extra work. I might not cover this topic in detail during class, but i may discuss it during office hours.*
+
+<br>
+
+# Create a Java project using Eclipse 
+## It must be stored in the Module2 of your fork directory.
 
 <img    src="NewProject.png" 
         title="Files available on the directory may vary from the time of the screenshot" 
@@ -49,7 +56,7 @@
 
 * ### Select `Java Project`
 * ### Name it `Module2`
-* ### Disable default location and select your Module2 directory
+* ### Disable default location and browse for your Module2 directory
 * ### Do not create `module-info.java`
 
 
@@ -60,11 +67,13 @@
         height="80%" />
 
 
- ### Click `Finish`
+### Click `Finish`
  
- <br>
+<br>
 
- ### Locate or open your `Project Explorer`. It should now reference your project directory.
+# Locate or open your `Project Explorer`. 
+### It should now reference your project directory. 
+### You may search for it using the macro used on Module1 or by `Window` > `Show View` > `Project Explorer`.
 
 
 <img    src="LocateProject.png" 
@@ -97,7 +106,7 @@
 
 <br>
 
-# Hello World! `(5pts)`
+# Hello World! `(6pts)`
 ### `Hello World!` Is known by all programmers as the initial confirmation that a development environment is functional. Lets test ours by adding some `Hello World!` code into our Main.java!
 
 <br>
@@ -106,7 +115,7 @@
 
 <br>
 
-### Type into your **Auto-generated method stub**
+### Type the following line inside the code block(`{}`) of your **Auto-generated method stub**.
 >System.out.println("Hello, World");
 
 <br>
@@ -123,7 +132,7 @@
 <br>
 
 ### Make the console print out your full name and student number in separate lines below `Hello World!`.
-### Take a screenshot of the console output and save it in the Module2 directory as: `CSI-Name-Lastname-Module2.png`. eg.  `CSI-Carlos-Cobian-Module2.png` 
+### Take a screenshot of the console output and save it in the Module2 directory as: `CSI-Name-Lastname-Module2.png`.
 
 
 
@@ -133,12 +142,12 @@
 
 <br>
 
-### Commit and push the project and the image before the next lecture`(2pts)`
+### Commit and push all of the project files and the image before the next lecture.
 
 <br>
 
 # Class Discussion
-## Answer the questions on the Markdown file located within your `Module2` directory (Module2.md). `(4pts)`
+## Answer the questions on the Markdown file located within your `Module2` directory (Module2.md). `(2pts)`
 
 <!-- This is a comment. It is not processed by the code -->
 <!-- Welcome! These are your questions. -->
@@ -150,25 +159,17 @@ https://www.markdownguide.org/getting-started/
 
  - Answer:
 
-What does "cd" stand for?
+What part of the instructions was incomplete or unclear?
 
  - Answer:
 
-Did you get stuck at any point or become confused with your console? (yes/no) 
-If so, what happened? How did you solve it? (optional)
+Type down any class notes below this sentence:
 
- - Answer:
 
-Did you consider searching google for other commands to run? What did you try? 
 
- - Answer:
-
-What would you like to program? 
-
- - Answer:
 
 Lackluster responses may result in point deductions.
 -->
 
-* ### Save the file. Commit your changes and push them to your remote repository by the end of the class. `(1pts)`
-* ### You may complete the answers by issuing aditional commits and pushing them before the next class.
+* ### Save the file, Commit your changes and push them to your remote repository by the end of the class. `(1pts)`
+* ### You may complete the answers by issuing additional commits and pushing them before the next class.
