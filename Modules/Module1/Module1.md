@@ -55,25 +55,8 @@
 
 <br>
 
-# Install Git **Correctly** `(1pts)`
-## Install [Git](https://git-scm.com/downloads) (Windows). 
-### In this class, we'll use Visual Studio's integrated implementation of Git. 
-### When installing, use default settings with these exceptions.
-- Select Visual Studio Code as your default editor.<br>
-<img    src="GitSelect.png" 
-        title="Select Visual Studio Code as your default editor" 
-        width="50%" 
-        height="50%" />
-
-- Use the default windows console.<br>
-<img    src="DefaultConsole.png" 
-        title="Select Windows Console." 
-        width="50%" 
-        height="50%" />
-
-<br>
-
-## Install [GitHub Desktop](https://desktop.github.com/) (Alternate). 
+# Install [GitHub Desktop](https://desktop.github.com/). 
+### **(Not needed with Eclipse)**. 
 Any students may use [GitHub Desktop](https://desktop.github.com/) as it is the easiest solution to the git dependency.
 
 <br>
@@ -119,12 +102,10 @@ https://github.com/CSI-Carlos-Cobian/CSI-Java-2021
 
 ## Install [Eclipse IDE](https://www.eclipse.org/downloads/) `(1pts)`
 
-## Clone the repository into your machine `(1pts)`
-
-<br>
+## Clone the repository into your machine `(2pts)`
 
 ### Clone using Eclipse IDE
-You mahttp://www.eclipsecolorthemes.org/pluginy manage your git by using Eclipse's integrated solution. Press `ALT+SHIFT+Q`, release, and then press `Q` again to search eclipse for tools. Write `git` and select `Git Repositories`. Clone your fork using the following configuration as an example. Remember that `CSI-Carlos-Cobian` is to be replaced with **your** username.
+You may manage your git by using Eclipse's integrated solution. Press `ALT+SHIFT+Q`, release, and then press `Q` again to search eclipse for tools. Type `git` and select `Git Repositories`. Clone your fork using the following configuration as an example. Remember that `CSI-Carlos-Cobian` is to be replaced with **your** username.
 
 <img    src="GitEclipse.png" 
         title="Create Account" 
@@ -135,6 +116,13 @@ You mahttp://www.eclipsecolorthemes.org/pluginy manage your git by using Eclipse
 
 ### Clone using GitHub Desktop
 After signing in to GitHub, click on Clone and your fork should show up. **GitHub Desktop** automatically creates a folder on your Documents called <u>GitHub</u>.  Within this folder, you will find a folder named <u>CSI-Java-2021</u> containing your cloned course.
+
+<br>
+
+### [Source Tree Git](/../../tree/main/Modules/SourceTree/Setup.md) **(Optional)** 
+
+* #### Provides easier visualization of branches and history. 
+* #### Requires many 3rd party authorizations.
 
 <br>
 
@@ -167,13 +155,6 @@ Select `upstream/main`
 
 <br>
 
-### [Source Tree Git](/../../tree/main/Modules/SourceTree/Setup.md) **(Optional)** 
-
-* #### Provides easier visualization of branches and history. 
-* #### Requires many 3rd party authorizations.
-
-<br>
-
 # Class Discussion
 ## Answer the questions on the Markdown file located within your <u>`Module1`</u> directory (Module1.md). `(4pts)`
 
@@ -201,5 +182,5 @@ Was any part of these instructions unclear or incomplete?
 Lackluster responses may result in point deductions.
 -->
 
-* ### Save the file. Commit your changes and push them to your remote repository by the next class. `(1pts)`*(Free for first class. Consult me if you struggle with Git.)*
+* ### Save the file. Commit your changes and push them to your remote repository by the end class. `(1pts)`
 * ### You may complete the answers by issuing additional commits and pushing them before the next class.
