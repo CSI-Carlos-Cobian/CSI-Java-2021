@@ -34,7 +34,7 @@
 
 <br>
 
-### Eclipse fails to load images in the local markdown preview. For this reason i edit them using [Visual Studio Code](https://code.visualstudio.com/). I personally prefer it to view the module files.
+### Eclipse fails to load images in the local markdown preview.*(I have yet to determine a solution)* For this reason i edit them using [Visual Studio Code](https://code.visualstudio.com/). I personally prefer it to view the module files.
 
 <br>
 
@@ -111,7 +111,7 @@
 
 <br>
 
-### Open your Main.java file.
+### Open your `Main.java` file.
 
 <br>
 
@@ -131,7 +131,7 @@
 
 <br>
 
-### Make the console print out your full name and student number in separate lines below `Hello World!`.
+### Make the console print out <u>your full name and student number</u> in separate lines below `Hello World!`.
 ### Take a screenshot of the console output and save it in the Module2 directory as: `CSI-Name-Lastname-Module2.png`.
 
 

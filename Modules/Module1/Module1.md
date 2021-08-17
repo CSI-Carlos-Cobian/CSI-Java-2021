@@ -102,7 +102,11 @@ https://github.com/CSI-Carlos-Cobian/CSI-Java-2021
 
 ## Install [Eclipse IDE](https://www.eclipse.org/downloads/) `(1pts)`
 
+## If prompted, Download and install [JDK](https://www.oracle.com/java/technologies/javase-jdk16-downloads.html)
+
 ## Clone the repository into your machine `(2pts)`
+
+<br>
 
 ### Clone using Eclipse IDE
 You may manage your git by using Eclipse's integrated solution. Press `ALT+SHIFT+Q`, release, and then press `Q` again to search eclipse for tools. Type `git` and select `Git Repositories`. Clone your fork using the following configuration as an example. Remember that `CSI-Carlos-Cobian` is to be replaced with **your** username.
