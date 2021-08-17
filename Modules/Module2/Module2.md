@@ -8,67 +8,132 @@
 
 # Module 2: Using Eclipse IDE
 
-### Create a commit merging master into your current branch. `(1pts)`
+### Create a commit merging master into your current branch(Fetch Upstream). `(1pts)`
 
 <br>
 
 ## What is [Markdown](https://www.markdownguide.org/getting-started/)?
-Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents.
-
-<br>
-
-### Open Eclipse IDE. Make sure that your working directory to that of the course.
-
-1. Go to `File` > `Open Folder`
-2. Select the directory you cloned your repository into `(CSI-Java-2021)`. 
+### Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents.
 
 <br>
 
 ### The first thing you will see on the left-most side of Eclipse IDE is the file system for the class.
-<img    src="VSLeftPanel.png" 
+
+### Expand your working tree to locate Module2.md
+
+<br>
+
+<img    src="eclipsegit.png" 
         title="Files available on the directory may vary from the time of the screenshot" 
         width="60%" 
         height="60%" />
 
 <br>
 
-### On the bottom of your screen is the Terminal. Through here you may communicate directly with your computer's Operating System. If you do not see it click on `Terminal` > `New Terminal` on your top menu.
+### By pushing a markdown file into GitHub a nice HTML webpage is rendered.
+
 <br>
-<img    src="Terminal.png" 
-        title="Terminal" 
+
+### Eclipse fails to load images in the local markdown preview. For this reason i edit them using [Visual Studio Code](https://code.visualstudio.com/). I personally prefer it to view the module files.
+
+<br>
+
+# Create a Java project and store it on this Module2 directory.
+
+<img    src="NewProject.png" 
+        title="Files available on the directory may vary from the time of the screenshot" 
         width="80%" 
         height="80%" />
 
-# Communicate with Console
+<br>
 
-[*Some commands vary on the Mac Shell.*](https://www.makeuseof.com/tag/mac-terminal-commands-cheat-sheet/)
+* ### Select `Java Project`
+* ### Name it `Module2`
+* ### Disable default location and select your Module2 directory
+* ### Do not create `module-info.java`
 
-## Lets start by navigating through directories 
-### Type the following commands into your console
 
 
-* `dir` will Show contents of current directory
+<img    src="ProjectOptions.png" 
+        title="This is what the settings should look like." 
+        width="80%" 
+        height="80%" />
+
+
+ ### Click `Finish`
  
-* `cd ..` will take you back one directory
+ <br>
 
-* `cd CSI-Java-2021` will bring you back to the project directory (Assuming you went back one directory in the step before)
+ ### Locate or open your `Project Explorer`. It should now reference your project directory.
 
-***(Hint)** After typing "`cd`" into the console, you may hit the `TAB` key to run through the options available in the directory. It also works as an auto-complete shortcut.*
 
-* `cd Modules\Module2` will move you from
-> C:\Users\user\Documents\CSI-Java-2021
+<img    src="LocateProject.png" 
+        title="This is what the settings should look like." 
+        width="50%" 
+        height="50%" />
 
-to 
+* Right click `src`
+* `New` > `Package`
+* Name it `csi.lastname.pkg`. eg.
 
-> C:\Users\user\Documents\CSI-Java-2021\Modules\Module2
+<img    src="Package.png" 
+        title="This is what the settings should look like." 
+        width="50%" 
+        height="50%" />
+* Right click `csi.lastname.pkg`
+* `New` > `Class`
+* Name it `Main`
+* [X] Generate the main method  `public static void main(String[] args)`
+* [X] Generate Comments
+
+<img    src="MakeClass.png" 
+        title="This is what the settings should look like." 
+        width="50%" 
+        height="50%" />
 
 <br>
 
-# Interact with Java.
+### This is the bare minimum to have a working Java project in Eclipse. Next up we will add some code and functionality. 
+
+<br>
+
+# Hello World! `(5pts)`
+### `Hello World!` Is known by all programmers as the initial confirmation that a development environment is functional. Lets test ours by adding some `Hello World!` code into our Main.java!
+
+<br>
+
+### Open your Main.java file.
+
+<br>
+
+### Type into your **Auto-generated method stub**
+>System.out.println("Hello, World");
+
+<br>
+
+### Run your Java File by right clicking on main and running it as a Java Application. Alternatively use the similar "Play" button located on the top toolbar.
+
+<img    src="RunJava.png" 
+        title="This is what the settings should look like." 
+        width="70%" 
+        height="70%" />
 
 
 
-### Commit and push this image before the next lecture`(2pts)`
+<br>
+
+### Make the console print out your full name and student number in separate lines below `Hello World!`.
+### Take a screenshot of the console output and save it in the Module2 directory as: `CSI-Name-Lastname-Module2.png`. eg.  `CSI-Carlos-Cobian-Module2.png` 
+
+
+
+
+
+
+
+<br>
+
+### Commit and push the project and the image before the next lecture`(2pts)`
 
 <br>
 
