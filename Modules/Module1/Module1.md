@@ -56,7 +56,7 @@
 <br>
 
 # Install [GitHub Desktop](https://desktop.github.com/). 
-### **(Not needed with Eclipse)**. 
+### **(Optional since Eclipse includes a Git solution)**. 
 Any students may use [GitHub Desktop](https://desktop.github.com/) as it is the easiest solution to the git dependency.
 
 <br>
@@ -68,7 +68,7 @@ Think of GitHub as an Instagram of Code. A whole bunch of programmers from all a
 
 ## Set up a GitHub Account.
 
-### Go to [GitHub.com](https://github.com) and Sign Up **Correctly**. `(1pts)`
+### Go to [GitHub.com](https://github.com) and Sign Up **Correctly**. `(2pts)`
 * Use your student Email.
 * Use the following format for your <u>**username**</u>: CSI-Name-Lastname. 
 * Pay attention to Capitalization.
@@ -100,8 +100,7 @@ https://github.com/CSI-Carlos-Cobian/CSI-Java-2021
 
 # Set up your development environment
 
-## Install [Eclipse IDE](https://www.eclipse.org/downloads/) `(1pts)`
-
+## Install [Eclipse IDE](https://www.eclipse.org/downloads/)
 ## If prompted, Download and install [JDK](https://www.oracle.com/java/technologies/javase-jdk16-downloads.html)
 
 ## Clone the repository into your machine `(2pts)`
@@ -143,7 +142,7 @@ You may update your fork on GitHub.com. When your fork is out of date, a banner 
 
 <br>
 
-To download fork updates to your **local** repository(PC) pull the changes from GitHub.
+To download fork updates to your **local repository(PC)** pull the changes from GitHub.
 
 <br>
 
@@ -183,8 +182,17 @@ Was any part of these instructions unclear or incomplete?
 
  - Answer:
 
+Type down any class notes below this sentence:
+
+
+
+
 Lackluster responses may result in point deductions.
 -->
 
 * ### Save the file. Commit your changes and push them to your remote repository by the end class. `(1pts)`
 * ### You may complete the answers by issuing additional commits and pushing them before the next class.
+
+<br>
+
+## [Next Module ->](/../../tree/main/Modules/Module2/Module2.md)
