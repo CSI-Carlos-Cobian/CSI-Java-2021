@@ -10,6 +10,7 @@
 ### Welcome to Java-2021! In this class, we will be using GitHub as our code repository. This is an industry standard that should be understood by all students looking to pursue a career path related to software.
 <br>
 
+
 # What is Git?
 *"Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency."*
 <br>
