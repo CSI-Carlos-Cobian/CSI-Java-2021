@@ -167,19 +167,19 @@ Select `upstream/main`
 <!-- 
 
 What is the difference between Git and GitHub?
-Git is the app where u code and git hub is the main plataform.
+Git is the app where you code and git hub is the main plataform.
  - Answer:
 
 What is the difference between a git commit and a git push?
-
+The difference is that git commit saves your changes and git push sends them. 
  - Answer:
 
 What is the difference between a pull, and an upstream pull?
-
+git upstream is the command that tells your local git to retrieve the latest meta-data info from the original and git pull does that and brings those changes from the remote repository 
  - Answer:
 
 Was any part of these instructions unclear or incomplete?
-
+They were a bit complicated for me but once i got it it wa easy nd clear 
  - Answer:
 
 Type down any class notes below this sentence:
