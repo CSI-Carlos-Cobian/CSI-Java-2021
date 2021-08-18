@@ -167,7 +167,7 @@ Select `upstream/main`
 <!-- 
 
 What is the difference between Git and GitHub?
-
+Git is the app where u code and git hub is the main plataform.
  - Answer:
 
 What is the difference between a git commit and a git push?
