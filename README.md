@@ -42,7 +42,8 @@ At least 300 points.
 ## Topics
 * [Git and source control](/../../tree/main/Modules/Module1/Module1.md)
 * [Integrated Development Environment(IDE) Project](/../../tree/main/Modules/Module2/Module2.md)
-* Java Class Structure and Data Types
+* [Data Types](/../../tree/main/Modules/Module3/Module3.md)
+* [Java Class Structure](/../../tree/main/Modules/Module4/Module4.md)
 * Arithmetic and unary operators
 * Logic operators and compound statements
 * Functions and Parameterization
