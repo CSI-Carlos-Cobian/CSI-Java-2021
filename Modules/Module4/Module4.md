@@ -21,7 +21,7 @@ public class Animal{
 }
 ```
 * A **package** declaration is necesary as it locates your class.
-* **public** is an <u>Access Modifier</u> which defines who can access this class.
+* **public** is an <u>Access Modifier</u>, and it defines which classes can access **this** class.
 * **class** initializes the class.
 * **Animal** is the class name. It must start with a capital letter.
 
@@ -83,18 +83,17 @@ public class Animal{
 <br>
 
 ### The format for a method is: 
-* `Access Modifier`: eg. public, private
-* `Return Data Type`: eg. String, int, or `void` for a null(Nothing is returned)
-* `Method Name`: uses camelCaseNotation
- 
+* `Access Modifier`: eg. <u>public</u>, <u>private</u>
+* `Return Data Type`: eg. <u>String</u>, <u>int</u>, or <u>`void`</u> for a null(Nothing is returned)
+* `Method Name`: uses camelCaseNotation <br>
 <img    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/CamelCase_new.svg/1200px-CamelCase_new.svg.png" 
         width="20%" 
         height="20%" />
 
-* `Parameters` with their defined data types.
-* a `return` statement at the end. This does not apply to `void` methods.
+* `Parameters` with their defined data types(inside of parenthesis). They are separated by commas.
+* A `return` statement at the end. This does not apply to `void` methods.
 
-*You may diferentiate global fields from parameters that share a name by using the '`this.`' keyword.*
+*You may diferentiate <u>class fields</u> from parameters that share a name by using the '`this.`' keyword.*
 
 <br>
 

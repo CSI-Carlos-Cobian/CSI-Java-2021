@@ -10,6 +10,13 @@
 
 ### Merge origin/master. This is the same as Fetching Upstream. Create a commit. `(1pts)`
 
+### Create an eclipse project called MainProject in the root directory of your CSI-Java-2021 directory.`(3pts)`
+eg: 
+>C:\Users\carlos.cobian\Documents\Courses\CSI-Java-2021\MainProject
+* Use the same package name that was used in Module2
+* Create a Java Class called DataTypes.java
+* [Copy and run this code from GitHub.](https://gist.github.com/Aivirth/ff7cb6cf88d3edd77edad8fa6221b20b)
+
 <br>
 
 # Data Types
@@ -35,6 +42,11 @@ A `double`'s full name is <u>Double Precision Decimal Floating Point Number</u>(
 ### String
 Programmers use the word strings to refer to blocks of text or any data made up of a sequence of characters. Strings are a single data object; They are surrounded by double quote (") characters. 
 >Example: "a", "aa", "Hello!", "101 Dalmatians"
+
+<br>
+
+### char 
+>Example: ''
 
 <br>
 
@@ -67,13 +79,15 @@ An array is a list, or collection, of a certain data type. An array is treated a
 
 | Data Type | Syntax | 
 |-----------|--------|
-|Integer | `i = 42` <br> `i:int = 42` <br> `i = int("3")` <br> converts a string with int characters into a number |
-|Float | `d = float(5)` <br> is equal to 5.0 <br> `d = 5.3` |
-|String | `s = "Hello World!"` <br> `s = str(42)` <br> is equal to "42" |
-|Boolean | True, False, >, <, ==, >=, <=, 1, 0, and, or, not |
-|Object | `o = Object()` |
-|Void/Null | `o = None` |
-|Array | `int[] integerArray = new int[5]` <br> initializes an empty(null) array of length 5 <br> `int[] arr = {4, 3, -1, 4, 34}`|
+| Integer | `int i = 42;` <br> `int x,y = 42;` <br> `Integer i = 42;` |
+| Float | `float f = 5.2f;` <br> `float f = 5f;` is equal to 5.0 |
+| Double | `double d = 5.2` <br> `Double d = 5.0` |
+| char | `char c = 's';` |
+| String | `String s = "Hello World!";` |
+| Boolean | true, false, >, <, ==, >=, <=, ! |
+| Object | `Object o = Object();` |
+| Void/Null | `Object o = null` |
+| Array | `int[] integerArray = new int[5];` <br> initializes an empty(null) array of length 5 <br> `int[] arr = {4, 3, -1, 4, 34}` |
 
 <br>
 
