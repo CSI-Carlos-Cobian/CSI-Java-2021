@@ -1,8 +1,8 @@
 <div style="text-align:center">
-        <img    src="../../images/csi.png" 
+        <img    src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191105111644/Data-types-in-Java.jpg" 
                 title="Colegio San Ignacio" 
-                width="20%" 
-                height="20%" />
+                width="70%" 
+                height="70%" />
 </div>
 <br>
 
@@ -10,16 +10,19 @@
 
 ### Merge origin/master. This is the same as Fetching Upstream. Create a commit. `(1pts)`
 
-### Create an eclipse project called MainProject in the root directory of your CSI-Java-2021 directory.`(3pts)`
+### Create an eclipse project called MainProject in the root directory of your CSI-Java-2021 directory.`(4pts)`
 eg: 
 >C:\Users\carlos.cobian\Documents\Courses\CSI-Java-2021\MainProject
-* Use the same package name that was used in Module2
+* Create a new folder called MainProject. Select it as your Location when creating the project.
+* Create a package using the same name from Module2
 * Create a Java Class called DataTypes.java
 * [Copy and run this code from GitHub.](https://gist.github.com/Aivirth/ff7cb6cf88d3edd77edad8fa6221b20b)
+* This code provides usage information and examples on all primitive data-types
 
 <br>
 
 # Data Types
+In Java, there are [8 primitive data types](https://www.w3schools.com/java/java_data_types.asp). Primitive data types use less memory than complex objects. The largest one is 8-bytes. Complex objects vary in size and cary many other characteristics. 
 
 ### Integer
 In whole numbers are called `integers`. Programmers usually count using integers. 
@@ -46,7 +49,8 @@ Programmers use the word strings to refer to blocks of text or any data made up 
 <br>
 
 ### char 
->Example: ''
+Stores a single character/letter or ASCII values.
+>Example: 'c'
 
 <br>
 
@@ -79,59 +83,73 @@ An array is a list, or collection, of a certain data type. An array is treated a
 
 | Data Type | Syntax | 
 |-----------|--------|
-| Integer | `int i = 42;` <br> `int x,y = 42;` <br> `Integer i = 42;` |
+| Integer | `int i = 42;` primitive integer<br> `int x,y = 42;` Assign multiple variables <br> `Integer i = 42;` Integer Object |
 | Float | `float f = 5.2f;` <br> `float f = 5f;` is equal to 5.0 |
-| Double | `double d = 5.2` <br> `Double d = 5.0` |
+| Double | `double d = 5.2;` <br> `Double d = 5.0;` |
 | char | `char c = 's';` |
 | String | `String s = "Hello World!";` |
-| Boolean | true, false, >, <, ==, >=, <=, !, \|\|, &&, |
-| Object | `Object o = Object();` |
-| Void/Null | `Object o = null` |
-| Array | `int[] integerArray = new int[5];` <br> initializes an empty(null) array of length 5 <br> `int[] arr = {4, 3, -1, 4, 34}` |
+| Boolean | `true, false, >, <, ==, >=, <=, !, \|\|, &&` |
+| Object | `Object o = Object();` <br> This is called the default constructor for an object. <br> It initializes an object without any values. |
+| Void/Null | `Object o = null;` |
+| Array | `int[] integerArray = new int[5];` <br> initializes an empty(null) array of length 5 <br> `int[] arr = {4, 3, -1, 4, 34};` <br> `arr[0] = 44;`|
 
 <br>
 
 ## Variables
 
-A variable can store a value.  In Python, programmers assign variables by using the equals sign "`=`". 
+A variable can store a value. Programmers assign variables by using the equals sign "`=`". 
 
 Example: 
 
-```python
-age = 21
+```java
+int i = 42;
+int[] arr = {4, 3, -1, 4, 34};
 
-print(age)
+System.out.println(i);
+System.out.println(arr[0]);
 ```
->21
+>42
+>
+>4
+
+
 
 <br>
 
-
-### Take a screenshot of the console output and save it in the Module3 directory as: `CSI-Name-Lastname-Module3.png`.
-
-<br>
-
-### Commit and push all of the project files and the image before the next lecture.
+### Commit and push all of the project files before the next lecture.
 
 <br>
 
 # Class Discussion
-## Answer the questions on the Markdown file located within your `Module3` directory (Module3.md). `(2pts)`
+## Answer the questions on the Markdown file located within your `Module3` directory (Module3.md). `(5pts)`
 
 <!-- This is a comment. It is not processed by the code -->
 <!-- Welcome! These are your questions. -->
 <!-- Answer using full sentences to receive all points. -->
 <!-- 
 
-What is the diference between a Java object and a primitive data type. List the primitives.
+What is the diference between a Java object and a primitive data type? 
+
+ - Answer:
+ - 
+Describe what an array is in your own words.
 
  - Answer:
 
-Correctly initialize every primitive data type twice(2 examples).
+How do you address an index in an array? Write a code that assigns 34 to a new variable by accessing the value stored in:  
+        int[] arr = {4, 3, -1, 4, 34};
 
  - Answer:
 
-What part of the instructions was incomplete or unclear?
+What is the first index of a list? Why?
+
+ - Answer:
+
+Provide an original example of a null value. It must prove your understanding of the concept.
+
+ - Answer:
+
+What part of this instructions was incomplete or unclear?
 
  - Answer:
 
@@ -143,7 +161,7 @@ Type down any class notes below this sentence:
 Lackluster responses may result in point deductions.
 -->
 
-* ### Save the file, Commit your changes and push them to your remote repository by the end of the class. `(1pts)`
+* ### Save the file, Commit your changes and push them to your remote repository by the end of the class.
 * ### You may complete the answers by issuing additional commits and pushing them before the next class.
 
 <br>
