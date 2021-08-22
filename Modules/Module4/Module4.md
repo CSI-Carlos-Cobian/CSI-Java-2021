@@ -149,8 +149,8 @@ public static void main(String[] args){
 
 <br>
 
-## Add a Main method to Animal.java.`(2pts)`
-* Select or Discover an exotic animal subspecies. Using **Google** may help. Look up its scientific name and age range. Initialize it the way i did with the Coqui.
+### Add a Main method to Animal.java.`(2pts)`
+* Select or Discover an exotic animal subspecies. Using **Google** may help. Look up it's scientific name and age range. Initialize it the way i did with the Coqui.
 
 <br>
 

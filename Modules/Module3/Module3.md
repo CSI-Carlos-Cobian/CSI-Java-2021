@@ -75,7 +75,7 @@ A null or None type represents the absence of a value. This differs from, say 0,
 <br>
 
 ### Array
-An array is a list, or collection, of a certain data type. An array is treated as its own data type since it acts like a container.
+An array is a list, or collection, of a certain data type. An array is treated as its own data type since it acts like a container. Array indices start at 0.
 
 <br>
 
@@ -85,13 +85,15 @@ An array is a list, or collection, of a certain data type. An array is treated a
 |-----------|--------|
 | Integer | `int i = 42;` primitive integer<br> `int x,y = 42;` Assign multiple variables <br> `Integer i = 42;` Integer Object |
 | Float | `float f = 5.2f;` <br> `float f = 5f;` is equal to 5.0 |
-| Double | `double d = 5.2;` <br> `Double d = 5.0;` |
+| Double | `double d = 5.2;` Primitive data type <br> `Double d = 5.0;` Double Object |
 | char | `char c = 's';` |
 | String | `String s = "Hello World!";` |
 | Boolean | `true, false, >, <, ==, >=, <=, !, \|\|, &&` |
-| Object | `Object o = Object();` <br> This is called the default constructor for an object. <br> It initializes an object without any values. |
+| Object | `Object o = new Object();` <br> This is called the default constructor for an object. <br> It initializes an object without any values. |
 | Void/Null | `Object o = null;` |
 | Array | `int[] integerArray = new int[5];` <br> initializes an empty(null) array of length 5 <br> `int[] arr = {4, 3, -1, 4, 34};` <br> `arr[0] = 44;`|
+
+*These are just a few examples of common usage.*
 
 <br>
 
@@ -104,13 +106,17 @@ Example:
 ```java
 int i = 42;
 int[] arr = {4, 3, -1, 4, 34};
+Object o = new Object();
 
 System.out.println(i);
 System.out.println(arr[0]);
+System.out.println(o);
 ```
 >42
 >
 >4
+>
+>java.lang.Object@1c4af82c
 
 
 
