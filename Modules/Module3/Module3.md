@@ -24,6 +24,8 @@ eg:
 # Data Types
 In Java, there are [8 primitive data types](https://www.w3schools.com/java/java_data_types.asp). Primitive data types use less memory than complex objects. The largest one is 8-bytes. Complex objects vary in size and cary many other characteristics. 
 
+<br>
+
 ### Integer
 In whole numbers are called `integers`. Programmers usually count using integers. 
 >Example: -2, -1, 0, 1, 2, 14, 2019
@@ -118,7 +120,9 @@ System.out.println(o);
 >
 >java.lang.Object@1c4af82c
 
+<br>
 
+#### As opposed to a primitive data type, an Object variable hold a ***reference*** to the actual value. This is why printing an Object returns a data type and the value of where the object is stored in memory.
 
 <br>
 
@@ -137,7 +141,7 @@ System.out.println(o);
 What is the diference between a Java object and a primitive data type? 
 
  - Answer:
- - 
+
 Describe what an array is in your own words.
 
  - Answer:

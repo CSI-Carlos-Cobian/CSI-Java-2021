@@ -30,7 +30,7 @@ public class Animal{
 <br>
 
 ## Fields (Variables)
-This class does nothing. For this reason we will add some Fields. Field is another name for variable. In Java all variables must:
+This class does nothing. For this reason we will add some Fields. Field is another name for variable. In Java, all variables must:
 * Have a declared data type
 * Have a declaration name that starts with a lower case letter.
 * Not start with a number, although it may end in one.
@@ -49,7 +49,7 @@ public class Animal{
 <br>
 
 ## Methods (Functions)
-Although this `Animal` class now has some properties, we do not use them. Next we will create some methods. Methods may do anything you define them to do. The simplest and most common methods are getters and setters. These allow a user to retrieve and modify the values in the fields. 
+Although this `Animal` class now has some properties, we are not currently using them. Next we will create some methods. Methods may do anything you define them to do. The simplest and most common methods are getters and setters. These allow a user to retrieve and modify field values.
 
 ```java
 package csi.cobian.pkg;
@@ -100,7 +100,7 @@ public class Animal{
 * In some cases, a `throw` declaration may be included in between the close parenthesis and open brace. eg:
 ```java
  ) throws InterruptedException {
-     ...
+    ...
 ```
 *You may differentiate <u>class fields</u> from <u>method parameters</u> that share a name by using a '`this.`' keyword.*
 
@@ -121,9 +121,8 @@ A Main method is the first method that is executed when a java class file is run
     public static void main(String[] args){
     
     }
-//Assume we are initializing this method at the end of the Animal class, before it's closing brace.	
+//Assume we are defining this method at the end of the Animal class, before it's closing brace.	
 }
-...
 ```
 
 
@@ -141,7 +140,7 @@ public static void main(String[] args){
     
     System.out.println("Name: " + a.getName());
     System.out.println("Age: " + a.getAge());
-    System.out.println("Scientific Name:" + a.getScientificName());
+    System.out.println("Scientific Name: " + a.getScientificName());
 }
     
 ...
@@ -151,6 +150,9 @@ public static void main(String[] args){
 
 ### Add a Main method to Animal.java.`(2pts)`
 * Select or Discover an exotic animal subspecies. Using **Google** may help. Look up it's scientific name and age range. Initialize it the way i did with the Coqui.
+* [If you struggle with creativity or intrigue, a random generator may help!](https://www.randomlists.com/random-animals)
+* Wikipedia usually displays an animal's Scientific name.
+* I googled "Coqui life expectancy"
 
 <br>
 
@@ -185,7 +187,7 @@ Animal a2 = new Animal("Dog",3);
 * Create a constructor that defines all 3 Animal class fields by using parameter values.
 * Within your main method, create a secondary Animal whose variable name is `a2`. Construct it using your 3-argument constructor. Print all field values by adding 3 `println` statements after initialization(similar to the main method example) 
 * `a2` should not use setter methods.
-* Use a common house pet for values.
+* Use a common house pet for `a2` values.
 
 
 ### Commit and push all of the project files and the image before the next lecture.
