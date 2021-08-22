@@ -84,7 +84,7 @@ An array is a list, or collection, of a certain data type. An array is treated a
 | Double | `double d = 5.2` <br> `Double d = 5.0` |
 | char | `char c = 's';` |
 | String | `String s = "Hello World!";` |
-| Boolean | true, false, >, <, ==, >=, <=, ! |
+| Boolean | true, false, >, <, ==, >=, <=, !, \|\|, &&, |
 | Object | `Object o = Object();` |
 | Void/Null | `Object o = null` |
 | Array | `int[] integerArray = new int[5];` <br> initializes an empty(null) array of length 5 <br> `int[] arr = {4, 3, -1, 4, 34}` |
