@@ -27,7 +27,7 @@ In Java, there are [8 primitive data types](https://www.w3schools.com/java/java_
 <br>
 
 ### Integer
-In whole numbers are called `integers`. Programmers usually count using integers. 
+Whole numbers are called `integers`. Programmers usually count using integers. 
 >Example: -2, -1, 0, 1, 2, 14, 2019
 
 <br>
@@ -50,7 +50,7 @@ Programmers use the word strings to refer to blocks of text or any data made up 
 
 <br>
 
-### char 
+### Char 
 Stores a single character/letter or ASCII values.
 >Example: 'c'
 
@@ -113,16 +113,24 @@ Object o = new Object();
 System.out.println(i);
 System.out.println(arr[0]);
 System.out.println(o);
+// Sum 3 integer values
+System.out.println(arr[0] + arr[1] + i);
+// Including a string before them will concatenate the integers.
+System.out.println("concatenation: " + arr[0] + arr[1] + i);
 ```
 >42
 >
 >4
 >
 >java.lang.Object@1c4af82c
+>
+>49
+>
+>concatenation: 4342
 
 <br>
 
-#### As opposed to a primitive data type, an Object variable hold a ***reference*** to the actual value. This is why printing an Object returns a data type and the value of where the object is stored in memory.
+#### As opposed to a primitive data type, an Object variable holds a ***reference*** to the actual value. This is why printing an Object `o` returns a data-type and the address of where the object is stored in memory.
 
 <br>
 
@@ -176,4 +184,4 @@ Lackluster responses may result in point deductions.
 
 <br>
 
-## [Next Module ->](/../../tree/main/Modules/Module3/Module3.md)
+## [Next Module ->](/../../tree/main/Modules/Module4/Module4.md)

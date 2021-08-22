@@ -30,11 +30,11 @@ public class Animal{
 <br>
 
 ## Fields (Variables)
-This class does nothing. For this reason we will add some Fields. Field is another name for variable. In Java, all variables must:
+This class does nothing, so far. For this reason we will add some Fields. Field is another name for variable. In Java, all variables must:
 * Have a declared data type
 * Have a declaration name that starts with a lower case letter.
-* Not start with a number, although it may end in one.
-* Not be named using [reserved keywords](https://www.thoughtco.com/reserved-words-in-java-2034200). 
+* Have a declaration name that does not start with a number, although it may end in one.
+* Have a declaration name that is not a [reserved keyword](https://www.thoughtco.com/reserved-words-in-java-2034200). 
 
 ```java
 package csi.cobian.pkg;
@@ -83,6 +83,7 @@ public class Animal{
         }
 }
 ```
+*<u>Class fields</u> differ from <u>method parameters</u> in that they are accessed by using the '`this.`' keyword.*
 
 <br>
 
@@ -102,7 +103,7 @@ public class Animal{
  ) throws InterruptedException {
     ...
 ```
-*You may differentiate <u>class fields</u> from <u>method parameters</u> that share a name by using a '`this.`' keyword.*
+
 
 
 <br>
@@ -112,7 +113,7 @@ public class Animal{
 <br>
 
 ## Main Method.
-A Main method is the first method that is executed when a java class file is run. It receives an undetermined amount of string parameters. It's syntax is the following:
+A Main method is the first method that is executed when a Java file is run. It receives an undetermined amount of string parameters. It's syntax is the following:
 
 ```java
 ...
@@ -167,6 +168,7 @@ public class Animal {
     int age;
     String scientificName;
 	
+    //  Constructors
 	public Animal(String name,int age) {
 		this.name = name;
 		this.age = age;
@@ -223,4 +225,4 @@ Lackluster responses may result in point deductions.
 
 <br>
 
-## [Next Module ->](/../../tree/main/Modules/Module4/Module4.md)
+## [Next Module ->](/../../tree/main/Modules/Module5/Module5.md)
