@@ -10,6 +10,7 @@
 ### Welcome to Java-2021! In this class, we will be using GitHub as our code repository. This is an industry standard that should be understood by all students looking to pursue a career path related to software.
 <br>
 
+
 # What is Git?
 *"Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency."*
 <br>
@@ -117,7 +118,12 @@ You may manage your git by using Eclipse's integrated solution. Press `ALT+SHIFT
 
 <br>
 
-### Clone using GitHub Desktop
+*This requires extra configuration steps and is no longer going to be used in the course.*
+
+<br>
+
+
+### <u>Clone using GitHub Desktop</u>
 After signing in to GitHub, click on Clone and your fork should show up. **GitHub Desktop** automatically creates a folder on your Documents called <u>GitHub</u>.  Within this folder, you will find a folder named <u>CSI-Java-2021</u> containing your cloned course.
 
 <br>
@@ -138,12 +144,10 @@ You may clone a repository without forking it, but only `contributors` may push 
 <br>
 
 ## Update your fork:
-You may update your fork on GitHub.com. When your fork is out of date, a banner will show up. Click on it to update your branch.
-
+You may update your fork on GitHub.com. When your fork is out of date, a banner will show up. Click on it to update your fork with any changes i've made. This is called pulling upstream. You're pulling changes from the primary remote repository, into **your** remote repository.
 <br>
 
-To download fork updates to your **local repository(PC)** pull the changes from GitHub.
-
+To download these fork updates to your **local repository(PC)** simply pull.
 <br>
 
 <!-- You may update both simultaneously from Visual Studio by selecting. -->
@@ -154,7 +158,7 @@ Select `upstream/main`
 <!-- #TODO: Update for eclipse -->
 
 
-`upstream/main` represents the repository you've forked. 'Merging' it into you branch means that you're applying its updates into your branch.
+`upstream/main` represents the repository you've forked. 'Merging' it into you branch means that you're combining your modifications with the updates.
 
 <br>
 

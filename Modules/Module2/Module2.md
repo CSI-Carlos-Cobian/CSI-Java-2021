@@ -8,7 +8,7 @@
 
 # Module 2: Using Eclipse IDE
 
-### Merge origin/master. This is the same as Fetching Upstream. Create a commit. `(1pts)`
+### Merge origin/master. This is another term for Fetching Upstream. `(1pts)`
 
 <br>
 
@@ -44,7 +44,7 @@
 
 <br>
 
-# Create a Java project using Eclipse 
+# Create a Java project using Eclipse `(2pts)`
 ## It must be stored in the Module2 of your fork directory.
 
 <img    src="NewProject.png" 
@@ -71,10 +71,12 @@
  
 <br>
 
-# Locate or open your `Project Explorer`. 
+# Add some code to your project. `(2pts)`
+
+
+### Locate or open your `Project Explorer`. 
 ### It should now reference your project directory. 
 ### You may search for it using the macro used on Module1 or by `Window` > `Show View` > `Project Explorer`.
-
 
 <img    src="LocateProject.png" 
         title="This is what the settings should look like." 
@@ -89,6 +91,7 @@
         title="This is what the settings should look like." 
         width="50%" 
         height="50%" />
+        
 * Right click `csi.lastname.pkg`
 * `New` > `Class`
 * Name it `Main`
@@ -106,7 +109,7 @@
 
 <br>
 
-# Hello World! `(6pts)`
+# Hello World! `(2pts)`
 ### `Hello World!` Is known by all programmers as the initial confirmation that a development environment is functional. Lets test ours by adding some `Hello World!` code into our Main.java!
 
 <br>
@@ -159,6 +162,13 @@ https://www.markdownguide.org/getting-started/
 
  - Answer:
 
+What is a java class and what is a java package?
+
+ - Answer:
+
+Add some cool original code into HelloWorld.py! Impress me.
+
+
 What part of the instructions was incomplete or unclear?
 
  - Answer:
@@ -171,7 +181,7 @@ Type down any class notes below this sentence:
 Lackluster responses may result in point deductions.
 -->
 
-* ### Save the file, Commit your changes and push them to your remote repository by the end of the class. `(1pts)`
+* ### Save the file, Commit your changes and push them to your remote repository by next class. Make a commit during class `(1pts)`
 * ### You may complete the answers by issuing additional commits and pushing them before the next class.
 
 <br>
