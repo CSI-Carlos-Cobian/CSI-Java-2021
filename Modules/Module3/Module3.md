@@ -148,28 +148,28 @@ System.out.println("concatenation: " + arr[0] + arr[1] + i);
 
 What is the diference between a Java object and a primitive data type? 
 
- - Answer:
+ - Answer: In Java, the primitive data types are the predefined data types of Java. They specify the size and type of any standard values, java has 8 primitive. A java object are Non-primitive or Reference Data Type. They are so-called because they refer to any particular objects. Unlike the primitive data types, the non-primitive ones are created by the users in Java.
 
 Describe what an array is in your own words.
 
- - Answer:
+ - Answer: An array is a list of values that can be represented in values, numbers, students etc...
 
 How do you address an index in an array? Write a code that assigns 34 to a new variable by accessing the value stored in:  
         int[] arr = {4, 3, -1, 4, 34};
 
- - Answer:
+ - Answer: int x= value[4]; 
 
 What is the first index of a list? Why?
 
- - Answer:
+ - Answer: The first index in a list is zero because it is the first number or index. 
 
 Provide an original example of a null value. It must prove your understanding of the concept.
 
- - Answer:
+ - Answer: They are variables that contain adress for a data rather than getting the data itself. 
 
 What part of this instructions was incomplete or unclear?
 
- - Answer:
+ - Answer: The mudule name 2 part and how do you adress an index in an array 
 
 Type down any class notes below this sentence:
 
