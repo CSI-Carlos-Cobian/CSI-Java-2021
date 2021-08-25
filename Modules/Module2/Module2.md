@@ -164,7 +164,7 @@ https://www.markdownguide.org/getting-started/
 
 What is a java class and what is a java package?
 
- - Answer:
+ - Answer: A package in Java is used to group related classes. a java class is a template used to create objects and to define object data types and methods
 
 Add some cool original code into HelloWorld.py! Impress me.
 
