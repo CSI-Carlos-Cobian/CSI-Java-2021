@@ -24,7 +24,7 @@ public class Ascii {
        System.out.println(" \\???\\/???/");
        System.out.println("  \\______/");
       
-       System.out.println(" __          __");
+      System.out.println("  __          __");
       System.out.println(" |??|        |??|");  
       System.out.println(" |??|        |??|");
       System.out.println(" |??|        |??|");
@@ -35,14 +35,25 @@ public class Ascii {
       System.out.println("   \\??\\      |??|");
       System.out.println("    \\??\\____/??/");
       System.out.println("     \\________/");
-	
-	
-	
-	
-	
-	
-	
-	
-	
+      
+      System.out.println(" __");
+      System.out.println("|??|");
+      System.out.println("|??|");
+      System.out.println("|??|");
+      System.out.println("|??|");
+      System.out.println("|??|");
+      System.out.println("|??|");
+      System.out.println("|??|");
+      System.out.println("|??|");
+      System.out.println("|??|");
+      System.out.println("|__|");
+      
+      System.out.println(" __");
+      
+      
+      
+      
+      
+      
 	}	
 }
