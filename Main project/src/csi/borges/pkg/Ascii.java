@@ -45,8 +45,8 @@ public class Ascii {
       System.out.println("|??|");
       System.out.println("|??|");
       System.out.println("|??|");
-      System.out.println("|??|");
-      System.out.println("|__|");
+      System.out.println("|??|_________");
+      System.out.println("|____________|");
       
       
       System.out.println(" __");
