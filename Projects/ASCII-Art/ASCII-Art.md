@@ -80,9 +80,9 @@ eg.<br>
 
 | Criteria | Points | 
 |-----------|--------|
-| When compiled and run, the program outputs a beautifully stylized, and readable, ASCII art version of your Name, Initials or nickname in the console. | <p style="text-align: center" >`12 points`</p> |
+| Java file compiles and outputs a beautifully stylized, and readable, ASCII art version of your Name, Initials or nickname in the console. | <p style="text-align: center" >`12 points`</p> |
 | Each character of your name is composed of at least 35 characters (5x7). Spaces per character are included.| <p style="text-align: center" >`5 points`</p> |
-| Name the file using the `Ascii.java` | <p style="text-align: center" >`2 points`</p> |
+| Correctly created class within package | <p style="text-align: center" >`2 points`</p> |
 | Take a screenshot of your terminal's output. Save it in the Project directory. Name the file using the following convention: `ASCII-Art-CSI-Jose-Quintana-1.png` | <p style="text-align: center" >`3 points`</p> |
 |Total:|<p style="text-align: center" >`22 points`</p> |
 
