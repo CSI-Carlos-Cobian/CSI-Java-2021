@@ -6,7 +6,7 @@
 </div>
 <br>
 
-# ASCII Initials Art Project
+# ASCII Art Project
 "ASCII art is a computer text art created with American Standard Code for Information Interchange code.  It uses ASCII characters to produce images ranging from simple and functional emoticons to elaborate works of art" (O'Riordan, 2014).
 
 "Consist of pictures pieced together from individual characters" (Codeacademy, 2021).

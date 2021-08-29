@@ -118,13 +118,13 @@ You may manage your git by using Eclipse's integrated solution. Press `ALT+SHIFT
 
 <br>
 
-*This requires extra configuration steps and is no longer going to be used in the course.*
+*This requires extra configuration steps and is no longer going to be used in the course. Using GitHub Desktop or SourceTree is encouraged.*
 
 <br>
 
 
 ### <u>Clone using GitHub Desktop</u>
-After signing in to GitHub, click on Clone and your fork should show up. **GitHub Desktop** automatically creates a folder on your Documents called <u>GitHub</u>.  Within this folder, you will find a folder named <u>CSI-Java-2021</u> containing your cloned course.
+After signing in to GitHub, your fork should show up. Click on it and  then select clone. **GitHub Desktop** automatically creates a folder on your Documents called <u>GitHub</u>.  Within this folder, you will find a folder named <u>CSI-Java-2021</u> containing your cloned course.
 
 <br>
 
@@ -158,7 +158,7 @@ Select `upstream/main`
 <!-- #TODO: Update for eclipse -->
 
 
-`upstream/main` represents the repository you've forked. 'Merging' it into you branch means that you're combining your modifications with the updates.
+`upstream/main` represents the repository you've forked. it may also be called `origin`. 'Merging' it into you branch means that you're combining your modifications with any updates the owner has issued since your fork was created. 
 
 <br>
 
