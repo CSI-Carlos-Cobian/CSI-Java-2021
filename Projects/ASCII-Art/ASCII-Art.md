@@ -28,7 +28,10 @@ O'Riordan, K (2014). ASCII art. <em>Encyclopedia Britannica</em>. https://www.br
 <br>
 
 ## Activity: `ASCII Art (22 points)`
-Create a Java Class named ACSII.java. The programs run a mian method that displays your initials, name or your nickname in block letters or keyboard characters. It should be at least 4 characters long.
+* Create a package in your `MainProject` named `csi.lastname.ascii`
+* Create within it a class named `Acsii.java`
+
+The programs run a main method that displays your initials, name or your nickname in block letters or keyboard characters. It should be at least **4** characters long. 
 
 Each character of your name should be composed of at least 35 characters (5 X 7). Spaces per characters are included. You are encouraged to use a larger custom font of your own creation. You should print each character vertically. A satisfactory output would look like:
 
