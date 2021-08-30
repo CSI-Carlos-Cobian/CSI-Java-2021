@@ -6,7 +6,7 @@ public class Animal{
         int age;
         String scientificName;
     //  Constructors
-    	public Animal(String name,int age, String scientificname) {
+    	public Animal(String name,int age,String scientificName) {
     		this.name = name;
     		this.age = age;
     		this.scientificName = scientificName;
@@ -36,7 +36,7 @@ public class Animal{
         }
 
             //  Main Method 
-            public static void main(String[] args){
+            public static void main(String[] args,  Psittaciformes){
             	Animal a = new Animal(); 
                 a.setName("Koala");
                 a.setAge(13);  
@@ -47,10 +47,11 @@ public class Animal{
                 System.out.println("Scientific Name: " + a.getScientificName());
                
                
-                Animal a2 = new Animal("Parrot",3);
-                a.setName("parrot");
+                Animal a2 = new Animal("Parrot",3,Psittaciformes);
+                a.setName("Parrot");
                 a.setAge(50);  
                 a.setScientificName("Psittaciformes");
+                
                 
            
             }
