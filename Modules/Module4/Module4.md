@@ -108,7 +108,7 @@ public class Animal{
 
 <br>
 
-### Add the `Animal.java` class to your MainProject.`(2pts)`
+### Add the `Animal.java` class to your MainProject.`(5pts)`
 
 <br>
 
@@ -149,7 +149,7 @@ public static void main(String[] args){
 
 <br>
 
-### Add a Main method to Animal.java.`(2pts)`
+### Add a Main method to Animal.java.`(10pts)`
 * Select or Discover an exotic animal subspecies. Using **Google** may help. Look up it's scientific name and age range. Initialize it the way i did with the Coqui.
 * [If you struggle with creativity or intrigue, a random generator may help!](https://www.randomlists.com/random-animals)
 * Wikipedia usually displays an animal's Scientific name.
@@ -184,7 +184,7 @@ Animal a2 = new Animal("Dog",3);
 ...
 ```
 
-## Create some Animal constructors.`(4pts)`
+## Create some Animal constructors.`(10pts)`
 * Include the default no-argument constructor seen above.
 * Create a constructor that defines all 3 Animal class fields by using parameter values.
 * Within your main method, create a secondary Animal whose variable name is `a2`. Construct it using your 3-argument constructor. Print all field values by adding 3 `println` statements after initialization(similar to the main method example) 
