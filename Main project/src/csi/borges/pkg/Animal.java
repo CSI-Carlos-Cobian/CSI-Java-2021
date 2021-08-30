@@ -1,7 +1,9 @@
 package csi.borges.pkg;
 
 public class Animal{
-        //	Fields
+        private static final String Psittaciformes = null;
+		private static final String Oryctolagus = null;
+		//	Fields
         String name;
         int age;
         String scientificName;
@@ -36,7 +38,7 @@ public class Animal{
         }
 
             //  Main Method 
-            public static void main(String[] args,  Psittaciformes){
+            public static void main(String[] args){
             	Animal a = new Animal(); 
                 a.setName("Koala");
                 a.setAge(13);  
@@ -47,15 +49,29 @@ public class Animal{
                 System.out.println("Scientific Name: " + a.getScientificName());
                
                
-                Animal a2 = new Animal("Parrot",3,Psittaciformes);
+                Animal a2 = new Animal("Parrot",50,Psittaciformes);
                 a.setName("Parrot");
                 a.setAge(50);  
                 a.setScientificName("Psittaciformes");
                 
+                System.out.println("Name: " + a.getName());
+                System.out.println("Age: " + a.getAge());
+                System.out.println("Scientific Name: " + a.getScientificName());
                 
-           
+                Animal a3 = new Animal("Horse",3,"Equus caballus");
+                a.setName("Horse");
+                a.setAge(11);  
+                a.setScientificName("Equus caballus");
+                
+                System.out.println("Name: " + a.getName());
+                System.out.println("Age: " + a.getAge());
+                System.out.println("Scientific Name: " + a.getScientificName());
+          
+            
+            
+            
             }
             
         
 
-        }
+}
