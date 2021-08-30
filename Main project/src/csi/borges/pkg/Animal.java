@@ -5,6 +5,12 @@ public class Animal{
         String name;
         int age;
         String scientificName;
+    //  Constructors
+    	public Animal(String name,int age) {
+    		this.name = name;
+    		this.age = age;
+    	}
+    	public Animal() {}
 
         //  Getters and Setters  
         public String getName(){
@@ -27,4 +33,21 @@ public class Animal{
         public void setScientificName(String scientificName){
             this.scientificName = scientificName;
         }
-}
+
+            //  Main Method 
+            public static void main(String[] args){
+            	Animal a = new Animal(); 
+                a.setName("Koala");
+                a.setAge(13);  
+                a.setScientificName("Phascolarctos cinereus");
+                
+                System.out.println("Name: " + a.getName());
+                System.out.println("Age: " + a.getAge());
+                System.out.println("Scientific Name: " + a.getScientificName());
+                Animal a2 = new Animal("Parrot",3);
+           
+            }
+            
+        
+
+        }
