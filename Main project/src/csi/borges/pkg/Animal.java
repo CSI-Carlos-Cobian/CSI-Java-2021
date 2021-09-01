@@ -55,10 +55,7 @@ public class Animal{
                 System.out.println("Scientific Name: " + a2.getScientificName());
                 
                 Animal a3 = new Animal("Horse",3,"Equus caballus");
-                a3.setName("Horse");
-                a3.setAge(11);  
-                a3.setScientificName("Equus caballus");
-                
+               
                 System.out.println("Name: " + a3.getName());
                 System.out.println("Age: " + a3.getAge());
                 System.out.println("Scientific Name: " + a3.getScientificName());
