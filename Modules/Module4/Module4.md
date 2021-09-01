@@ -149,7 +149,7 @@ public static void main(String[] args){
 
 <br>
 
-### Add a Main method to Animal.java.`(10pts)`
+## Add a Main method to Animal.java.`(10pts)`
 * Select or Discover an exotic animal subspecies. Using **Google** may help. Look up it's scientific name and age range. Initialize it the way i did with the Coqui.
 * [If you struggle with creativity or intrigue, a random generator may help!](https://www.randomlists.com/random-animals)
 * Wikipedia usually displays an animal's Scientific name.
@@ -191,9 +191,33 @@ Animal a2 = new Animal("Dog",3);
 * `a2` should not use setter methods.
 * Use a common house pet for `a2` values.
 
+<br>
+
+## Nest an Object `(20pts)`
+* Create a new class it in the same package `Animal`.
+* Name it `Taxonomy`
+* Declare it's variables to be [the 8 Major Taxonomic ranks](https://en.wikipedia.org/wiki/Taxonomic_rank)
+* Add Getters and Setters using the naming and capitalization conventions you've seen so far.
+  * Notice how `class` does not work. This is because it's a `reserved keyword`. 
+  * You will need to use a variation of the word for the field name.
+  * The Latin classis, for example.
+* Declare a constructor with all 8 parameters.
+* Declare a no-parameter constructor.
+* Add `Taxonomy` as a class variable of `Animal`
+* Create another constructor within `Animal` that accepts a `Taxonomy` Object as a Parameter.
+* Construct a new taxonomy object within your `Animal` class.
+  * It should go at the end of your `main` method, after your `a2` animal. 
+  * You may reuse an animal from the previous steps, or discover a new one.
+* Create an `Animal` using this taxonomy object as a parameter. Assign it to `a3`
+* Print at least 3 of its taxonomic ranks by using getter methods.
+
+[WhAt Is NEstInG?](https://www.bbc.co.uk/bitesize/guides/znh6pbk/revision/7)
+
+<br>
 
 ### Commit and push all of the project files and the image before the next lecture.
-it should have all animal class definitions defined above. It's main must construct 2 separate Animals and print their variables.
+- [X] It should have all animal class definitions defined above. 
+- [X] It's main must construct 3 separate Animals and print their variables.
 <br>
 
 # Class Discussion
