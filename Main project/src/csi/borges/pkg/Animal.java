@@ -1,8 +1,6 @@
 package csi.borges.pkg;
 
 public class Animal{
-        private static final String Psittaciformes = null;
-		private static final String Oryctolagus = null;
 		//	Fields
         String name;
         int age;
@@ -49,23 +47,21 @@ public class Animal{
                 System.out.println("Scientific Name: " + a.getScientificName());
                
                
-                Animal a2 = new Animal("Parrot",50,Psittaciformes);
-                a.setName("Parrot");
-                a.setAge(50);  
-                a.setScientificName("Psittaciformes");
+                Animal a2 = new Animal("Parrot",50,"Psittaciformes");
+
                 
-                System.out.println("Name: " + a.getName());
-                System.out.println("Age: " + a.getAge());
-                System.out.println("Scientific Name: " + a.getScientificName());
+                System.out.println("Name: " + a2.getName());
+                System.out.println("Age: " + a2.getAge());
+                System.out.println("Scientific Name: " + a2.getScientificName());
                 
                 Animal a3 = new Animal("Horse",3,"Equus caballus");
-                a.setName("Horse");
-                a.setAge(11);  
-                a.setScientificName("Equus caballus");
+                a3.setName("Horse");
+                a3.setAge(11);  
+                a3.setScientificName("Equus caballus");
                 
-                System.out.println("Name: " + a.getName());
-                System.out.println("Age: " + a.getAge());
-                System.out.println("Scientific Name: " + a.getScientificName());
+                System.out.println("Name: " + a3.getName());
+                System.out.println("Age: " + a3.getAge());
+                System.out.println("Scientific Name: " + a3.getScientificName());
           
             
             
