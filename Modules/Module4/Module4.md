@@ -203,7 +203,9 @@ Animal a2 = new Animal("Dog",3);
   * The Latin classis, for example.
 * Declare a constructor with all 8 parameters.
 * Declare a no-parameter constructor.
-* Add `Taxonomy` as a class variable of `Animal`
+* Add `Taxonomy` as a field of `Animal`
+  * `Taxonomy` is the data type.
+  * taxonomy is the variable name.
 * Create another constructor within `Animal` that accepts a `Taxonomy` Object as a Parameter.
 * Construct a new taxonomy object within your `Animal` class.
   * It should go at the end of your `main` method, after your `a2` animal. 
@@ -212,6 +214,12 @@ Animal a2 = new Animal("Dog",3);
 * Print at least 3 of its taxonomic ranks by using getter methods.
 
 [WhAt Is NEstInG?](https://www.bbc.co.uk/bitesize/guides/znh6pbk/revision/7)
+
+<br>
+
+[Write a toString method for your Animal Class.](https://www.javatpoint.com/understanding-toString()-method)
+* Use a multiline string
+* Print all taxonomic ranks
 
 <br>
 
