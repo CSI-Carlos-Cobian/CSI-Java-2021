@@ -151,9 +151,11 @@ public static void main(String[] args){
 
 ## Add a Main method to Animal.java.`(10pts)`
 * Select or Discover an exotic animal subspecies. Using **Google** may help. Look up it's scientific name and age range. Initialize it the way i did with the Coqui.
+  * Define the values for all class fields using setter methods.
 * [If you struggle with creativity or intrigue, a random generator may help!](https://www.randomlists.com/random-animals)
 * Wikipedia usually displays an animal's Scientific name.
 * I googled "Coqui life expectancy"
+
 
 <br>
 
@@ -217,9 +219,27 @@ Animal a2 = new Animal("Dog",3);
 
 <br>
 
-[Write a toString method for your Animal Class.](https://www.javatpoint.com/understanding-toString()-method)
-* Use a multiline string
-* Print all taxonomic ranks
+## To String
+In order to print an object to console, you must define what is to be printed. This is done by creating a function called toString(). When printing an object reference, your Java compiler will automatically call this function.
+
+### [Write a toString() method for your <u>Animal</u> and <u>Taxonomy</u> Class.](https://www.javatpoint.com/understanding-toString()-method)`(10pts)`
+* Use a [Multiline String](https://www.baeldung.com/java-multiline-string), As a parameter for a [String.format()](https://www.javatpoint.com/java-string-format).
+* Print all class fields 
+
+Here is an incomplete example of the `Animal` toString() function. 
+```java
+    public String toString() {
+    	String s = String.format("""
+    			Name: %s
+    			Age: %d
+    			Taxonomy: %s
+    			""", 
+    			name,
+    			age,
+    			taxonomy);
+    	return s;	
+    }
+```
 
 <br>
 
