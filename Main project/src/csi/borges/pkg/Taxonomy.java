@@ -167,5 +167,6 @@ public class Taxonomy {
 	public void setDomain(String domain) {
 		this.domain = domain;
 	}
-   
+	//no-argument constructor 
+  
 }
