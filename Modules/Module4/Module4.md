@@ -222,7 +222,7 @@ Animal a2 = new Animal("Dog",3);
 ## To String
 In order to print an object to console, you must define what is to be printed. This is done by creating a function called toString(). When printing an object reference, your Java compiler will automatically call this function.
 
-### [Write a toString() method for your <u>Animal</u> and <u>Taxonomy</u> Class.](https://www.javatpoint.com/understanding-toString()-method)`(10pts)`
+### [Write a toString() method for your <u>Animal</u> and <u>Taxonomy</u> Classes.](https://www.javatpoint.com/understanding-toString()-method)`(10pts)`
 * Use a [Multiline String](https://www.baeldung.com/java-multiline-string), As a parameter for a [String.format()](https://www.javatpoint.com/java-string-format).
 * Print all class fields 
 
@@ -242,6 +242,17 @@ Here is an incomplete example of the `Animal` toString() function.
 ```
 
 <br>
+
+### Create an Animal Array. `(10 pts)`
+* Add a line divider to your code to separate this new section in the following manner:
+```java
+System.out.println();
+System.out.println(----------------------------);
+System.out.println();
+```
+* Create an empty array called `animals` with a capacity of 5 `Animal`s.
+* Assign the already created animals to the array indices they represent (number attached to the variable name)
+* Create an 4th and store it in array index 4 `Animal` with `Taxonomy` in one line. Use an animal you have not used yet.
 
 ### Commit and push all of the project files and the image before the next lecture.
 - [X] It should have all animal class definitions defined above. 
