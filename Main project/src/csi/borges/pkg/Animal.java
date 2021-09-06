@@ -5,11 +5,13 @@ public class Animal{
         String name;
         int age;
         String scientificName;
+        String Taxonomy;
     //  Constructors
-    	public Animal(String name,int age,String scientificName) {
+    	public Animal(String name,int age,String scientificName,String Taxonomy) {
     		this.name = name;
     		this.age = age;
     		this.scientificName = scientificName;
+    		this.Taxonomy = Taxonomy;
     	}
     	public Animal() {}
 
@@ -34,6 +36,14 @@ public class Animal{
         public void setScientificName(String scientificName){
             this.scientificName = scientificName;
         }
+        
+        public String getTaxonomy(){
+            return Taxonomy;
+        }
+        public void setTaxonomy(String Taxonomy){
+            this.Taxonomy = Taxonomy;
+        }
+
 
             //  Main Method 
             public static void main(String[] args){
@@ -45,23 +55,48 @@ public class Animal{
                 System.out.println("Name: " + a.getName());
                 System.out.println("Age: " + a.getAge());
                 System.out.println("Scientific Name: " + a.getScientificName());
+           
                
-               
-                Animal a2 = new Animal("Parrot",50,"Psittaciformes");
+                Animal a2 = new Animal("Parrot",50,"Psittaciformes","phylum");
 
                 
                 System.out.println("Name: " + a2.getName());
                 System.out.println("Age: " + a2.getAge());
                 System.out.println("Scientific Name: " + a2.getScientificName());
+                System.out.println("Taxonomy: " + a2.getTaxonomy());
                 
-                Animal a3 = new Animal("Horse",3,"Equus caballus");
+                public String toString(String Taxonomy) {
+                	String s = String.format("""
+                			Name:Parrot %s
+                			Age:50 %d
+                			Taxonomy:phylum %s
+                			""", 
+                			name,
+                			age,
+                			taxonomy);
+                	return s;	
+                }
+
+                
+                Animal a3 = new Animal("Horse",3,"Equus caballus","species");
                
                 System.out.println("Name: " + a3.getName());
                 System.out.println("Age: " + a3.getAge());
                 System.out.println("Scientific Name: " + a3.getScientificName());
-          
+                System.out.println("Taxonomy: " + a3.getTaxonomy());
             
-            
+                public String toString("Taxonomy"); 
+                {
+                	String s = String.format("""
+                			Name:Horse %s
+                			Age:3 %d
+                			Taxonomy:species %s
+                			""", 
+                			name,
+                			age,
+                			Taxonomy);
+                	return s;	
+                }
             
             }
             
