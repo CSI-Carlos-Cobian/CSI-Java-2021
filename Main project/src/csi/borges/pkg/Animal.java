@@ -73,7 +73,7 @@ public class Animal{
                 			""", 
                 			name,
                 			age,
-                			taxonomy);
+                			Taxonomy);
                 	return s;	
                 }
 
@@ -85,18 +85,17 @@ public class Animal{
                 System.out.println("Scientific Name: " + a3.getScientificName());
                 System.out.println("Taxonomy: " + a3.getTaxonomy());
             
-                public String toString("Taxonomy"); 
-                {
+                public String textblocks() {
+                	return
                 	String s = String.format("""
                 			Name:Horse %s
                 			Age:3 %d
                 			Taxonomy:species %s
                 			""", 
-                			name,
-                			age,
-                			Taxonomy);
-                	return s;	
-                }
+                			Horse,
+                			3,
+                			species);
+                	}
             
             }
             
