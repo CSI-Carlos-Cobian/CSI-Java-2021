@@ -85,7 +85,7 @@ public class Animal{
                 System.out.println("Scientific Name: " + a3.getScientificName());
                 System.out.println("Taxonomy: " + a3.getTaxonomy());
             
-                public String textblocks() {
+                public String Stringconcation() {
                 	return
                 	String s = String.format("""
                 			Name:Horse %s
@@ -95,6 +95,7 @@ public class Animal{
                 			Horse,
                 			3,
                 			species);
+                	String newLine = System.getProperty("line.separator");
                 	}
             
             }
