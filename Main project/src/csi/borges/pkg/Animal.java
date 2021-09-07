@@ -55,17 +55,13 @@ public class Animal{
                 System.out.println("Age: " + a2.getAge());
                 System.out.println("Scientific Name: " + a2.getScientificName());
                
-                Taxonomy t = new Taxonomy ("phylum","animalia","chordata","vertebrata");
-                
-               
-                
                 Animal a3 = new Animal("Horse",3,"Equus caballus","species");
                
                 System.out.println("Name: " + a3.getName());
                 System.out.println("Age: " + a3.getAge());
                 System.out.println("Scientific Name: " + a3.getScientificName());
                 
-                a3.getTaxonomy().getorder(); 
+                a3.getTaxonomy().getOrder(); 
             }
             public Animal(String name,int age, String scientificName) {
         		this.name = name;
