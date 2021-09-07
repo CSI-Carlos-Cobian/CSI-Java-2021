@@ -71,7 +71,27 @@ public class Animal{
         		this.name = name;
         		this.age = age;
         		this.scientificName = scientificName;
-        		
+            }
+            
+        		  public Animal(String name,int age, String scientificName, Taxonomy taxonomy) {
+              		this.name = name;
+              		this.age = age;
+              		this.scientificName = scientificName;
+              		this.setTaxonomy(taxonomy);
+        		  }
+        		  
+        		  public Animal() {
+        		  }
+        		  public Taxonomy getTaxonomy() {
+        			  return taxonomy; 
+        		  }
+        		  public void setTaxonomy(Taxonomy taxonomy) {
+        		  this.taxonomy=taxonomy;
+        		  
+        		  
+        		  
+        		  
+        		  }
             
                
 
