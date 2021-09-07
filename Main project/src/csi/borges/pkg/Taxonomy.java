@@ -7,7 +7,7 @@ package csi.borges.pkg;
  * @author user
  *
  */
-public class Taxonomy {
+public class Taxonomy11 {
 //	Fields
     String species;
     String genus;
@@ -18,7 +18,7 @@ public class Taxonomy {
     String kingdom;
     String domain;
 //  Constructors
-	public Taxonomy(String species, String genus, String family, String order, String classs,String phylum,String kingdom,String domain) {
+	public Taxonomy11(String species, String genus, String family, String order, String classs,String phylum,String kingdom,String domain) {
 		this.species = species;
 		this.genus = genus;
 		this.family = family;
@@ -30,8 +30,7 @@ public class Taxonomy {
 		
 	}
 	
-	  public Taxonomy(String string, String string2, String string3, String string4) {
-		// TODO Auto-generated constructor stub
+	  public Taxonomy11(String string, String string2, String string3, String string4) {
 	}
 
 	//  Getters and Setters
@@ -58,10 +57,19 @@ public class Taxonomy {
 		this.domain = domain;
     }
     
-    public Taxonomy(String string, String string2,String string3,String string4)
+    public Taxonomy1(String string, String string2,String string3,String string4)
 }
-
-    
+public Taxonomy(String string, String string2,String string3,String string4)
+}
+public String getName() {
+	return null; 
+}
+public String getAge() {
+	return null; 
+}
+public String getScientificName() {
+	return null; 
+}
    
 
 	/**
