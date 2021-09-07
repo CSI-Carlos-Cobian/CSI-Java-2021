@@ -58,6 +58,10 @@ public class Taxonomy {
 		this.domain = domain;
     }
     
+    public Taxonomy(String string, String string2,String string3,String string4)
+}
+
+    
    
 
 	/**
