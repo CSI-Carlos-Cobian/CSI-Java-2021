@@ -30,7 +30,11 @@ public class Taxonomy {
 		
 	}
 	
-	  //  Getters and Setters
+	  public Taxonomy(String string, String string2, String string3, String string4) {
+		// TODO Auto-generated constructor stub
+	}
+
+	//  Getters and Setters
     public void setName(String species, String genus, String family, String order, String classs,String phylum,String kingdom,String domain){
     	this.species = species;
 		this.genus = genus;
