@@ -1,6 +1,7 @@
 package csi.borges.pkg;
 
 public class Animal {
+	private static Object Taxonomy;
 	// Fields
 	String name;
 	int age;
@@ -59,7 +60,7 @@ public class Animal {
 	}
 
 	// Main Method
-	public static void main(String[] args) {
+	public static void main(String[] args, Object species, Object genus, Object family, Object order, Object classs, Object phylum, Object kingdom, Object domain) {
 		Animal a = new Animal();
 		a.setName("Koala");
 		a.setAge(13);
@@ -75,10 +76,38 @@ public class Animal {
 		System.out.println("Age: " + a2.getAge());
 		System.out.println("Scientific Name: " + a2.getScientificName());
 
-		Taxonomy = t(String species){;
+		Taxonomy = t("species"){
 			this.species = species;
 		}
-				
+		
+		Taxonomy = t("genus"){
+			this.genus = genus;
+		}
+		Taxonomy = t("family"){
+			this.family = family;
+		}
+		Taxonomy = t("order"){
+			this.order = order;
+		}
+		Taxonomy = t("classs"){
+			this.classs = classs;
+		}
+		Taxonomy = t("phylum"){
+			this.phylum = phylum;
+		}
+		Taxonomy = t("kingdom"){
+			this.kingdom = kingdom;
+		}
+		Taxonomy = t("domain"){
+			this.domain = domain;
+		}
+		
+		
+		
+		
+		
+		
+		
 				
 				
 				
@@ -90,5 +119,10 @@ public class Animal {
 
 		a2.getTaxonomy().getOrder();
 		a3.getTaxonomy().getOrder();
+	}
+
+	private static Object t(String string) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
