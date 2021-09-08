@@ -9,16 +9,18 @@ package csi.borges.pkg;
  */
 public class Taxonomy {
 //	Fields
-    String species;
-    String genus;
-    String family;
-    String order;
-    String classs;
-    String phylum;
-    String kingdom;
-    String domain;
+	String species;
+	String genus;
+	String family;
+	String order;
+	String classs;
+	String phylum;
+	String kingdom;
+	String domain;
+
 //  Constructors
-	public Taxonomy(String species, String genus, String family, String order, String classs,String phylum,String kingdom,String domain) {
+	public Taxonomy(String species, String genus, String family, String order, String classs, String phylum,
+			String kingdom, String domain) {
 		this.species = species;
 		this.genus = genus;
 		this.family = family;
@@ -27,50 +29,14 @@ public class Taxonomy {
 		this.phylum = phylum;
 		this.kingdom = kingdom;
 		this.domain = domain;
-		
+
 	}
-	
-	  public Taxonomy(String string, String string2, String string3, String string4) {
+	public Taxonomy() {
+
+
 	}
 
-	//  Getters and Setters
-    public void setName(String species, String genus, String family, String order, String classs,String phylum,String kingdom,String domain){
-    	this.species = species;
-		this.genus = genus;
-		this.family = family;
-		this.order = order;
-		this.classs = classs;
-		this.phylum = phylum;
-		this.kingdom = kingdom;
-		this.domain = domain;
-    }
-    
-    
-    public void setname(String species, String genus, String family, String order, String classs,String phylum,String kingdom,String domain ){
-    	this.species = species;
-		this.genus = genus;
-		this.family = family;
-		this.order = order;
-		this.classs = classs;
-		this.phylum = phylum;
-		this.kingdom = kingdom;
-		this.domain = domain;
-    }
-    
-    public Taxonomy(String string, String string2,String string3,String string4)
-}
-public Taxonomy(String string, String string2,String string3,String string4)
-}
-public String getName() {
-	return null; 
-}
-public String getAge() {
-	return null; 
-}
-public String getScientificName() {
-	return null; 
-}
-   
+	// Getters and Setters
 
 	/**
 	 * @return the species
@@ -183,6 +149,6 @@ public String getScientificName() {
 	public void setDomain(String domain) {
 		this.domain = domain;
 	}
-	//no-argument constructor 
-  
+	// no-argument constructor
+
 }
