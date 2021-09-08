@@ -76,7 +76,7 @@ public class Animal {
 		System.out.println("Age: " + a2.getAge());
 		System.out.println("Scientific Name: " + a2.getScientificName());
 
-		Taxonomy t = new Taxonomy("species","genus","family","order","classs","pylum","kingdom","domain");
+		Taxonomy t = new Taxonomy("Equus caballus","Equus Linnaeus","Equidae Gray","Perissodactyla Owen","Mammalia Linnaeus","	Chordata","	Animalia","Eukaryote");
 		
 		
 		
