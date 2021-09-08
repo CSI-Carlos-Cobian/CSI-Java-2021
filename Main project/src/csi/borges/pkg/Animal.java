@@ -76,42 +76,14 @@ public class Animal {
 		System.out.println("Age: " + a2.getAge());
 		System.out.println("Scientific Name: " + a2.getScientificName());
 
-		Taxonomy = t("species"){
-			this.species = species;
-		}
-		
-		Taxonomy = t("genus"){
-			this.genus = genus;
-		}
-		Taxonomy = t("family"){
-			this.family = family;
-		}
-		Taxonomy = t("order"){
-			this.order = order;
-		}
-		Taxonomy = t("classs"){
-			this.classs = classs;
-		}
-		Taxonomy = t("phylum"){
-			this.phylum = phylum;
-		}
-		Taxonomy = t("kingdom"){
-			this.kingdom = kingdom;
-		}
-		Taxonomy = t("domain"){
-			this.domain = domain;
-		}
-		
-		
-		
-		
+		Taxonomy t = new Taxonomy("species","genus","family","order","classs","pylum","kingdom","domain");
 		
 		
 		
 				
 				
 				
-		Animal a3 = new Animal("Horse", 3, "Equus caballus");
+		Animal a3 = new Animal("Horse", 3, "Equus caballus",t);
 
 		System.out.println("Name: " + a3.getName());
 		System.out.println("Age: " + a3.getAge());
