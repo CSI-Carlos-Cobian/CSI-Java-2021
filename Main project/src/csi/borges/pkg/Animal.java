@@ -8,11 +8,18 @@ public class Animal {
 	Taxonomy taxonomy;
 
 	// Constructors
-	public Animal(String name, int age, String scientificName, String Taxonomy) {
+
+	public Animal(String name, int age, String scientificName) {
 		this.name = name;
 		this.age = age;
 		this.scientificName = scientificName;
+	}
 
+	public Animal(String name, int age, String scientificName, Taxonomy taxonomy) {
+		this.name = name;
+		this.age = age;
+		this.scientificName = scientificName;
+		this.taxonomy = taxonomy;
 	}
 
 	public Animal() {
@@ -43,6 +50,14 @@ public class Animal {
 		this.scientificName = scientificName;
 	}
 
+	private Taxonomy getTaxonomy() {
+		return this.taxonomy;
+	}
+
+	private void setTaxonomy(Taxonomy taxonomy) {
+		this.taxonomy = taxonomy;
+	}
+
 	// Main Method
 	public static void main(String[] args) {
 		Animal a = new Animal();
@@ -54,13 +69,20 @@ public class Animal {
 		System.out.println("Age: " + a.getAge());
 		System.out.println("Scientific Name: " + a.getScientificName());
 
-		Animal a2 = new Animal("Parrot", 50, "Psittaciformes", "phylum");
+		Animal a2 = new Animal("Parrot", 50, "Psittaciformes");
 
 		System.out.println("Name: " + a2.getName());
 		System.out.println("Age: " + a2.getAge());
 		System.out.println("Scientific Name: " + a2.getScientificName());
 
-		Animal a3 = new Animal("Horse", 3, "Equus caballus", "species");
+		Taxonomy = t(String species){;
+			this.species = species;
+		}
+				
+				
+				
+				
+		Animal a3 = new Animal("Horse", 3, "Equus caballus");
 
 		System.out.println("Name: " + a3.getName());
 		System.out.println("Age: " + a3.getAge());
@@ -69,41 +91,4 @@ public class Animal {
 		a2.getTaxonomy().getOrder();
 		a3.getTaxonomy().getOrder();
 	}
-
-	private Taxonomy getTaxonomy() {
-		return null;
-	}
-
-	public Animal(String name, int age, String scientificName) {
-		this.name = name;
-		this.age = age;
-		this.scientificName = scientificName;
-	}
-
-	public Animal(String name, int age, String scientificName, Taxonomy taxonomy) {
-		this.name = name;
-		this.age = age;
-		this.scientificName = scientificName;
-		this.setTaxonomy(taxonomy);
-	}
-
-	private void setTaxonomy(Taxonomy taxonomy) {
-
-	}
-
-	public class Animal() {
-        		  }
-        		  public Taxonomy getTaxonomy() {
-        			  return taxonomy; 
-        		  }
-        		  public void setTaxonomy(Taxonomy taxonomy) {
-        		  this.taxonomy=taxonomy;
-        		  
-        		  
-        		  
-        		  
-        		  }
-            
-               
-
-            }
+}
