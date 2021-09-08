@@ -244,15 +244,16 @@ Here is an incomplete example of the `Animal` toString() function.
 <br>
 
 ### Create an Animal Array. `(10 pts)`
-* Add a line divider to your code to separate this new section in the following manner:
-```java
-System.out.println();
-System.out.println(----------------------------);
-System.out.println();
-```
-* Create an empty array called `animals` with a capacity of 5 `Animal`s.
-* Assign the already created animals to the array indices they represent (number attached to the variable name)
-* Create an 4th and store it in array index 4 `Animal` with `Taxonomy` in one line. Use an animal you have not used yet.
+* Create a new class named `AnimalFarm`
+* Add a field called `animals`. It should be a `List` of type `Animal`
+* Add a main method to your animal farm.
+* Within your main method, initialize your array with a capacity of 5 animals. 
+* Populate your animal farm with the `Animals`
+  *  Ony create 4 animals. Leave the last index of the array empty(`null`)
+  * Your may reuse the animals constructed in the previous step.
+  *  They must all be created using constructors (no setter methods) 
+  *  All animals must be constructed in a single line.
+  *  All animals must have all fields populated and a taxonomy.
 
 ### Commit and push all of the project files and the image before the next lecture.
 - [X] It should have all animal class definitions defined above. 
