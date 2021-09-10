@@ -1,7 +1,7 @@
 package csi.borges.pkg;
 
 public class Animal {
-	private static Object Taxonomy;
+
 	// Fields
 	String name;
 	int age;
@@ -55,9 +55,8 @@ public class Animal {
 		return this.taxonomy;
 	}
 
-	private void setTaxonomy(Taxonomy taxonomy) {
-		this.taxonomy = taxonomy;
-	}
+	
+	
 
 	// Main Method
 	public static void main(String[] args, Object species, Object genus, Object family, Object order, Object classs, Object phylum, Object kingdom, Object domain) {
@@ -93,8 +92,5 @@ public class Animal {
 		a3.getTaxonomy().getOrder();
 	}
 
-	private static Object t(String string) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 }
