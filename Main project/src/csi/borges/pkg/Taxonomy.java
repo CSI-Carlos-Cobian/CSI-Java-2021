@@ -150,5 +150,25 @@ public class Taxonomy {
 		this.domain = domain;
 	}
 	// no-argument constructor
-
+	 public String toString() {
+	    	String s = String.format("""
+	    			Genus %s
+	    			Species %d
+	    			Classs%s
+	    			Domain%s
+	    			Kingdom%s
+	    			Phylum%s
+	    			Order%s
+	    			Family:%s
+	    			""",
+	    			genus,
+	    			species,
+	    			classs,
+	    			domain,
+	    			kingdom,
+	    			phylum,
+	    			order,
+	    			family);
+	    	return s;	
+	    }
 }
