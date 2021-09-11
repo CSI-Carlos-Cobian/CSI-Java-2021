@@ -55,11 +55,19 @@ public class Animal {
 		return this.taxonomy;
 	}
 
-	
+	 public String toString() {
+	    	String s = String.format("""
+	    			Name: %s
+	    			Age: %d
+	    			Taxonomy: %s
+	    			""", name, age, taxonomy);
+	    	
+	    	return s;	
+	    }
 	
 
 	// Main Method
-	public static void main(String[] args, Object species, Object genus, Object family, Object order, Object classs, Object phylum, Object kingdom, Object domain) {
+	public static void main(String[] args ) {
 		Animal a = new Animal();
 		a.setName("Koala");
 		a.setAge(13);
@@ -87,8 +95,13 @@ public class Animal {
 		System.out.println("Name: " + a3.getName());
 		System.out.println("Age: " + a3.getAge());
 		System.out.println("Scientific Name: " + a3.getScientificName());
+		
+		System.out.println("genus: "+ a3.getTaxonomy().getGenus());
+		System.out.println("domain: "+ a3.getTaxonomy().getDomain());
+		System.out.println("species: "+ a3.getTaxonomy().getSpecies());
+		System.out.println("classs: "+ a3.getTaxonomy().getClasss());
 
-		a2.getTaxonomy().getOrder();
+		
 		a3.getTaxonomy().getOrder();
 	}
 
