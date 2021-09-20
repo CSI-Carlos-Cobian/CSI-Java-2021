@@ -152,14 +152,14 @@ public class Taxonomy {
 	// no-argument constructor
 	 public String toString() {
 	    	String s = String.format("""
-	    			Genus %s
-	    			Species %d
-	    			Classs%s
-	    			Domain%s
-	    			Kingdom%s
-	    			Phylum%s
-	    			Order%s
-	    			Family:%s
+	    			Genus: %s
+	    			Species: %s
+	    			Classs: %s
+	    			Domain: %s
+	    			Kingdom: %s
+	    			Phylum: %s
+	    			Order: %s
+	    			Family: %s
 	    			""",
 	    			genus,
 	    			species,
