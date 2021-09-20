@@ -31,7 +31,7 @@ public class Taxonomy {
 		this.domain = domain;
 
 	}
-	public Taxonomy(String string, String string2, String string3, String string4, String string5, String string6, String string7, Object object) {
+	public Taxonomy() {
 
 
 	}
