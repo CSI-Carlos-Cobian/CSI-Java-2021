@@ -2,7 +2,7 @@ package csi.borges.pkg;
 
 public class AnimalFarm {
 
-	static Animal[]animals; 
+	static Animal[] animals; 
 	
 	public static void main(String[] args) {
 	
