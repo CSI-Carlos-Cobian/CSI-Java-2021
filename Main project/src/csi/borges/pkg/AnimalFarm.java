@@ -20,7 +20,7 @@ public class AnimalFarm {
 	
 	
 	// animals[4] = new Animal("Monkey", 3, "Cercopithecidae", new Taxonomy("Proboscis Monkey","	Nasalis", "	Cercopithecidae Gray", "	Primates", 	"Mammalia Linnaeus", "	Chordata", 	"Animalia"));
-	// animals[4] = new Animal("Crocodile", 3, "Crocodylinae", new Taxonomy("	Crocodylus porosus Schneider","		Crocodylus Laurenti", "		Crocodylidae", "		Crocodilia", 	"	Reptilia Laurenti", "		Chordata", 	"	Animalia"));
+	// animals[5] = new Animal("Crocodile", 3, "Crocodylinae", new Taxonomy("	Crocodylus porosus Schneider","		Crocodylus Laurenti", "		Crocodylidae", "Crocodilia", 	"Reptilia Laurenti", "	Chordata", 	"Animalia"));
 	
 	printAnimals();
 	
