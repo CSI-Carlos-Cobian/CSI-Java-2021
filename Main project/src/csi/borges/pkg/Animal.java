@@ -59,8 +59,9 @@ public class Animal {
 	    	String s = String.format("""
 	    			Name: %s
 	    			Age: %d
+	    			Scientific name %s
 	    			Taxonomy: %s
-	    			""", name, age, taxonomy);
+	    			""", name, age, scientificName, taxonomy);
 	    	
 	    	return s;	
 	    }
