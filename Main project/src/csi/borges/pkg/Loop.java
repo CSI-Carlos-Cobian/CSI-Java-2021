@@ -7,7 +7,10 @@ public class Loop {
 			
 			System.out.println(i);
 		}
-			
+			int[][] arr = new int[10][20]; 
+			arr[0[0] = 1; 
+			System.out.println arr = 1 [10][20]
+			arr = {{1, 2}, {3, 4}}; 
 	}
 	
 }
