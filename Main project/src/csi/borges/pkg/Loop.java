@@ -1,5 +1,7 @@
 package csi.borges.pkg;
 
+import java.util.Arrays;
+
 public class Loop {
 
 	public static void main (String[] args) {
@@ -7,10 +9,9 @@ public class Loop {
 			
 			System.out.println(i);
 		}
-			int[][] arr = new int[10][20]; 
-			arr[0[0] = 1; 
-			System.out.println arr = 1 [10][20]
-			arr = {{1, 2}, {3, 4}}; 
+			int[][] arr = {{1, 2}, {3, 4}}; 
+			System.out.println(Arrays.toString(arr[0] ));
+			
 	}
 	
 }
