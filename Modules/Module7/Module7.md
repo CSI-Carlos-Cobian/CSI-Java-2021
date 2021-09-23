@@ -6,20 +6,19 @@
 </div>
 <br>
 
-# Module 7: Importing Libraries
-
+# Module 7: Java Package Structure
 
 
 ## Importing Default Libraries
 
 <br>
 
-s## Importing Custom Libraries
+## Importing Custom Libraries
 
 <br>
 
 
-### Merge origin/master. This is the same as Fetching Upstream. Create a commit. `(1pts)`
+### Merge origin/master. Create a commit. `(1pts)`
 
 <br>
 

@@ -95,7 +95,7 @@ An array is a list, or collection, of a certain data type. An array is treated a
 | Boolean | `true, false, >, <, ==, >=, <=, !, \|\|, &&` |
 | Object | `Object o = new Object();` <br> This is called the default constructor for an object. <br> It initializes an object without any values. |
 | Void/Null | `Object o = null;` |
-| Array | `int[] integerArray = new int[5];` <br> initializes an empty(null) array of length 5 <br> `int[] arr = {4, 3, -1, 4, 34};` <br> `arr[0] = 44;`|
+| Array | `int[] integerArray = new int[5];` <br> initializes an empty(null) array of length 5 <br> `int[] arr1 = {4, 3, -1, 4, 34};` <br> `arr1[0] = 44;` Assigns a value  <br> `int[] arr2 = new int[]{1,2,3};` <br> `int[][] arr2 = { {1,2,3}, {4,5,6} };` |
 
 *These are just a few examples of common usage.*
 

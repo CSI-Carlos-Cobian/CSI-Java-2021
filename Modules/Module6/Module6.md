@@ -60,6 +60,7 @@ for(Animal a : animals){
 * Define a new method called `printEachAnimal()`
 * Create an iterator that loops through your `animals` list and calls `toString()` for each animal. 
   * Remember that printing the object **reference** automatically calls this method.
+  * You must use for-each syntax.
 
 <br>
 
@@ -117,6 +118,29 @@ do{
 i++;    
 }while(i<=10);  
 ```
+
+<br>
+
+# Nested Loops
+We have previously studied nesting. Now we will apply that concept into looping. By creating a loop within a loop, we may iterate over multidimensional arrays. an example for the syntax is displayed below.
+
+```java
+int[][] arr = 	{
+                  {1,2,3,4,5}, 
+                  {6,7,8,9,10}, 
+                  {11,12,13,14,15}
+                };
+
+for(int i = 0; i < arr.length; i++) {
+  for(int j = 0; j < arr[i].length; j++) {
+    System.out.println( arr[i][j] );
+  }
+}
+
+```
+
+The code above prints every value of a 2 dimensional array. A 2D array is essentially an array of arrays. We may observe in the example above that a for loop using the variable `i` traverses the top level array. This is an array that contains 3 arrays. The second loop using the variable `j` will traverse each of these arrays mentioned above. In this case, they contain 5 integers each. 
+
 
 <br>
 
