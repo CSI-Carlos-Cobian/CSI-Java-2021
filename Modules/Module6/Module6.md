@@ -111,12 +111,12 @@ I am using basic boolean mathematic operators, but any type of boolean operator 
 A do-while will execute the code within the code block before evaluating the termination condition. It is useful for when you need a block of code to run at least once, regardless of the termination condition.
 
 ```java
-int i=1;    
+int i=1;
 
-do{    
-    System.out.println(i);    
-i++;    
-}while(i<=10);  
+do{
+  System.out.println(i);
+  i++;
+}while(i<=10);
 ```
 
 <br>
@@ -141,7 +141,44 @@ for(int i = 0; i < arr.length; i++) {
 
 The code above prints every value of a 2 dimensional array. A 2D array is essentially an array of arrays. We may observe in the example above that a for loop using the variable `i` traverses the top level array. This is an array that contains 3 arrays. The second loop using the variable `j` will traverse each of these arrays mentioned above. In this case, they contain 5 integers each. 
 
+<br>
 
+## Create a 2D Nested Loop `(10pts)`
+* Create a Java class in the package you have been using so far named `EvenOdd2D.java`
+* Create a main method
+* Within the main method, create a 2D integer array filled with 0 values.
+  * it should have 10 columns and 10 rows
+* Create a nested `for` loop.
+  * The for loop should use `i` and `j` as variables respectively.
+  * On odd rows **(`i` is odd)**, set odd indexed columns **(`j` is odd)** as 1.
+  * On even rows **(`i` is even)**, set even indexed columns **(`j` is even)** as 1.
+  * Remember from class that we determine whether a number is odd or even by using the modulus `%` operator.
+
+Sample snippet of code:
+```java
+int[][] arr = new int[10][10];
+
+for(int i = 0; i < arr.length; i++) {
+    for(int j = 0; j < arr[i].length; j++) {
+      //Implement if-else logic here.
+    }
+    System.out.println(Arrays.toString(arr[i]));
+}
+```
+Expected Output
+
+```java
+[1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+[0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+[1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+[0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+[1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+[0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+[1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+[0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+[1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+[0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+```
 <br>
 
 # Class Discussion
