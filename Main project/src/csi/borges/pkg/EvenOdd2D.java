@@ -11,6 +11,7 @@ public class EvenOdd2D {
 		    	if (i%2==0); 
 		    	
 		    	
+		    	
 		    	System.out.println("(i%2==0)");
 		    	System.out.println("(i%2==1);");
 		    	System.out.println(Arrays.toString(arr[i]));
