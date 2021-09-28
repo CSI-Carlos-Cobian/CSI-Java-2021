@@ -13,7 +13,8 @@ public class Lax {
 
 		    	
 		    	arr [i][i] = 1; 
-		      	arr [j][j] = 1-0 ;
+		      	arr [i][arr.length-1-i] = 1 ;
+		    
 		      	
 		    
 		    	
