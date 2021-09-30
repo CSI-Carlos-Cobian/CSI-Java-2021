@@ -44,11 +44,9 @@ At least 300 points.
 * [Integrated Development Environment(IDE)](/../../tree/main/Modules/Module2/Module2.md)
 * [Data Types](/../../tree/main/Modules/Module3/Module3.md)
 * [Java Class Structure](/../../tree/main/Modules/Module4/Module4.md)
+* [If Statement and Logic operators](/../../tree/main/Modules/Module5/Module5.md)
+* [Arrays and Iteration](/../../tree/main/Modules/Module6/Module6.md)
 * Arithmetic and unary operators
-* Logic operators and compound statements
-* Functions and Parameterization
-* Arrays and Iteration (**for**, **for-each**, **while**)
-* Constructors
 * Inheritance and Overloading
 * Abstract classes and Interfaces
 * Polymorphism
@@ -57,4 +55,4 @@ At least 300 points.
 * Rock Paper Scissors
 * Conway's game of life
 * Markdown Writer
-* Gene data
+* Taxonomic data

@@ -179,7 +179,102 @@ Expected Output
 [1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
 [0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
 ```
+
 <br>
+
+## Draw an X using nested loops `(10pts)`
+* Create a Java class in the package you have been using so far named `LaX.java`
+* Create a main method
+* Within the main method, create a 2D integer array filled with 0 values.
+  * it should have 9 columns and 9 rows
+* Create a nested `for` loop.
+  * The for loop should use `i` and `j` as variables respectively.
+* Fill in the question marks in the code to draw an X like the one displayed below..
+
+Sample snippet of code:
+```java
+int[][] arr = new int[9][9];
+
+for(int i = 0; i < arr.length; i++) {
+    for(int j = 0; j < arr[i].length; j++) {
+      arr[?][?]=1;
+      arr[?][?]=1;
+    }
+    System.out.println(Arrays.toString(arr[i]));
+}
+```
+Expected Output
+
+```java
+[1, 0, 0, 0, 0, 0, 0, 0, 1]
+[0, 1, 0, 0, 0, 0, 0, 1, 0]
+[0, 0, 1, 0, 0, 0, 1, 0, 0]
+[0, 0, 0, 1, 0, 1, 0, 0, 0]
+[0, 0, 0, 0, 1, 0, 0, 0, 0]
+[0, 0, 0, 1, 0, 1, 0, 0, 0]
+[0, 0, 1, 0, 0, 0, 1, 0, 0]
+[0, 1, 0, 0, 0, 0, 0, 1, 0]
+[1, 0, 0, 0, 0, 0, 0, 0, 1]
+
+```
+
+<br>
+
+
+## Draw an inverted X using 3D arrays `(10pts)`
+* Create a Java class in the package you have been using so far named `LaX3D.java`
+* Create a main method
+* Within the main method, create a 3D integer array filled with 0 values.
+  * It should have 2 grids of 9 columns and 9 rows
+* Create a nested `for` loop.
+  * The for loops should use `i`, `j` and `k` as variables respectively.
+* The first dimension should display the LaX code worked on the last class.
+* The second code should display a negation of the first array's output.
+
+Sample snippet of code:
+```java
+		int[][][] arr = new int[2][9][9];
+
+		for(int i = 0;i<arr.length;i++) {
+			System.out.println("--------------------------------");
+			
+			for(int j = 0; j < arr[i].length; j++) {
+				
+			    for(int k = 0; k < arr[i][j].length; k++) {
+	
+			    	arr[i][j][j] = 1;
+			    	arr[i][j][ arr[i][j].length - j - 1 ] = 1;
+			    }
+			    System.out.println(Arrays.toString(arr[i][j]));
+			    
+			}
+			
+		}
+```
+Expected Output
+
+```java
+--------------------------------
+[1, 0, 0, 0, 0, 0, 0, 0, 1]
+[0, 1, 0, 0, 0, 0, 0, 1, 0]
+[0, 0, 1, 0, 0, 0, 1, 0, 0]
+[0, 0, 0, 1, 0, 1, 0, 0, 0]
+[0, 0, 0, 0, 1, 0, 0, 0, 0]
+[0, 0, 0, 1, 0, 1, 0, 0, 0]
+[0, 0, 1, 0, 0, 0, 1, 0, 0]
+[0, 1, 0, 0, 0, 0, 0, 1, 0]
+[1, 0, 0, 0, 0, 0, 0, 0, 1]
+--------------------------------
+[0, 1, 1, 1, 1, 1, 1, 1, 0]
+[1, 0, 1, 1, 1, 1, 1, 0, 1]
+[1, 1, 0, 1, 1, 1, 0, 1, 1]
+[1, 1, 1, 0, 1, 0, 1, 1, 1]
+[1, 1, 1, 1, 0, 1, 1, 1, 1]
+[1, 1, 1, 0, 1, 0, 1, 1, 1]
+[1, 1, 0, 1, 1, 1, 0, 1, 1]
+[1, 0, 1, 1, 1, 1, 1, 0, 1]
+[0, 1, 1, 1, 1, 1, 1, 1, 0]
+```
 
 # Class Discussion
 ## Answer the questions on the Markdown file located within your `Module6` directory (Module6.md).`(0pts)`
