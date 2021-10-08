@@ -1,17 +1,16 @@
 package csi.borges.pkg;
 
-import java.util.Arrays;
-
-public class Lax3D {
+public class LaX3D {
+	public static void main(String[] args) {
 
 	int[][][] arr = new int[2][9][9];
 
 	System.out.println("--------------------------------");
-	for (int j = 0; j < arr[0].length; j++) {
+	for (int j = 0; j < arr[0].length; j++){
 	  for (int k = 0; k < arr[0][j].length; k++) {
 
-	    // X Logic Here
-	    // Can be done in 2 lines
+		  arr [j][j] = 1; 
+	      	arr [j][arr.length-1-j] = 1 ;
 
 	  }
 	  System.out.println(Arrays.toString(arr[0][j]));
@@ -28,3 +27,6 @@ public class Lax3D {
 	  }
 	  System.out.println(Arrays.toString(arr[1][j]));
 	}
+
+	}
+}
