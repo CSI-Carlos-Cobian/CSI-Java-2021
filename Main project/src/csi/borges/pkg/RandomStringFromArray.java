@@ -7,10 +7,25 @@ public class RandomStringFromArray
 	public static void main(String[] args) 
 {
  
-		String[] arr = {"1", "2", "3", "4", "5"}; 
+	
 		Random r= new Random(); 
 		int randomnumber= r.nextInt(arr.length); 
 		System.out.println(arr[randomnumber]); 
+		
+		
+		String computerChoice = choices[r.nextInt(choices.length)]; 
 	
+		
+		Scanner sc= new Scanner(system.in); 
+		
+		System.out.println("computer chose:  " +computerChoice); 
+		System.out.println("User chose: " + userchoice); 
+		
+		if(computerChoice == )
+		
+		
+		
+		
+		
 }
 }
