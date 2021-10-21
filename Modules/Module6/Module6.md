@@ -1,8 +1,8 @@
 <div style="text-align:center">
         <img    src="https://beginnersbook.com/wp-content/uploads/2017/09/for_loop_C.jpg" 
                 title="Colegio San Ignacio" 
-                width="60%" 
-                height="60%" />
+                width="50%" 
+                height="50%" />
 </div>
 <br>
 
@@ -230,7 +230,7 @@ Sample snippet of code:
 ```java
 int[][][] arr = new int[2][9][9];
 
-System.out.println("--------------------------------");
+System.out.println("---------------------------");
 for (int j = 0; j < arr[0].length; j++) {
   for (int k = 0; k < arr[0][j].length; k++) {
 
@@ -242,7 +242,7 @@ for (int j = 0; j < arr[0].length; j++) {
 
 }
 
-System.out.println("--------------------------------");
+System.out.println("---------------------------");
 for (int j = 0; j < arr[1].length; j++) {
   for (int k = 0; k < arr[1][j].length; k++) {
 
@@ -253,10 +253,11 @@ for (int j = 0; j < arr[1].length; j++) {
   System.out.println(Arrays.toString(arr[1][j]));
 }
 ```
-Expected Output
+
+### Expected Output:
 
 ```java
---------------------------------
+---------------------------
 [1, 0, 0, 0, 0, 0, 0, 0, 1]
 [0, 1, 0, 0, 0, 0, 0, 1, 0]
 [0, 0, 1, 0, 0, 0, 1, 0, 0]
@@ -266,7 +267,7 @@ Expected Output
 [0, 0, 1, 0, 0, 0, 1, 0, 0]
 [0, 1, 0, 0, 0, 0, 0, 1, 0]
 [1, 0, 0, 0, 0, 0, 0, 0, 1]
---------------------------------
+---------------------------
 [0, 1, 1, 1, 1, 1, 1, 1, 0]
 [1, 0, 1, 1, 1, 1, 1, 0, 1]
 [1, 1, 0, 1, 1, 1, 0, 1, 1]
@@ -277,6 +278,12 @@ Expected Output
 [1, 0, 1, 1, 1, 1, 1, 0, 1]
 [0, 1, 1, 1, 1, 1, 1, 1, 0]
 ```
+
+<br>
+
+## [DNA Project corresponds to this lecture. ->](/../../tree/main/Projects/DNA/DNA.md)
+
+<br>
 
 # Class Discussion
 ## Answer the questions on the Markdown file located within your `Module6` directory (Module6.md).`(0pts)`
