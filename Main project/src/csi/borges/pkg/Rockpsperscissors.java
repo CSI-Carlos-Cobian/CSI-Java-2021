@@ -19,6 +19,7 @@ public class Rockpsperscissors {
 
 		System.out.println("type your choice: ");
 		int inputInt = Arrays.asList(choices).indexOf(sc.nextLine());
+		
 		String userChoice = choices[inputInt];
 
 		System.out.println("computer chose:  " + computerChoice);
