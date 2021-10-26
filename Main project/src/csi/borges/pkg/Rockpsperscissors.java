@@ -14,8 +14,8 @@ public class Rockpsperscissors {
 
 		// int randomnumber= r.nextInt(arr.length);
 		String computerChoice = choices[r.nextInt(choices.length)];
-
 		Scanner sc = new Scanner(System.in);
+
 
 		System.out.println("type your choice: ");
 		int inputInt = Arrays.asList(choices).indexOf(sc.nextLine());
@@ -28,8 +28,11 @@ public class Rockpsperscissors {
 			System.out.println("It's a Tie!");
 		} else if (computerChoice == choices[0] && userChoice == choices[1]) {
 			System.out.println("You Win!");
-		} else {
-
+		}
+		else if(computerChoice == choices[1] && userChoice == choices[0]) { 
+			{
+			System.out.println("Something went wrong!");
 		}
 	}
+}
 }
