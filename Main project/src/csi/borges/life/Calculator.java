@@ -34,7 +34,23 @@ public class Calculator {
 				
 				} else if (age <24 ) { //residency 
 					
-					String location= "PR"
+					String location= "PA"
+					double salary = 68_000; 
+					double tuition = 200; 
+					double costOfLiving= 40_000; 
+					double Investment = 5_000; 
+					double rent= 12* (2_000*500)
+					double food= 20*365; 
+					double InvestmentInterest= 1.00; 
+					double LoanInterest= 0.00; 
+					
+					cash+= salary; 
+					debt-= tuition; 
+					debt-= costOfLiving; 
+					debt += ({LoanInterest* debt)*12); 
+					
+					} else if (age <38) {//work 
+					
 				}
 				
 				
