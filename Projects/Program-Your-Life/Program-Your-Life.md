@@ -74,7 +74,7 @@
     * invested
   * Sum your starting amount to your cash.
 ```java
-        cash = 0.0;
+        double cash = 0.0;
         double startingAmount = 1_000;
         cash += startingAmount;
 ```
