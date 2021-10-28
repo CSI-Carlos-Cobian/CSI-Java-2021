@@ -6,21 +6,13 @@
 </div>
 <br>
 
-# Module 7: Java Package Structure
+# Module 7: Unary Mathematics
 
-
-## Importing Default Libraries
 
 <br>
 
-## Importing Custom Libraries
+## [Program-Your-Life corresponds to this lecture. ->](/../../tree/main/Projects/Program-Your-Life/Program-Your-Life.md)
 
-<br>
-
-
-### Merge origin/master. Create a commit. `(1pts)`
-
-<br>
 
 # Class Discussion
 ## Answer the questions on the Markdown file located within your `Module8` directory (Module8.md).`(0pts)`
