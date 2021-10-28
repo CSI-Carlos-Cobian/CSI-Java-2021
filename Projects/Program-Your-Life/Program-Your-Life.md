@@ -153,6 +153,15 @@ else if(i<55) {
 
 ```
 
+<br>
+
+### Add a print at the end of your print
+```java
+
+System.out.println("Balance at age: " + i + " is: " + cash + " with a debt of " + debt + " and " + invested + " invested." );
+
+```
+
 
 <br>
 
