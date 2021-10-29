@@ -68,9 +68,9 @@ public class Calculator {
 						debt-= carAndExpenses; 
 						
 						
-						} else if (age<65) (//retire
+						} else if (age<65) (//retire)
 								// salary - 12% tax 
-								double salary = 200_000 * 1.0; 
+								double salary  = 200_000 * 1.0; 
 								
 								// 2 bedroom house with 2 bathrooms + electric/ water/ wi-fi bills
 								double rent = 12*(2000+ 600); 
@@ -87,44 +87,15 @@ public class Calculator {
 								cash-= food; 
 								cash-= rent;
 								cash-= carAndExpenses; 
-					} else if (age< 80) {// Living the dream 
+					} 
+					else if (age< 80) {// Living the dream 
 					}
-					System.out.println("Balance at age: "+ age + "is"+ cash + "with a debt of" + debt+ )
-								
-								
-								
-								
-								
-								
-					}
+					System.out.println("Balance at age: "+ age + "is"+ cash + "with a debt of" + debt+ " and " + invested + " invested." );
 					
+					
+					}	
 				}
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-			
 			}
 		}
-			
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 }
