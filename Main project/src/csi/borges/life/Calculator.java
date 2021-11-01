@@ -1,7 +1,10 @@
 package csi.borges.life;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Calculator {
-	public static void main(String[] args) throws InterruptedException {
+	public static <Loan> void main(String[] args) throws InterruptedException {
 		
 		double initial= 6000; 
 		double cash= initial; 
@@ -9,6 +12,13 @@ public class Calculator {
 		double debt= 0;
 		double invested= 500; 
 		
+		List<Loan> loans = new ArrayList<Loan>(); 
+		
+		loans.add( new Loan ("Student Loan", 0, 0.0466, 0, 23));
+		loans.add( new Loan ("Personal Loans", 0, 0.16, 0, 0));
+		loans.add( new Loan ("Mortage Loans", 0, 0.0, 0, 23));
+
+
 		for( int age= 0; age<= 81; age++) {
 			
 			if (age <17) {// highschool 
@@ -45,6 +55,8 @@ public class Calculator {
 					double LoanInterest= 0.00; 
 					
 					cash+= salary; 
+					loans.get(0).balance += costOfLiving; 
+					loans.get(0).balance += tuition; 
 					debt-= tuition; 
 					debt-= costOfLiving; 
 					debt += (LoanInterest* debt)*12; 
