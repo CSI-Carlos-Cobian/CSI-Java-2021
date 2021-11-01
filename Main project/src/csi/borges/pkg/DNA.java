@@ -20,8 +20,9 @@ public static void main (String []args) throws InterruptedException{
 					Thread.sleep(75);
 					
 					
-					System.out.println(Arrays.toString(arr[i])); 
+					
 				}
+				System.out.println(Arrays.toString(arr[i])); 
 			}
 		}
 	}
