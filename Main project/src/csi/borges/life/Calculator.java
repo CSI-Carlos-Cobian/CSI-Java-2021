@@ -30,7 +30,7 @@ public class Calculator {
 				cash+= salary; 
 				debt-= tuition; 
 				debt-= costOfLiving; 
-				debt+= ({LoanInterest * debt) * 12);
+				debt+= (LoanInterest * debt) * 12;
 				
 				} else if (age <24 ) { //residency 
 					
@@ -47,7 +47,7 @@ public class Calculator {
 					cash+= salary; 
 					debt-= tuition; 
 					debt-= costOfLiving; 
-					debt += ({LoanInterest* debt)*12); 
+					debt += (LoanInterest* debt)*12; 
 					
 					} else if (age <38) {//work 
 						
@@ -64,13 +64,13 @@ public class Calculator {
 						cash += salary; 
 						debt-= food; 
 						debt-= costOfLiving;
-						debt+= ({LoanInterest * debt)* 12; 
+						debt+= (LoanInterest * debt)* 12; 
 						debt-= carAndExpenses; 
 						
 						
-						} else if (age<65) (//retire)
+						} else if (age<65) //retire
 								// salary - 12% tax 
-								double salary  = 200_000 * 1.0; 
+								double salary = 200_000 * 1.0; 
 								
 								// 2 bedroom house with 2 bathrooms + electric/ water/ wi-fi bills
 								double rent = 12*(2000+ 600); 
@@ -83,7 +83,7 @@ public class Calculator {
 								//montly car payment 500
 								double carAndExpenses= 200 * 12 + 2_000 * 1_000 * 12; 
 								
-								cash+= salary; 
+								cash+= cash; 
 								cash-= food; 
 								cash-= rent;
 								cash-= carAndExpenses; 
