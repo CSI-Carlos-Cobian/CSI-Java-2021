@@ -1,15 +1,13 @@
 package csi.borges.life;
-
 import java.util.ArrayList;
 import java.util.List;
-
 public class Calculator {
 	public static <Loan> void main(String[] args) throws InterruptedException {
 		
 		double initial= 6000; 
 		double cash= initial; 
 		
-		double debt= 0;
+		
 		double invested= 500; 
 		
 		List<Loan> loans = new ArrayList<Loan>(); 
@@ -94,12 +92,24 @@ public class Calculator {
 								// 4,000 a year on car fixes
 								//montly car payment 500
 								double carAndExpenses= 200 * 12 + 2_000 * 1_000 * 12; 
+						}
+						// Living the dream 
+			else {
+			}
+						loans.forEach(loan -> {
+								 loan.makePayment();
+								 loan -> loan.accureInterest(); 
+						}); 
+						
+								double debt= 0;
+								for( Loan loan : loans) {
+									debt += loan.balance; 
 								
 								cash+= cash; 
 								cash-= food; 
 								cash-= rent;
 								cash-= carAndExpenses; 
-					}else if (age < 80) {// Living the dream 
+								}
 		
 					System.out.println("Balance at age: "+ age + "is"+ cash + "with a debt of" + debt+ " and " + invested + " invested." );
 					
