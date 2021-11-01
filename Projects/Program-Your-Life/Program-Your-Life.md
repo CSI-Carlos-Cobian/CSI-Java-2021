@@ -4,6 +4,7 @@
                 width="50%" 
                 height="50%" />
 </div>
+
 <br>
 
 # Program your Life `(∞pts)`
@@ -63,6 +64,14 @@
         }
 ```
 
+<br>
+
+### Add a print at the end of your loop
+```java
+System.out.println("Balance at age: " + age + " is: " + cash + " with a debt of " + debt + " and " + invested + " invested." );
+```
+
+<br>
 
 ## Calculate your expenses
 ### Start of life
@@ -85,9 +94,34 @@
         // Formative years
         if(age < 18){
                 double salary = 0;
-
                 cash += salary;
         } 
+```
+
+### Loans 
+* Some of us are not born with access to capital. For this reason we take loans from the bank. Loans can both be beneficial and dangerous. Opening loan accounts and being responsible in payments will increase your credit score. Be careful with interest rates, their compounding nature can make you end up paying twice or more of your original loan amount.
+* Create a new file called `Loan.java`
+* Define the variables for:
+  * name
+  * balance
+  * rate
+  * paymentAmount
+  * startAge
+* Create a constructor with the parameters above.
+  
+* Back at your `Calculator` 
+  * Import Java Util with: `import java.util.*`
+  * Create an ArrayList of `Loan`s.
+  * Populate it with some common types of loans.
+  * Leave the startAge at 0 for all loans until you determine it further on.
+  * 
+```java
+List<Loan> loans = new ArrayList<Loan>();
+
+loans.add( new Loan("Student Loans", 0, 0.0466, 0, 23) );
+loans.add( new Loan("Personal Loans", 0, 0.16, 0, 0) );
+loans.add( new Loan("Mortgage Loans", 0, 0.03125, 0, 0) );
+loans.add( new Loan("CreditCard", 0, 0.29, 0, 0) );
 ```
 
 ### Early adulthood
@@ -101,21 +135,20 @@
 ```java
 // College years 
 else if(age < 23) { 
-        String location = "IA";
-        double salary = 0;
+  String location = "IA";
+  double salary = 0;
 
-        //Tuition + fees - scholarship
-        double tuition = 23_000 + 4_000 - 31_000; 
-        // Housing fees and meal plan
-        double costOfLiving = 10_000; 
-
-        // Federal Loans are waived while you study. 
-        // Some loans are not
-        double loanInterest = 0.00; 
-        
-        cash += salary;
-        debt -= costOfLiving;
-        debt -= tuition;
+  //Tuition + fees - scholarship
+  double tuition = 23_000 + 4_000 - 31_000; 
+  // Dorm fees and meal plan
+  double costOfLiving = 10_000; 
+  
+  cash += salary;
+  // Federal Loans are waived while you study. 
+  // Some loans are not. You may create multiple loans 
+  // with different rates and repayment periods. 
+  loans.get(0).balance += costOfLiving;
+  loans.get(0).balance += tuition;
 }
 ```
   * Repeat this process for all other degrees and/or goals segmented above (eg. masters, medicine school, law school, etc.)
@@ -129,38 +162,65 @@ else if(age < 23) {
   * Look up real values for the location in which you'd like to live.
 ```java
 else if(i<55) {
-        String location = "PR";
+  String location = "PR";
 
-        // salary - 10% tax
-        double salary = 50_000 * 0.9; 
+  // salary - 10% tax
+  double salary = 50_000 * 0.9; 
 
-        // 2 bedroom apartment + electric/water/wi-fi bills
-        double rent = 12 * (1500 + 400);
+  // 2 bedroom apartment + electric/water/wi-fi bills
+  double rent = 12 * (1500 + 400);
 
-        // 30$ daily food stipend
-        double food = 30 * 365; 
+  // 30$ daily food stipend
+  double food = 30 * 365; 
 
-        // 60$ per month on gas.
-        // Approximately 1000$ a year on car reparations, tolls, licenses, oil and tire changes.
-        // Monthly car payment of 400$
-        double carAndExpenses = 60*12 + 1_000 + 400*12; 
-                
-        cash += salary;
-        cash -= food;
-        cash -= rent;
-        cash -= carAndExpenses;
+  // 60$ per month on gas.
+  // Approximately 1000$ a year on car reparations, tolls, licenses, oil and tire changes.
+  // Monthly car payment of 400$ 
+  // Plus insurance! :o
+  double carAndExpenses = 60*12 + 1_000 + 400*12; 
+          
+  cash += salary;
+  cash -= food;
+  cash -= rent;
+  cash -= carAndExpenses;
 }
 
 ```
 
 <br>
 
-### Add a print at the end of your print
-```java
+### Multiple decision trees
+Adding `if` statements that are *detached* from your primary `else if` **decision tree** will allow you to make <u>specific</u> decisions on separate occasions.
 
-System.out.println("Balance at age: " + i + " is: " + cash + " with a debt of " + debt + " and " + invested + " invested." );
+```java
+// Buy a used car after college. Could you afford it? 
+if(age == 24 && cash > 15_000){
+        double usedCarPrice = 5000.00;
+        cash -= usedCarPrice;
+} // New cars with loan interest are a bad investment! 
+else if(age == 24 && cash > 5_000){
+        double newCarPrice = 35_000;
+        double downPayment = 5_000;
+        int repaymentYears = 6;
+
+        loans.add(new Loan("Car Loan", (newCarPrice - downPayment), 0.05, age , age + repaymentYears));
+
+        // Loan interest is Based on your credit score
+        // It is higher if you're below 25, have loans, are unemployed, etc. 
+        // double loanInterest = 0.0575
+        // double interest = (newCarPrice - downPayment) * Math.pow(1 + (loanInterest / 12) , repaymentYears * 12)); 
+
+        // debt += interest + newCarPrice;
+}
+
 
 ```
+
+# Time to pay back those loans
+
+<br>
+
+
 
 
 <br>
