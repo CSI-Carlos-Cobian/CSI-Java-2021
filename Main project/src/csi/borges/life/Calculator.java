@@ -11,10 +11,10 @@ public class Calculator {
 		
 		double invested= 500; 
 		
-		List<Loan> loans = new ArrayList<Loan>(); 
+		List<Loan> loans = new ArrayList<Loan>();
 		
-		loans.add( new Loan ("Student Loan", 0, 0.0466, 0, 23));
-		loans.add( new Loan ("Personal Loans", 0, 0.16, 0, 0));
+		loans.add( new Loan ("Student Loan", 0, 0.0466, 0, 23) );
+		loans.add( new Loan ("Personal Loans", 0, 0.16, 0, 0) );
 		loans.add( new Loan("Mortgage Loans", 0, 0.03125, 0, 0) );
 		loans.add( new Loan("CreditCard", 0, 0.29, 0, 0) ); 
 
@@ -61,27 +61,13 @@ public class Calculator {
 					debt-= costOfLiving; 
 					debt += (LoanInterest* debt)*12; 
 					
-					if(age == 24 && cash > 15_000){
+					if(age == 24 && cash > 10_000){
 				        double usedCarPrice = 5000.00;
 				        cash -= usedCarPrice;
-				} // New cars with loan interest are a bad investment! 
-				else if(age == 24 && cash > 5_000){
-				        double newCarPrice = 35_000;
-				        double downPayment = 5_000;
-				        int repaymentYears = 6;
-
-				        loans.add(new Loan("Car Loan", (newCarPrice - downPayment), 0.05, age , age + repaymentYears));
-
-				        // Loan interest is Based on your credit score
-				        // It is higher if you're below 25, have loans, are unemployed, etc. 
-				        // double loanInterest = 0.0575
-				        // double interest = (newCarPrice - downPayment) * Math.pow(1 + (loanInterest / 12) , repaymentYears * 12)); 
-
-				        // debt += interest + newCarPrice;
-				}
+				} 
 
 					
-					} else if (age <38) {//work 
+					{ else if (age <38) {//work 
 						
 						String location= "PR"; 
 						double salary= 125_000; 
@@ -100,7 +86,7 @@ public class Calculator {
 						debt-= carAndExpenses; 
 						
 						
-						}else if (age<65) { //retire
+						} else if (age<65) { //retire
 								// salary - 12% tax 
 			double salary = 200_000 * 1.0; 
 								
@@ -114,12 +100,12 @@ public class Calculator {
 								// 4,000 a year on car fixes
 								//montly car payment 500
 								double carAndExpenses= 200 * 12 + 2_000 * 1_000 * 12; 
-						}
-						// Living the dream 
-			else {
+						} 
+			else {// Living the dream 
 			}
 						loans.forEach(loan -> {
-								 loan.makePayment();
+								  loan;
+								loan.makePayment();
 								 loan -> loan.accureInterest(); 
 						}); 
 						
@@ -137,8 +123,7 @@ public class Calculator {
 					
 					
 					}	
-
-			}
-
+				
+				
+			}	
 	}
-}
