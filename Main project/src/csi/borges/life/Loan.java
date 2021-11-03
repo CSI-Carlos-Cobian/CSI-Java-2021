@@ -17,23 +17,21 @@ public class Loan {
 		this.paymentAmount = paymentAmount;
 		this.startAge = startAge;
 	}
-	
+
 	public double makePayment() {
-		balance-= paymentAmount; 
-		
-		if( balance < 0) {
-			double actualPayment = paymentAmount + balance; 
-			balance =0; 
-			return actualPayment; 
+		balance -= paymentAmount;
+
+		if (balance < 0) {
+			double actualPayment = paymentAmount + balance;
+			balance = 0;
+			return actualPayment;
 		}
-		return paymentAmount; 
-		
+		return paymentAmount;
+
 	}
-public void accureInterest() {
-	balance += balance * rate; 
-}
 
+	public void accureInterest() {
+		balance += balance * rate;
+	}
 
-	
-	
 }
