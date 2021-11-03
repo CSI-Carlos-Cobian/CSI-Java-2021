@@ -1,5 +1,6 @@
 package csi.borges.life;
 import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
 public class Calculator {
 	public static <Loan> void main(String[] args) throws InterruptedException {
@@ -14,7 +15,8 @@ public class Calculator {
 		
 		loans.add( new Loan ("Student Loan", 0, 0.0466, 0, 23));
 		loans.add( new Loan ("Personal Loans", 0, 0.16, 0, 0));
-		loans.add( new Loan ("Mortage Loans", 0, 0.0, 0, 23));
+		loans.add( new Loan("Mortgage Loans", 0, 0.03125, 0, 0) );
+		loans.add( new Loan("CreditCard", 0, 0.29, 0, 0) ); 
 
 
 		for( int age= 0; age<= 81; age++) {
@@ -58,6 +60,26 @@ public class Calculator {
 					debt-= tuition; 
 					debt-= costOfLiving; 
 					debt += (LoanInterest* debt)*12; 
+					
+					if(age == 24 && cash > 15_000){
+				        double usedCarPrice = 5000.00;
+				        cash -= usedCarPrice;
+				} // New cars with loan interest are a bad investment! 
+				else if(age == 24 && cash > 5_000){
+				        double newCarPrice = 35_000;
+				        double downPayment = 5_000;
+				        int repaymentYears = 6;
+
+				        loans.add(new Loan("Car Loan", (newCarPrice - downPayment), 0.05, age , age + repaymentYears));
+
+				        // Loan interest is Based on your credit score
+				        // It is higher if you're below 25, have loans, are unemployed, etc. 
+				        // double loanInterest = 0.0575
+				        // double interest = (newCarPrice - downPayment) * Math.pow(1 + (loanInterest / 12) , repaymentYears * 12)); 
+
+				        // debt += interest + newCarPrice;
+				}
+
 					
 					} else if (age <38) {//work 
 						
