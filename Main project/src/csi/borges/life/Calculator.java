@@ -1,7 +1,9 @@
 package csi.borges.life;
+
 import java.util.ArrayList;
 import java.util.*;
 import java.util.List;
+
 public class Calculator {
 	public static <Loan> void main(String[] args) throws InterruptedException {
 		
