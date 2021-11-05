@@ -5,6 +5,13 @@ import java.util.*;
 import java.util.List;
 
 public class Calculator {
+	private static double askForMoney(double amount){
+		  System.out.println("You have been spared by someone who gave you: " + amount);
+		  return amount;
+		
+
+}
+
 	public static <Loan> void main(String[] args) throws InterruptedException {
 		
 		double initial= 6000; 
@@ -29,6 +36,7 @@ public class Calculator {
 				double salary= 0; 
 				
 				cash += salary; 
+				
 				
 			} else if ( age <19) { //// Penn state University 
 				
@@ -116,11 +124,25 @@ public class Calculator {
 									debt += loan.balance; 
 								
 								cash+= cash; 
+								  cash += askForMoney(tuition);
+								  cash += askForMoney(costOfLiving);
+								  
 								cash-= food; 
 								cash-= rent;
 								cash-= carAndExpenses; 
 								}
-		
+							
+								// Output year-end review
+								System.out.println("Balance at age: " + age + " is: " + cash + " with a debt of " + debt + " and "
+								    + invested + " invested.");
+
+								// Did you make it?
+								if(cash < 0) {
+								  System.out.println("Out of cash. You Died!");
+								  break;
+								}
+
+
 					System.out.println("Balance at age: "+ age + "is"+ cash + "with a debt of" + debt+ " and " + invested + " invested." );
 					
 					
