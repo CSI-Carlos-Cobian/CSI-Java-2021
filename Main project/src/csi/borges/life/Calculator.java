@@ -71,7 +71,7 @@ public class Calculator {
 					loans.get(0).balance += tuition; 
 					debt-= tuition; 
 					debt-= costOfLiving; 
-					debt += (LoanInterest* debt)*12; 
+					
 					
 					if(age == 24 && cash > 10_000){
 				        double usedCarPrice = 5000.00;
@@ -84,7 +84,6 @@ public class Calculator {
 						String location= "PR"; 
 						double salary= 125_000; 
 						double costOfLiving= 50_000; 
-						double investment= 10_000; 
 						double food= 500*12;
 						double carAndExpenses= 20_000 + 200 *12 *2000 + 1000 *12; 
 						double rent = 12*(1600+500); 
@@ -92,7 +91,6 @@ public class Calculator {
 						cash += salary; 
 						debt-= food; 
 						debt-= costOfLiving;
-						debt+= (LoanInterest * debt)* 12; 
 						debt-= carAndExpenses; 
 						
 					
@@ -112,14 +110,8 @@ public class Calculator {
 								double carAndExpenses= 200 * 12 + 2_000 * 1_000 * 12; 
 						} 
 			else {// Living the dream 
-			
-						loans.forEach(loan -> {
-								  loan;
-								loan.makePayment();
-								 loan -> loan.accureInterest(); 
-						}); 
-			}
-								double debt= 0;
+
+				double debt= 0;
 								for( Loan loan : loans) {
 									debt += loan.balance; 
 								
