@@ -48,9 +48,11 @@ public class Calculator {
 				double LoanInterest = 0.00; 
 				
 				cash+= salary; 
-				debt-= tuition; 
-				debt-= costOfLiving; 
-				debt+= (LoanInterest * debt) * 12;
+				cash += askForMoney(tuition);
+				cash-= tuition; 
+				cash += askForMoney(costOfLiving);
+				cash-= costOfLiving; 
+				cash+= (LoanInterest * cash) * 12;
 				
 				} else if (age <24 ) { //residency 
 					
@@ -124,9 +126,6 @@ public class Calculator {
 									debt += loan.balance; 
 								
 								cash+= cash; 
-								  cash += askForMoney(tuition);
-								  cash += askForMoney(costOfLiving);
-								  
 								cash-= food; 
 								cash-= rent;
 								cash-= carAndExpenses; 
