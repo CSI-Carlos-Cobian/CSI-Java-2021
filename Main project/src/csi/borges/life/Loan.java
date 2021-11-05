@@ -32,6 +32,25 @@ public class Loan {
 
 	public void accureInterest() {
 		balance += balance * rate;
+		
+		// -----=====88888=====-----
+//      Loans
+//-----=====88888=====-----
+
+//Monthly loan payments
+for(int month = 0; month < 12; month++) {
+for(Loan loan: loans) {
+if(age >= loan.startAge) {
+ cash -= loan.makePayment();	
+ loan.accrueInterest();
+}
+}
+}
+
+//Calculate Debt Balance
+double debt = 0;
+for(Loan loan : loans)
+debt += loan.balance;
 	}
 
 }
