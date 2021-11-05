@@ -12,7 +12,7 @@ public class Calculator {
 
 }
 
-	public static <Loan> void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException {
 		
 		double initial= 10_000; 
 		double cash= initial; 
@@ -86,8 +86,6 @@ public class Calculator {
 						double costOfLiving= 50_000; 
 						double investment= 10_000; 
 						double food= 500*12;
-						double InvestmentInterest= 1.00;
-						double LoanInterest= 0.00; 
 						double carAndExpenses= 20_000 + 200 *12 *2000 + 1000 *12; 
 						double rent = 12*(1600+500); 
 						
