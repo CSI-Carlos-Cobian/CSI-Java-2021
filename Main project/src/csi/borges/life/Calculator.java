@@ -1,7 +1,6 @@
 package csi.borges.life;
-
-import java.util.ArrayList;
 import java.util.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Calculator {
@@ -12,6 +11,7 @@ public class Calculator {
 
 }
 
+	
 	public static <Loan> void main(String[] args) throws InterruptedException {
 		
 		double initial= 6000; 
@@ -75,9 +75,9 @@ public class Calculator {
 				        double usedCarPrice = 5000.00;
 				        cash -= usedCarPrice;
 				} 
-
+					{
 					
-					{ else if (age <38) {//work 
+					 else if (age <38) {//work 
 						
 						String location= "PR"; 
 						double salary= 125_000; 
@@ -95,11 +95,11 @@ public class Calculator {
 						debt+= (LoanInterest * debt)* 12; 
 						debt-= carAndExpenses; 
 						
-						
+					
 						} else if (age<65) { //retire
 								// salary - 12% tax 
 			double salary = 200_000 * 1.0; 
-								
+						
 								// 2 bedroom house with 2 bathrooms + electric/ water/ wi-fi bills
 								double rent = 12*(2000+ 600); 
 								
@@ -112,13 +112,13 @@ public class Calculator {
 								double carAndExpenses= 200 * 12 + 2_000 * 1_000 * 12; 
 						} 
 			else {// Living the dream 
-			}
+			
 						loans.forEach(loan -> {
 								  loan;
 								loan.makePayment();
 								 loan -> loan.accureInterest(); 
 						}); 
-						
+			}
 								double debt= 0;
 								for( Loan loan : loans) {
 									debt += loan.balance; 
