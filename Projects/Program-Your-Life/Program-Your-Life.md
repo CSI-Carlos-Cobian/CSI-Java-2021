@@ -113,7 +113,6 @@ if(age < 18){
   * Create an ArrayList of `Loan`s.
   * Populate it with some common types of loans.
   * Leave the startAge at 0 for all loans until you determine it further on.
-  * 
 ```java
 List<Loan> loans = new ArrayList<Loan>();
 
@@ -122,12 +121,19 @@ loans.add( new Loan("Personal Loans", 0, 0.16, 0, 0) );
 loans.add( new Loan("Mortgage Loans", 0, 0.03125, 0, 0) );
 loans.add( new Loan("CreditCard", 0, 0.29, 0, 0) );
 ```
+* Now that you have created your loans you will need to pass your balance on to the object.
+
+```java
+loans.get(0).balance += costOfLiving;
+loans.get(0).balance += tuition;
+```
+
 
 <br>
 
 ### Asking for money
-When lacking the capital to invest in yourself, you may have the option to ask someone for money. Some may refuse to do so due to pride or interpersonal debt. Others may not have the option at all.
-If you plan on asking someone for money instead of taking a loan they you must write a function to do so. This function should add the needed money into your `cash` deposit.
+When lacking the capital to invest in yourself, you may have the option to ask someone for money. Some may refuse to do so due to pride or refusal of being in debt to another. Others may not have the option at all.
+If you plan on asking someone for money instead of taking a loan they you must write a function to do so. This function should add the needed money into your `cash` deposit. *Remember, **nothing** is free and everything has a price.*
 * Write the function outside of your `main`, but within your `Calculator`.
 
 ```java
@@ -266,17 +272,21 @@ else if(age == 24 && cash < 15_000){
   * makePayment()
   * accrueInterest()
 * You must implement them to properly deduce from balance and accumulate interest until they are paid off.
+
 ```java
 // -----=====88888=====-----
 //           Loans
 // -----=====88888=====-----
 
 // Monthly loan payments
-for(int month = 0; month < 12; month++) 
+for(int month = 0; month < 12; month++) {
   for(Loan loan: loans) {
-    cash -= loan.makePayment();	
-    loan.accrueInterest();
+    if(age >= loan.startAge) {
+      cash -= loan.makePayment();	
+      loan.accrueInterest();
+    }
   }
+}
 
 // Calculate Debt Balance
 double debt = 0;
@@ -290,6 +300,7 @@ for(Loan loan : loans)
 // Output year-end review
 System.out.println("Balance at age: " + age + " is: " + cash + " with a debt of " + debt + " and "
     + invested + " invested.");
+
 // Did you make it?
 if(cash < 0) {
   System.out.println("Out of cash. You Died!");
