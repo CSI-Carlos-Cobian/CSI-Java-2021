@@ -1,4 +1,5 @@
 package csi.borges.life;
+
 import java.util.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,10 +12,9 @@ public class Calculator {
 
 }
 
-	
 	public static <Loan> void main(String[] args) throws InterruptedException {
 		
-		double initial= 6000; 
+		double initial= 10_000; 
 		double cash= initial; 
 		
 		
