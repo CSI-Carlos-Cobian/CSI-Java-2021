@@ -30,7 +30,7 @@
   * Lets start with our formative years
 ```java
 // -----=====88888=====-----
-//      Lifetime accounting
+//    Lifetime accounting
 // -----=====88888=====-----
 if(age<18){
 }
@@ -103,7 +103,7 @@ if(age < 18){
 * Define the variables for:
   * name
   * balance
-  * rate
+  * [rate](https://www.investopedia.com/ask/answers/100314/what-difference-between-interest-rate-and-annual-percentage-rate-apr.asp)
   * paymentAmount
   * startAge
 * Create a constructor with the parameters above.
@@ -111,7 +111,7 @@ if(age < 18){
 * Back at your `Calculator` 
   * Import Java Util with: `import java.util.*`
   * Create an ArrayList of `Loan`s.
-  * Populate it with some common types of loans.
+  * [Populate it with some common types of loans](https://www.creditkarma.com/calculators/loan).
   * Leave the startAge at 0 for all loans until you determine it further on.
 ```java
 List<Loan> loans = new ArrayList<Loan>();
@@ -124,6 +124,15 @@ loans.add( new Loan("CreditCard", 0, 0.29, 0, 0) );
 * Now that you have created your loans you will need to pass your balance on to the object.
 
 ```java
+... 
+
+double salary = 0;
+// Tuition + fees - scholarship
+double tuition = 54_000 + 4_000;
+// rent + food + expenses
+double costOfLiving = 17_000;
+
+cash += salary;
 loans.get(0).balance += costOfLiving;
 loans.get(0).balance += tuition;
 ```
@@ -147,13 +156,6 @@ You must now implement this function into your loop.
 
 ```java
 ...
-  double salary = 0;
-  // Tuition + fees - scholarship
-  double tuition = 54_000 + 4_000;
-  // rent + food + expenses
-  double costOfLiving = 17_000;
-
-  cash += salary;
 
   cash += askForMoney(tuition);
   cash -= tuition;
@@ -218,9 +220,10 @@ else if(i<55) {
 
   // 60$ per month on gas.
   // Approximately 1000$ a year on car reparations, tolls, licenses, oil and tire changes.
-  // Plus insurance! :o
+  // Expensive vehicles have an insurance cost.
+  // Trucks are more expensive.
   double carExpenses = 60*12 + 1_000 ; 
-          
+  
   cash += salary;
   cash -= food;
   cash -= rent;
@@ -231,12 +234,12 @@ else if(i<55) {
 
 <br>
 
-### Multiple decision trees
+## Multiple decision trees
 Adding `if` statements that are *detached* from your primary `else if` **decision tree** will allow you to make <u>specific</u> decisions on separate occasions.
-* Purchase your first car.
-  * The average lifespan of a new car can be approximated to be 10 years. Accidents and damages may shorten these while frequent oil changes and careful driving may extend them.
-  * expect a used car to last less.
 
+### Purchase a Car
+* The average lifespan of a new car can be approximated to be 10 years. Accidents and damages may shorten these while frequent oil changes and careful driving may extend them.
+* expect a used car to last less.
 ```java
 // -----=====88888=====-----
 //     Additional Logic
@@ -259,11 +262,15 @@ else if(age == 24 && cash < 15_000){
                   (newCarPrice - downPayment), 
                   interestRate, 
                   payment , 
-                  age));
+                  age) );
 }
 ```
 
-### Purchase a new car every 10 or so years until you retire.
+* Purchase a new car every 10 or so years until you retire.
+
+### Purchase a House
+Buying a house allows you to retain your monthly rent bill. Purchasing a house using a mortgage loan for 30 years will cost you almost twice the value of the house, but most anyone with a consistent paycheck will have access to it. Taking a 15 year loan will bring this to a bout 1.5x the original cost, but requires thicc monthly payments. 
+
 
 <br>
 
@@ -272,6 +279,7 @@ else if(age == 24 && cash < 15_000){
   * makePayment()
   * accrueInterest()
 * You must implement them to properly deduce from balance and accumulate interest until they are paid off.
+* [Consider this implementation for reference.](https://github.com/seycileli/Loan-Calculator/blob/master/src/Loan.java)
 
 ```java
 // -----=====88888=====-----
