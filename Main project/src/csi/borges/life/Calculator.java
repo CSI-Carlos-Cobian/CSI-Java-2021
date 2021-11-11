@@ -20,9 +20,9 @@ public class Calculator {
 		List<Loan> loans = new ArrayList<Loan>();
 
 		loans.add(new Loan("Student Loan", 0, 0.0466, 0, 10));
-		loans.add(new Loan("Personal Loans", 0, 0.16, 0, 0));
-		loans.add(new Loan("Mortgage Loans", 0, 0.03125, 0, 0));
-		loans.add(new Loan("CreditCard", 0, 0.29, 0, 0));
+		loans.add(new Loan("Personal Loans", 0, 0.16, 0, 10));
+		loans.add(new Loan("Mortgage Loans", 0, 0.03125, 0, 30));
+		loans.add(new Loan("CreditCard", 0, 0.29, 0, 99));
 
 		for (int age = 0; age <= 81; age++) {
 
@@ -63,8 +63,8 @@ public class Calculator {
 				double Investment = 41_000;
 				double rent = 12 * (1_100 * 350);
 				double food = 20 * 365;
-				double InvestmentInterest = 1.00;
-				double LoanInterest = 1.00;
+				double InvestmentInterest = 2.00;
+				double LoanInterest = 2.00;
 
 				cash += salary;
 				cash+= Investment; 
