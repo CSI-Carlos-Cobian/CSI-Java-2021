@@ -37,8 +37,8 @@ public class Calculator {
 			} else if (age < 19) { //// Penn state University
 
 				String location = "PA";
-				double salary = 50_000;
-				double tuition = 25_000 - 15_000;
+				double salary = 35_000;
+				double tuition = 25_000 +35_000 - 15_000;
 				double costOfLiving = 12_000;
 				double Investment = 16_000; 
 				double LoanInterest = 2.0;
@@ -57,8 +57,8 @@ public class Calculator {
 			} else if (age < 24) { // residency
 
 				String location = "PA";
-				double salary = 80_000;
-				double tuition = 200;
+				double salary = 60_000;
+				double tuition = 350;
 				double costOfLiving = 24_000;
 				double Investment = 41_000;
 				double rent = 12 * (1_100 * 350);
@@ -79,7 +79,7 @@ public class Calculator {
 				loans.get(0).balance += tuition;
 
 				if (age == 24 && cash > 15_000) {
-					double usedCarPrice = 5000.00;
+					double usedCarPrice = 18_000.00;
 					cash -= usedCarPrice;
 				}
 			}
@@ -91,8 +91,8 @@ public class Calculator {
 				double costOfLiving = 50_000;
 				double Investment = 65_000;
 				double food = 500 * 12;
-				double carAndExpenses = 5_000 + 200 * 12 * 2000 + 1000 * 12;
-				double rent = 12 * (1600 + 500);
+				double carAndExpenses = 25_000 + 200 * 12 * 2000 + 1000 * 12;
+				double rent = 12 * (2000 + 600);
 
 				cash += salary;
 				cash += Investment; 
@@ -106,7 +106,7 @@ public class Calculator {
 				double salary = 200_000 * 1.0;
 				double Investment = 100_000; 
 				// 2 bedroom house with 2 bathrooms + electric/ water/ wi-fi bills
-				double rent = 12 * (1100 + 350);
+				double rent = 12 * (3000 + 800);
 
 				// 30$ daily food stipend
 				double food = 35 * 365;
@@ -114,7 +114,7 @@ public class Calculator {
 				// 100 monthly dollars o gas
 				// 4,000 a year on car fixes
 				// montly car payment 500
-				double carAndExpenses = 150 * 12 + 1_000;
+				double carAndExpenses = 800 * 12 + 4_000;
 				
 				 cash += salary;
 				 cash += Investment; 
