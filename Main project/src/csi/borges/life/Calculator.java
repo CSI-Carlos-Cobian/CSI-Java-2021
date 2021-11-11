@@ -41,7 +41,7 @@ public class Calculator {
 				double tuition = 25_000 - 15_000;
 				double costOfLiving = 12_000;
 				double Investment = 16_000; 
-				double LoanInterest = 1.0;
+				double LoanInterest = 2.0;
 
 				cash += salary;
 				cash+= Investment;
