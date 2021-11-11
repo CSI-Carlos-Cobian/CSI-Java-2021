@@ -109,7 +109,7 @@ public class Calculator {
 				double rent = 12 * (3000 + 800);
 
 				// 30$ daily food stipend
-				double food = 35 * 365;
+				double food = 55 * 365;
 
 				// 100 monthly dollars o gas
 				// 4,000 a year on car fixes
