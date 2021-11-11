@@ -30,7 +30,7 @@ public class Calculator {
 
 				String location = "PR";
 				double salary = 4_000;
-				double Investment = 5_000; 
+				double Investment = 6_000; 
 				cash += salary;
 				cash+= Investment; 
 
@@ -78,7 +78,7 @@ public class Calculator {
 				loans.get(0).balance += costOfLiving;
 				loans.get(0).balance += tuition;
 
-				if (age == 24 && cash > 10_000) {
+				if (age == 24 && cash > 15_000) {
 					double usedCarPrice = 5000.00;
 					cash -= usedCarPrice;
 				}
@@ -91,7 +91,7 @@ public class Calculator {
 				double costOfLiving = 50_000;
 				double Investment = 65_000;
 				double food = 500 * 12;
-				double carAndExpenses = 20_000 + 200 * 12 * 2000 + 1000 * 12;
+				double carAndExpenses = 5_000 + 200 * 12 * 2000 + 1000 * 12;
 				double rent = 12 * (1600 + 500);
 
 				cash += salary;
