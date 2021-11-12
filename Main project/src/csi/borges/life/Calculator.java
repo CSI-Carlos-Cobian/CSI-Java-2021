@@ -1,8 +1,6 @@
 package csi.borges.life;
-
 import java.util.ArrayList;
 import java.util.List;
-
 public class Calculator {
 	private static double askForMoney(double amount) {
 		System.out.println("You have been spared by someone who gave you: " + amount);
@@ -120,7 +118,32 @@ public class Calculator {
 				
 			} else {// Living the dream
 			}
-			
+			// -----=====88888=====-----
+//		     Additional Logic
+		// -----=====88888=====-----
+
+		// Buy a used car after college. Could you afford it? 
+		if(age == 24 && cash >= 15_000){
+		        double usedCarPrice = 5_000.00;
+		        cash -= usedCarPrice;
+		} // New cars with loan interest are a bad investment! 
+		else if(age == 24 && cash < 15_000){
+		        double newCarPrice = 35_000;
+		        double downPayment = 5_000;
+		        // Loan interest is Based on your credit score
+		        //It is higher if you're under 25, have debt, are unemployed, etc.
+		        double interestRate = 0.05;
+		        double payment = 400;
+
+		        loans.add( new Loan("Car Loan", 
+		                  (newCarPrice - downPayment), 
+		                  interestRate, 
+		                  payment , 
+		                  age) );
+		        
+		        loans.add(new Loan( "Car loan",( newCarPrice- downPayment), inter);
+		}
+
 			
 			}
 			// -----=====88888=====-----
@@ -138,18 +161,22 @@ public class Calculator {
 
 	//Calculate Debt Balance
 	double debt = 0;
-	for (Loan loan : loans)
+	for(Loan loan : loans)
 		debt += loan.getBalance();
-
+	
 	// Output year-end review
-	System.out.println("Balance at age: " + age + " is: " + cash + " with a debt of " + debt + " and " + invested + " invested.");
+	System.out.println("Balance at age: " + age + " is: " + cash + " with a debt of " + debt + " and "
+	    + invested + " invested.");
 
 	// Did you make it?
-	if (cash < 0) {
-		System.out.println("Out of cash. You Died!");
-		break;
+	if(cash < 0) {
+	  System.out.println("Out of cash. You Died!");
+	  break;
 	}
 
-}
 
-}
+
+		}
+
+	}
+
