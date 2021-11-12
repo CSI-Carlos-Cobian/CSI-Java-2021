@@ -140,8 +140,6 @@ public class Calculator {
 		                  interestRate, 
 		                  payment , 
 		                  age) );
-		        
-		        loans.add(new Loan( "Car loan",( newCarPrice- downPayment), inter);
 		}
 
 			
