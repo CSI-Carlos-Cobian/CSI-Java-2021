@@ -138,19 +138,18 @@ public class Calculator {
 
 	//Calculate Debt Balance
 	double debt = 0;
-	for(Loan loan : loans)
+	for (Loan loan : loans)
 		debt += loan.getBalance();
-			// Output year-end review
-			System.out.println("Balance at age: " + age + " is: " + cash + " with a debt of " + debt + " and "
-					+ invested + " invested.");
 
-			// Did you make it?
-			if (cash < 0) {
-				System.out.println("Out of cash. You Died!");
-				break;
-			}
+	// Output year-end review
+	System.out.println("Balance at age: " + age + " is: " + cash + " with a debt of " + debt + " and " + invested + " invested.");
 
-		}
-
+	// Did you make it?
+	if (cash < 0) {
+		System.out.println("Out of cash. You Died!");
+		break;
 	}
 
+}
+
+}
