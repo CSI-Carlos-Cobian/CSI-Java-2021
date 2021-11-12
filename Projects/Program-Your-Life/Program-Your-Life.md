@@ -102,10 +102,9 @@ if(age < 18){
 * Create a new file called `Loan.java`
 * Define the variables for:
   * name
-  * balance
-  * [rate](https://www.investopedia.com/ask/answers/100314/what-difference-between-interest-rate-and-annual-percentage-rate-apr.asp)
-  * paymentAmount
-  * startAge
+  * principal
+  * annualInterestRate
+  * numberOfYears
 * Create a constructor with the parameters above.
   
 * Back at your `Calculator` 
@@ -116,15 +115,14 @@ if(age < 18){
 ```java
 List<Loan> loans = new ArrayList<Loan>();
 
-loans.add( new Loan("Student Loans", 0, 0.0466, 0, 23) );
-loans.add( new Loan("Personal Loans", 0, 0.16, 0, 0) );
-loans.add( new Loan("Mortgage Loans", 0, 0.03125, 0, 0) );
-loans.add( new Loan("CreditCard", 0, 0.29, 0, 0) );
+loans.add( new Loan("Student Loans", 0, 0.0466, 30) );
+loans.add( new Loan("Personal Loans", 0, 0.16, 10) );
+loans.add( new Loan("Mortgage Loans", 0, 0.03125, 30) );
+loans.add( new Loan("CreditCard", 0, 0.29, 0, 1) );
 ```
 * Now that you have created your loans you will need to pass your balance on to the object.
 
 ```java
-... 
 
 double salary = 0;
 // Tuition + fees - scholarship
@@ -205,6 +203,8 @@ else if(age < 23) {
 * Enjoy your financial stability.
   * Determine the quality of life you'd like to purchase with your salary. 
   * Look up real values for the location in which you'd like to live.
+* You won't earn an average salary straight on your first years working in the field. Look up entry level salaries.
+* You may design another block for when you have attained industry experience and are eligible for a senior salary (average).
 ```java
 else if(i<55) {
   String location = "PR";
@@ -277,21 +277,27 @@ Buying a house allows you to retain your monthly rent bill. Purchasing a house u
 ## Time to pay back those loans
 * We will make 2 new functions on out `Loan` class.
   * makePayment()
-  * accrueInterest()
-* You must implement them to properly deduce from balance and accumulate interest until they are paid off.
+  * getBalance()
+  * getMonthlyPayment()
+  * getTotalPayment()
+* You must implement them to properly pay of a loan.
+* Differed loans don't have to be paid until a certain date. eg. `student loans until you graduate`
+  * Implement a differed payment flag
 * [Consider this implementation for reference.](https://github.com/seycileli/Loan-Calculator/blob/master/src/Loan.java)
+* An example of what a functional `Loan` class within your loop should look like this.
 
 ```java
 // -----=====88888=====-----
 //           Loans
 // -----=====88888=====-----
 
-// Monthly loan payments
-for(int month = 0; month < 12; month++) {
-  for(Loan loan: loans) {
-    if(age >= loan.startAge) {
-      cash -= loan.makePayment();	
-      loan.accrueInterest();
+//Iterate over all loans
+for (Loan loan : loans) {
+  // Carry out 12 payments (monthly)
+  for (int month = 0; month < 12; month++) {
+    // If this loan is still due and has not been differed
+    if (loan.getBalance() > 0 && loan.differed == false) {
+      cash -= loan.makePayment();
     }
   }
 }
@@ -316,6 +322,7 @@ if(cash < 0) {
 }
 
 ```
+You don't necessarily have to die if you run out of cash. Some people may move back in with their parents. If you're willing to do so and planing to get back in your feet then you may remove the `break` statement.
 
 
 <br>
