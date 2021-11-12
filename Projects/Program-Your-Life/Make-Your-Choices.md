@@ -6,6 +6,7 @@
     * Some may chose to study Engineering, Medicine or Law amongst many other professions.
     * Some may not.  
   * Lets start with our formative years
+
 ```java
 // -----=====88888=====-----
 //    Lifetime accounting
@@ -13,9 +14,11 @@
 if(age<18){
 }
 ```
+
   * Add the years you intent to study and the degrees you would like to accumulate. 
     * Research the degrees and practice years expected for your profession.
     * I studied a Bachelors of Engineering and it took me 5 years. I worked for a few years and would now like to do a masters.
+  
 ```java
 // Formative years
 if(age < 18){
@@ -30,8 +33,10 @@ else if (age < 25){
 else if (age < 28){
 }
 ```   
+
   * Include the amount of years you expect to work. The standard age for retirement is 65.
   * Add a retirement gap.
+
 ```java
 ...
 // Masters Degree
