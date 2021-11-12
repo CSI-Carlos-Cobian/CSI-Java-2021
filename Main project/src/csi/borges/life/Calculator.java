@@ -7,7 +7,7 @@ public class Calculator {
 	private static double askForMoney(double amount) {
 		System.out.println("You have been spared by someone who gave you: " + amount);
 		return amount;
-			
+
 	}
 
 	public static void main(String[] args) throws InterruptedException {
@@ -51,8 +51,6 @@ public class Calculator {
 				cash -= costOfLiving;
 				cash += (LoanInterest * cash) * 12;
 				
-				loans.get(0).balance += costOfLiving/2;
-				loans.get(0).balance += tuition/2;
 
 			} else if (age < 24) { // residency
 
@@ -73,16 +71,13 @@ public class Calculator {
 				cash -= costOfLiving;
 				cash -= InvestmentInterest;
 				cash-= LoanInterest; 
-				
-
-				loans.get(0).balance += costOfLiving;
-				loans.get(0).balance += tuition;
 
 				if (age == 24 && cash > 15_000) {
 					double usedCarPrice = 18_000.00;
 					cash -= usedCarPrice;
 				}
 			}
+
 
 			else if (age < 38) {// work
 
@@ -126,11 +121,25 @@ public class Calculator {
 			} else {// Living the dream
 			}
 			
-			double debt = 0;
-			for (Loan loan : loans) {
-				debt += loan.balance;
+			
 			}
+			// -----=====88888=====-----
+			//          Loans
+			//-----=====88888=====-----
 
+		//Monthly loan payments
+		for (Loan loan : loans) {
+			for (int month = 0; month < 12; month++) {
+				if (loan.getBalance() > 0 && loan.differed == false) {
+					cash -= loan.makePayment();
+   }
+ }
+}
+
+	//Calculate Debt Balance
+	double debt = 0;
+	for(Loan loan : loans)
+		debt += loan.getBalance();
 			// Output year-end review
 			System.out.println("Balance at age: " + age + " is: " + cash + " with a debt of " + debt + " and "
 					+ invested + " invested.");
@@ -144,4 +153,4 @@ public class Calculator {
 		}
 
 	}
-}
+
