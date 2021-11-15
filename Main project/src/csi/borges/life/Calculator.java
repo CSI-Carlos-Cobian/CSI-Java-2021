@@ -2,8 +2,6 @@ package csi.borges.life;
 import java.util.ArrayList;
 import java.util.List;
 public class Calculator {
-	private static final double cashPrice = 0;
-
 	private static double askForMoney(double amount) {
 		System.out.println("You have been spared by someone who gave you: " + amount);
 		return amount;
@@ -72,6 +70,10 @@ public class Calculator {
 				cash -= InvestmentInterest;
 				cash-= LoanInterest; 
 			    cash-= tuition;
+			    cash += askForMoney(tuition);
+				 cash -= tuition;
+				  cash += askForMoney(costOfLiving);
+				  cash -= costOfLiving;
 
 				if (age == 24 && cash > 15_000) {
 					double usedCarPrice = 18_000.00;
@@ -96,6 +98,7 @@ public class Calculator {
 				cash -= rent;
 				cash -= costOfLiving;
 				cash -= carAndExpenses;
+				
 
 			} else if (age < 65) { // retire
 				// salary - 12% tax
@@ -117,6 +120,7 @@ public class Calculator {
 				  cash -= food;
 				  cash -= rent;
 				  cash -= carAndExpenses;
+				  
 				
 				
 			} else {// Living the dream
@@ -148,6 +152,7 @@ public class Calculator {
 					for (int month = 0; month < 12; month++) {
 						if (loan.getBalance() > 0 && loan.differed == false) {
 							cash -= loan.makePayment();
+							
 		   }
 		 }
 		}
