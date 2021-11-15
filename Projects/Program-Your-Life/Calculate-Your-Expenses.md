@@ -3,10 +3,10 @@
 <br>
 
 <div style="text-align:center">
-        <img    src="https://lh3.googleusercontent.com/proxy/IB5Enns-9Q26ZqybtVp0WIYkXmkcXqOGIaJHxw7gg9udd37sFxvYuNyfVi7l_iSaoMo025dof6Dqshrm4emVZF3UzTo4DMv4DA"
-                title="Life" 
-                width="30%" 
-                height="30%" />
+  <img    src="https://lh3.googleusercontent.com/proxy/IB5Enns-9Q26ZqybtVp0WIYkXmkcXqOGIaJHxw7gg9udd37sFxvYuNyfVi7l_iSaoMo025dof6Dqshrm4emVZF3UzTo4DMv4DA"
+          title="Life" 
+          width="30%" 
+          height="30%" />
 </div>
 
 <br>
@@ -47,8 +47,7 @@ if(age < 18){
 ## Review how your life plan went! Add a `Print` statement before finalizing your loop.
 ```java
   // Output year-end review
-  System.out.println("Balance at age: " + age + " is: " + cash + " with a debt of " + debt + " and "
-      + invested + " invested.");
+  System.out.println("Balance at age: " + age + " is: " + cash + " with a debt of " + debt + " and " + invested + " invested.");
 
   // Did you make it?
   if(cash < 0) {
@@ -59,4 +58,6 @@ if(age < 18){
 ```
 You don't necessarily have to die if you run out of cash. Some people may move back in with their parents. If you're willing to do so and planing to get back in your feet then you may modify the text.
 
-## [Back to Project](/../../tree/main/Projects/Program-Your-Life/Program-Your-Life.md)
+## [Next](/../../tree/main/Projects/Program-Your-Life/Early-Adulthood.md)
+
+## [Return to Project](/../../tree/main/Projects/Program-Your-Life/Program-Your-Life.md)

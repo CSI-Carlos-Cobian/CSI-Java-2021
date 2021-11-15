@@ -18,15 +18,14 @@ else if(age < 23) {
   double costOfLiving = 10_000; 
   
   cash += salary;
-  // Federal Loans are waived while you study. 
-  // Some loans are not. You may create multiple loans 
-  // with different rates and repayment periods. 
-  loans.get(0).principal += costOfLiving;
-  loans.get(0).principal += tuition;
+  cash -= costOfLiving;
+  cash -= tuition;
 }
 ```
   * Repeat this process for all other degrees and/or goals segmented above (eg. masters, medicine school, law school, etc.)
 
+<br>
 
+## [Next](/../../tree/main/Projects/Program-Your-Life/Loans.md)
 
-## [Back to Project](/../../tree/main/Projects/Program-Your-Life/Program-Your-Life.md)
+## [Return to Project](/../../tree/main/Projects/Program-Your-Life/Program-Your-Life.md)

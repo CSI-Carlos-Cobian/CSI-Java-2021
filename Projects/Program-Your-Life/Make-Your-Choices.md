@@ -3,8 +3,8 @@
 <div style="text-align:center">
         <img    src="https://cdn.powerofpositivity.com/wp-content/uploads/2021/10/Psychology-Explains-Why-People-Make-Bad-Life-Choices-And-How-to-Help-1600x900.jpg"
                 title="Life" 
-                width="50%" 
-                height="50%" />
+                width="40%" 
+                height="40%" />
 </div>
 
 <br>
@@ -20,6 +20,8 @@
 // -----=====88888=====-----
 //    Lifetime accounting
 // -----=====88888=====-----
+
+// Formative years
 if(age<18){
 }
 ```
@@ -62,5 +64,8 @@ else {
 
 
 
+<br>
 
-## [Back to Project](/../../tree/main/Projects/Program-Your-Life/Program-Your-Life.md)
+## [Next](/../../tree/main/Projects/Program-Your-Life/Calculate-Your-Expenses.md)
+
+## [Return to Project](/../../tree/main/Projects/Program-Your-Life/Program-Your-Life.md)

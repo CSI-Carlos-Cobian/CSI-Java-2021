@@ -38,16 +38,39 @@ loans.add( new Loan("CreditCard", 0, 0.29, 0, 1) );
 * Now that you have created your loans you will need to pass your balance on to the object.
 
 ```java
+// College years 
+else if(age < 23) { 
+  String location = "IA";
+  double salary = 0;
 
-double salary = 0;
-// Tuition + fees - scholarship
-double tuition = 54_000 + 4_000 - 10_000;
-// rent + food + expenses
-double costOfLiving = 17_000;
+  //Tuition + fees - scholarship
+  double tuition = 23_000 + 4_000 - 31_000; 
+  // Dorm fees and meal plan
+  double costOfLiving = 10_000; 
+  
+  cash += salary; 
+  // Add cost to Student Loans
+  loans.get(0).principal += costOfLiving;
+  loans.get(0).principal += tuition;
+}
+```
 
-cash += salary;
-loans.get(0).principal += costOfLiving;
-loans.get(0).principal += tuition;
+<br>
+
+Differed loans don't have to be paid until a certain date. eg. `student loans until you graduate`
+* Implement a differed payment flag on your `Loan.java` class. 
+* You may directly reference your variable or use getters and setters.
+* Some Loans are *waived* while you study(Federal loans). Some loans are not. 
+  * Loans accrue Interest, meaning the due balance will increase with time.
+  * We will not implement this yet.
+
+```java
+  cash += salary; 
+  // Add cost to Student Loans
+  loans.get(0).principal += costOfLiving;
+  loans.get(0).principal += tuition;
+  loans.get(0).differed = true;
+}
 ```
 
 <br>
@@ -59,8 +82,7 @@ loans.get(0).principal += tuition;
   * getMonthlyPayment()
   * getTotalPayment()
 * You must implement them to properly pay of a loan.
-* Differed loans don't have to be paid until a certain date. eg. `student loans until you graduate`
-  * Implement a differed payment flag
+
 * [Consider this implementation for reference.](https://github.com/seycileli/Loan-Calculator/blob/master/src/Loan.java)
 * An example of what a functional `Loan` class within your loop should look like this.
 
@@ -118,5 +140,8 @@ You must now implement this function into your loop.
 }
 ```
 
+<br>
 
-## [Back to Project](/../../tree/main/Projects/Program-Your-Life/Program-Your-Life.md)
+## [Next](/../../tree/main/Projects/Program-Your-Life/Adulthood.md)
+
+## [Return to Project](/../../tree/main/Projects/Program-Your-Life/Program-Your-Life.md)

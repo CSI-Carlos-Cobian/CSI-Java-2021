@@ -1,6 +1,7 @@
 # Adulthood
 * Hope you were able to reach all your educational goals. They may take a little longer than you originally expected but the important thing is to persevere and never give up. Now what?
 * Enjoy your financial stability.
+  * Subtract your expenses from your cash.
   * Determine the quality of life you'd like to purchase with your salary. 
   * Look up real values for the location in which you'd like to live.
 * You won't earn an average salary straight on your first years working in the field. Look up entry level salaries.
@@ -32,4 +33,8 @@ else if(i<55) {
 
 ```
 
-## [Back to Project](/../../tree/main/Projects/Program-Your-Life/Program-Your-Life.md)
+<br>
+
+## [Next](/../../tree/main/Projects/Program-Your-Life/Decision-Forest.md)
+
+## [Return to Project](/../../tree/main/Projects/Program-Your-Life/Program-Your-Life.md)
