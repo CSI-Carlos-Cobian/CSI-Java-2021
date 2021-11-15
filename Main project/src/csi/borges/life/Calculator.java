@@ -169,7 +169,7 @@ public class Calculator {
 	// Did you make it?
 	if(cash < 0) {
 	  System.out.println("Out of cash. You Died!");
-	 
+	  break;
 	}
 
 
