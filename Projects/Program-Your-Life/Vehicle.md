@@ -39,4 +39,4 @@ else if(age == 24 && cash < 15_000 && cash > 6_000) {
 
 <br>
 
-## [Back to Decisions](/../../tree/main/Projects/Program-Your-Life/Multiple-Decision-Trees.md)
+## [Back to Decisions](/../../tree/main/Projects/Program-Your-Life/Decision-Forest.md)
