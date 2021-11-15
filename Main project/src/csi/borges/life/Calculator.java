@@ -140,36 +140,35 @@ public class Calculator {
 		                  interestRate, 
 		                  payment , 
 		                  age) );
+		      //Monthly loan payments
+				for (Loan loan : loans) {
+					for (int month = 0; month < 12; month++) {
+						if (loan.getBalance() > 0 && loan.differed == false) {
+							cash -= loan.makePayment();
+		   }
+		 }
 		}
 
+			//Calculate Debt Balance
+			double debt = 0;
+			for(Loan loan : loans)
+				debt += loan.getBalance();
+			
+			// Output year-end review
+			System.out.println("Balance at age: " + age + " is: " + cash + " with a debt of " + debt + " and "
+			    + invested + " invested.");
+		}
 			
 			}
-			// -----=====88888=====-----
-			//          Loans
-			//-----=====88888=====-----
+			
 
-		//Monthly loan payments
-		for (Loan loan : loans) {
-			for (int month = 0; month < 12; month++) {
-				if (loan.getBalance() > 0 && loan.differed == false) {
-					cash -= loan.makePayment();
-   }
- }
-}
-
-	//Calculate Debt Balance
-	double debt = 0;
-	for(Loan loan : loans)
-		debt += loan.getBalance();
 	
-	// Output year-end review
-	System.out.println("Balance at age: " + age + " is: " + cash + " with a debt of " + debt + " and "
-	    + invested + " invested.");
-
+	
+	
 	// Did you make it?
 	if(cash < 0) {
 	  System.out.println("Out of cash. You Died!");
-	  break;
+
 	}
 
 
