@@ -1,11 +1,14 @@
 # Adulthood
-* Hope you were able to reach all your educational goals. They may take a little longer than you originally expected but the important thing is to persevere and never give up. Now what?
+
+Hope you were able to reach all your educational goals. They may take a little longer than you originally expected but the important thing is to persevere and never give up. Now what?
 * Enjoy your financial stability.
+  * Retain 10% of your salary for taxes. Do so by multiplying your salary by 90%.
   * Subtract your expenses from your cash.
   * Determine the quality of life you'd like to purchase with your salary. 
   * Look up real values for the location in which you'd like to live.
-* You won't earn an average salary straight on your first years working in the field. Look up entry level salaries.
+* You won't earn an average salary on your first years working in the field. Look up entry level salaries.
 * You may design another block for when you have attained industry experience and are eligible for a senior salary (average).
+
 ```java
 else if(i<55) {
   String location = "PR";

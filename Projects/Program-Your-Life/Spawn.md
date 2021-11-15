@@ -3,8 +3,8 @@
 <div style="text-align:center">
     <img    src="https://i.pinimg.com/736x/8a/a7/b7/8aa7b77732c813ded99f0c702510890b.jpg"
             title="Life" 
-            width="40%" 
-            height="40%" />
+            width="30%" 
+            height="30%" />
 </div>
 
 <br>
@@ -29,6 +29,7 @@ for(int age = 0; age < lifeExpectancy; age++){
 
 }
 ```
+
 <br>
 
 ## [Next](/../../tree/main/Projects/Program-Your-Life/Make-Your-Choices.md)

@@ -3,8 +3,8 @@
 <div style="text-align:center">
   <img    src="https://static.wikia.nocookie.net/super-smash-flash-3/images/a/aa/Mr._Monopoly.gif/revision/latest/scale-to-width-down/228?cb=20140322211421"
           title="Life" 
-          width="25%" 
-          height="25%" />
+          width="20%" 
+          height="20%" />
 </div>
 
 <br>
@@ -59,7 +59,7 @@ else if(age < 23) {
 
 Differed loans don't have to be paid until a certain date. eg. `student loans until you graduate`
 * Implement a differed payment flag on your `Loan.java` class. 
-* You may directly reference your variable or use getters and setters.
+  * You may directly reference your variable or use getters and setters.
 * Some Loans are *waived* while you study(Federal loans). Some loans are not. 
   * Loans accrue Interest, meaning the due balance will increase with time.
   * We will not implement this yet.
@@ -87,6 +87,7 @@ Differed loans don't have to be paid until a certain date. eg. `student loans un
 * An example of what a functional `Loan` class within your loop should look like this.
 
 ```java
+
 // -----=====88888=====-----
 //           Loans
 // -----=====88888=====-----
@@ -107,8 +108,6 @@ double debt = 0;
 for(Loan loan : loans)
   debt += loan.principal;
 ```
-<br>
-
 
 <br>
 

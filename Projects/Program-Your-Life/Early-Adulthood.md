@@ -1,4 +1,14 @@
 # Early adulthood
+
+<div style="text-align:center">
+  <img    src="https://thumbs.dreamstime.com/b/college-life-word-concepts-banner-student-living-university-lifestyle-infographics-linear-icons-mint-background-isolated-193639368.jpg"
+          title="Life" 
+          width="20%" 
+          height="20%" />
+</div>
+
+<br>
+
 * If you're going straight to college after high school, you need to plan out your expenses. [Research which institution you would be interested in attending](https://www.petersons.com/college-search.aspx).
   * Consider the class size, acceptance rate, location and price.
   * Find out the out-of-state tuition.

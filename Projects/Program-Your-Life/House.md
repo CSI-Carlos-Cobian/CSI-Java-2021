@@ -1,4 +1,13 @@
 # Purchase a House
+
+<div style="text-align:center">
+  <img    src="https://www.acc.org//-/media/Non-Clinical/Images/2019/07/16/FITs-Mortgage-1.jpg"
+          title="Life" 
+          width="60%" 
+          height="60%" />
+</div>
+
+<br>
 Buying a house allows you to retain your monthly rent bill. Purchasing a house using a mortgage loan for 30 years will cost you almost twice the value of the house, but most anyone with a consistent paycheck will have access to it. Taking a 15 year loan will bring this to a bout 1.5x the original cost, but requires thicc monthly payments. 
 
 

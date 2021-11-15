@@ -17,16 +17,16 @@ if(age == 24 && cash >= 15_000) {
 
         System.out.println("Bought a car for: " + usedCarPrice);
 } // New cars with loan interest are a bad investment! 
-else if(age == 24 && cash < 15_000 && cash > 6_000) {
+else if(age == 24 && cash > 6_000) {
         double newCarPrice = 35_000;
         double downPayment = newCarPrice * 0.15;
         double interestRate = 0.05;
         int repaymentYears = 6;
 
         Loan carLoan = new Loan("Car Loan", 
-                  (newCarPrice - downPayment),
-                  interestRate, 
-                  repaymentYears);
+                                (newCarPrice - downPayment),
+                                interestRate, 
+                                repaymentYears);
         loans.add( carLoan );
 
         System.out.println("Monthly car Payment: " + carLoan.getMonthlyPayment() + " For a total of " + carLoan.getTotalPayment() );
