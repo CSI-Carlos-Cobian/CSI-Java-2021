@@ -12,17 +12,17 @@ if(age == 35 && cash >= 200_000){
         double cashPrice = 150_000;
         cash -= cashPrice;
 
-        System.out.println("Bought a House for: " + usedCarPrice);
+        System.out.println("Bought a House for: " + cashPrice);
 }
 else if(age == 35 && cash >= 100_000){
         double apartmentPrice = 75_000;
-        cash -= cashPrice;
+        cash -= apartmentPrice;
 
-        System.out.println("Bought an  Apartment for: " + usedCarPrice);
+        System.out.println("Bought an  Apartment for: " + apartmentPrice);
 }
 else if(age == 35 &&  cash > 15_000){
         double apartmentPrice = 75_000;
-        double downPayment = housePrice * 0.15;
+        double downPayment = apartmentPrice * 0.15;
         double interestRate = 0.03;
         // int repaymentYears = 15;
         int repaymentYears = 30;
