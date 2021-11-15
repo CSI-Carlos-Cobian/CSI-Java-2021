@@ -2,6 +2,8 @@ package csi.borges.life;
 import java.util.ArrayList;
 import java.util.List;
 public class Calculator {
+	private static final double cashPrice = 0;
+
 	private static double askForMoney(double amount) {
 		System.out.println("You have been spared by someone who gave you: " + amount);
 		return amount;
@@ -69,6 +71,7 @@ public class Calculator {
 				cash -= costOfLiving;
 				cash -= InvestmentInterest;
 				cash-= LoanInterest; 
+			    cash-= tuition;
 
 				if (age == 24 && cash > 15_000) {
 					double usedCarPrice = 18_000.00;
@@ -154,6 +157,42 @@ public class Calculator {
 			for(Loan loan : loans)
 				debt += loan.getBalance();
 			
+		// -----=====88888=====-----
+//		     Additional Logic
+		// -----=====88888=====-----
+
+		// Buy a House at 35
+		if(age == 35 && cash >= 200_000){
+		        double cashPrice = 150_000;
+		        cash -= cashPrice;
+
+		        System.out.println("Bought a House for: " + newCarPrice);
+		}
+		else if(age == 35 && cash >= 100_000){
+		        double housePrice = 75_000;
+		        cash -= housePrice;
+
+		        System.out.println("Bought an house for: " + newCarPrice);
+		}
+		else if(age == 35 &&  cash > 200_000){
+		        double housePrice = 500_000;
+		        double yearlyInterestRate = housePrice * 0.15;
+		        double montlyInterestRate = 0.03;
+		        // int repaymentYears = 15;
+		        int repaymentYears = 30;
+		        
+		        cash-= yearlyInterestRate;
+		        cash-= montlyInterestRate;
+
+		        Loan mortgageLoan = new Loan("My first home", 
+		                (housePrice - downPayment),
+		                interestRate, 
+		                repaymentYears, repaymentYears);
+		        loans.add( mortgageLoan );
+
+		        System.out.println("House mortgage: " + mortgageLoan.getMontlyPayment() + " For a total of " + mortgageLoan.getTotalPayment() );
+		}
+			
 			// Output year-end review
 			System.out.println("Balance at age: " + age + " is: " + cash + " with a debt of " + debt + " and "
 			    + invested + " invested.");
@@ -168,7 +207,6 @@ public class Calculator {
 	// Did you make it?
 	if(cash < 0) {
 	  System.out.println("Out of cash. You Died!");
-
 	}
 
 
