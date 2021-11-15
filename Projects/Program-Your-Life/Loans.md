@@ -1,10 +1,19 @@
 # Loans 
 
+<div style="text-align:center">
+  <img    src="https://static.wikia.nocookie.net/super-smash-flash-3/images/a/aa/Mr._Monopoly.gif/revision/latest/scale-to-width-down/228?cb=20140322211421"
+          title="Life" 
+          width="25%" 
+          height="25%" />
+</div>
+
+<br>
+
 The word mortgage originates from latin and means `Death Pledge`. Mortgages may be used to acquire property, equipment, and tangible assets. Your bank will be more than happy to lend you money, given that you have a good credit score. This is not free as you must pay compounded interest.
 
 <br>
 
-* Some of us are not born with access to capital. For this reason we take loans from the bank. Loans can both be beneficial and dangerous. Opening loan accounts and being responsible in payments will increase your credit score. Be careful with interest rates, their compounding nature can make you end up paying twice or more of your original loan amount.
+Some of us are not born with access to capital. For this reason we take loans from the bank. Loans can both be beneficial and dangerous. Opening loan accounts and being responsible in payments will increase your credit score. Be careful with interest rates, their compounding nature can make you end up paying twice or more of your original loan amount.
 * Create a new file called `Loan.java`
 * Define the variables for:
   * name
@@ -37,8 +46,8 @@ double tuition = 54_000 + 4_000 - 10_000;
 double costOfLiving = 17_000;
 
 cash += salary;
-loans.get(0).balance += costOfLiving;
-loans.get(0).balance += tuition;
+loans.get(0).principal += costOfLiving;
+loans.get(0).principal += tuition;
 ```
 
 <br>
@@ -74,7 +83,7 @@ for (Loan loan : loans) {
 // Calculate Debt Balance
 double debt = 0;
 for(Loan loan : loans)
-  debt += loan.balance;
+  debt += loan.principal;
 ```
 <br>
 

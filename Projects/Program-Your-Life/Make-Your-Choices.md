@@ -1,5 +1,14 @@
 # Make your choices
 
+<div style="text-align:center">
+        <img    src="https://cdn.powerofpositivity.com/wp-content/uploads/2021/10/Psychology-Explains-Why-People-Make-Bad-Life-Choices-And-How-to-Help-1600x900.jpg"
+                title="Life" 
+                width="50%" 
+                height="50%" />
+</div>
+
+<br>
+
 * How much thought have you put into what you're going to use your time for?
 * Segment your expected phases using `if else` statements and age ranges.
   * This will vary by person. 
@@ -52,21 +61,6 @@ else {
 ```
 
 
-<br>
 
-## Review how your life plan went! Add a `Print` statement before finalizing your loop.
-```java
-  // Output year-end review
-  System.out.println("Balance at age: " + age + " is: " + cash + " with a debt of " + debt + " and "
-      + invested + " invested.");
-
-  // Did you make it?
-  if(cash < 0) {
-    System.out.println("Out of cash. You Died!");
-    break;
-  }
-} // End of loop
-```
-You don't necessarily have to die if you run out of cash. Some people may move back in with their parents. If you're willing to do so and planing to get back in your feet then you may modify the text.
 
 ## [Back to Project](/../../tree/main/Projects/Program-Your-Life/Program-Your-Life.md)

@@ -21,8 +21,8 @@ else if(age < 23) {
   // Federal Loans are waived while you study. 
   // Some loans are not. You may create multiple loans 
   // with different rates and repayment periods. 
-  loans.get(0).balance += costOfLiving;
-  loans.get(0).balance += tuition;
+  loans.get(0).principal += costOfLiving;
+  loans.get(0).principal += tuition;
 }
 ```
   * Repeat this process for all other degrees and/or goals segmented above (eg. masters, medicine school, law school, etc.)
