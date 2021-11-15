@@ -37,7 +37,7 @@
 
 <br>
 
-## [Multiple decision trees](/../../tree/main/Projects/Program-Your-Life/Decision-Forest.md)
+## [Decision-Forest](/../../tree/main/Projects/Program-Your-Life/Decision-Forest.md)
 
 ### [Purchase a Car](/../../tree/main/Projects/Program-Your-Life/Vehicle.md)
 
