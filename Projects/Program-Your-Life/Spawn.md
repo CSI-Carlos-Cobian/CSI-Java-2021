@@ -3,8 +3,8 @@
 <div style="text-align:center">
     <img    src="https://i.pinimg.com/736x/8a/a7/b7/8aa7b77732c813ded99f0c702510890b.jpg"
             title="Life" 
-            width="30%" 
-            height="30%" />
+            width="40%" 
+            height="40%" />
 </div>
 
 <br>
@@ -20,10 +20,11 @@
 * [Reduce it by 3 if you are obese, be it genetic or by diet.](https://pubmed.ncbi.nlm.nih.gov/12513041/#:~:text=Conclusions%3A%20Obesity%20and%20overweight%20in,of%20death%20at%20older%20ages.)
 
 
-### Create a for loop that runs this many times.
+### Create a for-loop that runs this many times.
 * Well the years start coming and they don't stop coming.
 * Use the variable name `age` instead of `i`.
 * It should look like:
+
 ```java
 for(int age = 0; age < lifeExpectancy; age++){
 

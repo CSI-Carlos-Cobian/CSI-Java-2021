@@ -39,8 +39,12 @@ if(age < 18){
 <br>
 
 ## Review how your life plan went! Add a `Print` statement before finalizing your loop.
+* We don't have `debt` or `invested` yet so we will create temporary variables to use.
 
 ```java
+  double debt = 0;
+  double invested = 0;
+
   // Output year-end review
   System.out.println("Balance at age: " + age + " is: " + cash + " with a debt of " + debt + " and " + invested + " invested.");
 
@@ -49,10 +53,13 @@ if(age < 18){
     System.out.println("Out of cash. You Died!");
     break;
   }
+
 } // End of loop
 ```
 
-You don't necessarily have to die if you run out of cash. Some people may move back in with their parents. If you're willing to do so and planing to get back in your feet then you may modify the text.
+You don't necessarily have to die if you run out of cash. Some people may move back in with their parents or rely on another. You may modify the behavior of this script, but you may not go below 0 `cash` without triggering a response.
+
+<br>
 
 ## [Next](/../../tree/main/Projects/Program-Your-Life/Early-Adulthood.md)
 

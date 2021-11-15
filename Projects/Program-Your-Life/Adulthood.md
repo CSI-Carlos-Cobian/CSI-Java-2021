@@ -1,5 +1,14 @@
 # Adulthood
 
+<div style="text-align:center">
+        <img    src="https://media.npr.org/assets/img/2011/02/28/man1-5e5441bc39872d1f6601006c212026e8c717365e-s1100-c50.jpg"
+                title="Life" 
+                width="40%" 
+                height="40%" />
+</div>
+
+<br>
+
 Hope you were able to reach all your educational goals. They may take a little longer than you originally expected but the important thing is to persevere and never give up. Now what?
 * Enjoy your financial stability.
   * Retain 10% of your salary for taxes. Do so by multiplying your salary by 90%.

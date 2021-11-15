@@ -9,7 +9,7 @@
 
 <br>
 
-The word mortgage originates from latin and means `Death Pledge`. Mortgages may be used to acquire property, equipment, and tangible assets. Your bank will be more than happy to lend you money, given that you have a good credit score. This is not free as you must pay compounded interest.
+The word mortgage originates from latin and it's literal translation is `Death Pledge`. Mortgages may be used to acquire property, equipment, and tangible assets. Your bank will be more than happy to lend you money, given that you have a good credit score. This is not free as you must pay compounded interest.
 
 <br>
 
@@ -61,7 +61,7 @@ Differed loans don't have to be paid until a certain date. eg. `student loans un
 * Implement a differed payment flag on your `Loan.java` class. 
   * You may directly reference your variable or use getters and setters.
 * Some Loans are *waived* while you study(Federal loans). Some loans are not. 
-  * Loans accrue Interest, meaning the due balance will increase with time.
+  * Loans will accrue Interest, meaning the due balance will increase with time.
   * We will not implement this yet.
 
 ```java
@@ -76,7 +76,7 @@ Differed loans don't have to be paid until a certain date. eg. `student loans un
 <br>
 
 ## Time to pay back those loans
-* We will make 2 new functions on out `Loan` class.
+* We will make 4 new functions on our `Loan` class.
   * makePayment()
   * getBalance()
   * getMonthlyPayment()
@@ -116,7 +116,7 @@ When lacking the capital to invest in yourself, you may have the option to ask s
 
 Others may not have the option at all. 
 
-If you plan on asking someone for money instead of taking a loan they you must write a function to do so. This function should add the needed money into your `cash` deposit. *Remember, **nothing** is free and everything has a price.*
+If you plan on asking someone for money <u>**instead of taking a loan**</u> they you must write a function to do so. This function should add the needed money into your `cash` deposit. *Remember, **nothing** is free and everything has a price.*
 * Write the function outside of your `main`, but within your `Calculator`.
 
 ```java

@@ -11,6 +11,16 @@
 
 ## I have No Idea
 
+* Support financially
+  * Buy Pampers
+  * Buy extra food
+  * Pay for school
+  * Help with college
+  * Financially support caretaker (optional).
+* Provide with a method of transportation at an age.
+* Can't calculate love for child.
+* Expected duration of 18-25 years.
+
 <br>
 
 ## [Back to Decisions](/../../tree/main/Projects/Program-Your-Life/Decision-Forest.md)

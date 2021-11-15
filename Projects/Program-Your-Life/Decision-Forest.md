@@ -1,4 +1,4 @@
-# Decision-Forest
+# Decision Forest
 
 <div style="text-align:center">
         <img    src="https://i.pinimg.com/474x/85/01/58/850158c2b5a91ddc7eb84a9d32a1c916--girl-face-painting-face-paintings.jpg"
