@@ -9,7 +9,7 @@
 
 <br>
 
-Buying a house allows you to retain your monthly rent bill. Purchasing a house using a mortgage loan for 30 years will cost you almost twice the value of the house, but most anyone with a consistent paycheck will have access to it. Taking a 15 year loan will bring this to a bout 1.5x the original cost, but requires thicc monthly payments. 
+Buying a house allows you to retain your monthly rent bill. Purchasing a house using a mortgage loan for 30 years will cost you almost twice the value of the house, but most anyone with a consistent paycheck will have access to it. Taking a 15 year loan will bring this to a bout 1.5x the original cost, but requires thicc monthly payments. Buying multiple houses and renting them may represent a passive income with little to no work.
 
 <br>
 
@@ -48,6 +48,10 @@ else if(age == 35 &&  cash > 15_000){
 }
 ```
 
+You may modify the house decision algorithm to your liking. Examples would be: 
+* Buying a house with different age and cash parameters
+* Buying multiple houses at different ages, or no houses at all.
+* Selling a house to buy another.
 <br>
 
 ## [Back to Decisions](/../../tree/main/Projects/Program-Your-Life/Decision-Forest.md)

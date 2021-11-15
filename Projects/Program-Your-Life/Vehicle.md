@@ -1,9 +1,9 @@
 # Purchase a Car
 * The average lifespan of a new car can be approximated to be 10 years. Accidents and damages may shorten these while frequent oil changes and careful driving may extend them.
-* expect a used car to last less.
-* In the code below we will make a choice at the age of 24. If you don't have a lot of money we will buy a used car. Otherwise you will mortgage a car at a more than reasonable interest rate of 5%.
-* Loan interest is Based on your credit score
-* It is higher if you're under 25, have debt, are unemployed, etc.
+* Expect a used car to last less.
+* In the code below, you will make a choice at the age of 24. If you don't have a lot of money you'll buy a used car. Otherwise you will mortgage a car at a interest rate of 5%.
+* Loan interest is based on your credit score.
+* It is higher if you're under 25, have debt, are unemployed, have no credit history, etc.
 
 ```java
 // -----=====88888=====-----

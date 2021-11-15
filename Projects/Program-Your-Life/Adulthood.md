@@ -15,6 +15,7 @@ Hope you were able to reach all your educational goals. They may take a little l
   * Subtract your expenses from your cash.
   * Determine the quality of life you'd like to purchase with your salary. 
   * Look up real values for the location in which you'd like to live.
+  * Your student loans are no longer differed.
 * You won't earn an average salary on your first years working in the field. Look up entry level salaries.
 * You may design another block for when you have attained industry experience and are eligible for a senior salary (average).
 
@@ -41,6 +42,8 @@ else if(i<55) {
   cash -= food;
   cash -= rent;
   cash -= carExpenses;
+
+  loans.get(0).differed = false;
 }
 
 ```
