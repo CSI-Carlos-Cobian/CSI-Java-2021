@@ -1,7 +1,7 @@
 ## Calculate your expenses
 
 <div style="text-align:center">
-  <img    src="https://lh3.googleusercontent.com/proxy/IB5Enns-9Q26ZqybtVp0WIYkXmkcXqOGIaJHxw7gg9udd37sFxvYuNyfVi7l_iSaoMo025dof6Dqshrm4emVZF3UzTo4DMv4DA"
+  <img    src="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f1e55e18ba283c9ad86684a%2F0x0.jpg"
           title="Life" 
           width="30%" 
           height="30%" />

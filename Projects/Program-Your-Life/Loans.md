@@ -43,7 +43,7 @@ else if(age < 23) {
   String location = "IA";
   double salary = 0;
 
-  //Tuition + fees - scholarship
+  // Tuition + fees - scholarship
   double tuition = 23_000 + 4_000 - 31_000; 
   // Dorm fees and meal plan
   double costOfLiving = 10_000; 
@@ -92,7 +92,7 @@ Differed loans don't have to be paid until a certain date. eg. `student loans un
 //           Loans
 // -----=====88888=====-----
 
-//Iterate over all loans
+// Iterate over all loans
 for (Loan loan : loans) {
   // Carry out 12 payments (monthly)
   for (int month = 0; month < 12; month++) {
@@ -107,6 +107,10 @@ for (Loan loan : loans) {
 double debt = 0;
 for(Loan loan : loans)
   debt += loan.principal;
+
+double invested = 0;
+
+// Output year-end review
 ```
 
 <br>
