@@ -106,7 +106,7 @@ for (Loan loan : loans) {
 // Calculate Debt Balance
 double debt = 0;
 for(Loan loan : loans)
-  debt += loan.principal;
+  debt += loan.getBalance();
 
 double invested = 0;
 
