@@ -50,9 +50,18 @@ public class Calculator {
 				cash += askForMoney(costOfLiving / 2);
 				cash -= costOfLiving;
 				cash += (LoanInterest * cash) * 12;
+				  cash += salary; 
+				  
+				  // Add cost to Student Loans
+				  loans.get(0).principal += costOfLiving;
+				  loans.get(0).principal += tuition;
+				  loans.get(0).differed = true;
+				}
 
-			} else if (age < 24) { // residency
-
+				
+			} else if (age < 24) { // Working finished studies
+				
+				loans.get(0).differed = false;
 				String location = "PA";
 				double salary = 75_000;
 				double tuition = 350;
@@ -102,7 +111,7 @@ public class Calculator {
 			} else if (age < 65) { // retire
 				// salary - 12% tax
 				double salary = 200_000 * 1.0;
-				double Investment = 250_000;
+				double Investment = 300_000;
 				// 2 bedroom house with 2 bathrooms + electric/ water/ wi-fi bills
 				double rent = 12 * (3000 + 800);
 
@@ -112,7 +121,7 @@ public class Calculator {
 				// 100 monthly dollars o gas
 				// 4,000 a year on car fixes
 				// montly car payment 500
-				double carAndExpenses = 800 * 12 + 4_000;
+				double carAndExpenses = 2_600* 12 + 4_000;
 
 				cash += salary;
 				cash += Investment;
