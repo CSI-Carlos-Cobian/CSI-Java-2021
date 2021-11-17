@@ -1,6 +1,8 @@
 package csi.borges.life;
+
 import java.util.ArrayList;
 import java.util.List;
+
 public class Calculator {
 	private static double askForMoney(double amount) {
 		System.out.println("You have been spared by someone who gave you: " + amount);
@@ -28,27 +30,26 @@ public class Calculator {
 
 				String location = "PR";
 				double salary = 4_000;
-				double Investment = 6_000; 
+				double Investment = 6_000;
 				cash += salary;
-				cash+= Investment; 
+				cash += Investment;
 
 			} else if (age < 19) { //// Penn state University
 
 				String location = "PA";
-				double salary = 35_000;
-				double tuition = 25_000 +35_000 - 15_000;
+				double salary = 15_000;
+				double tuition = 25_000 + 35_000 - 15_000;
 				double costOfLiving = 12_000;
-				double Investment = 16_000; 
+//				double Investment = 16_000;
 				double LoanInterest = 2.0;
 
 				cash += salary;
-				cash+= Investment;
-				cash += askForMoney(tuition/2);
+//				cash += Investment;
+				cash += askForMoney(tuition / 2);
 				cash -= tuition;
-				cash += askForMoney(costOfLiving/2);
+				cash += askForMoney(costOfLiving / 2);
 				cash -= costOfLiving;
 				cash += (LoanInterest * cash) * 12;
-				
 
 			} else if (age < 24) { // residency
 
@@ -63,24 +64,23 @@ public class Calculator {
 				double LoanInterest = 2.00;
 
 				cash += salary;
-				cash+= Investment; 
+				cash += Investment;
 				cash -= food;
-				 cash -= rent;
+				cash -= rent;
 				cash -= costOfLiving;
 				cash -= InvestmentInterest;
-				cash-= LoanInterest; 
-			    cash-= tuition;
-			    cash += askForMoney(tuition);
-				 cash -= tuition;
-				  cash += askForMoney(costOfLiving);
-				  cash -= costOfLiving;
+				cash -= LoanInterest;
+				cash -= tuition;
+				cash += askForMoney(tuition);
+				cash -= tuition;
+				cash += askForMoney(costOfLiving);
+				cash -= costOfLiving;
 
 				if (age == 24 && cash > 15_000) {
 					double usedCarPrice = 18_000.00;
 					cash -= usedCarPrice;
 				}
 			}
-
 
 			else if (age < 38) {// work
 
@@ -93,17 +93,16 @@ public class Calculator {
 				double rent = 12 * (2000 + 600);
 
 				cash += salary;
-				cash += Investment; 
+				cash += Investment;
 				cash -= food;
 				cash -= rent;
 				cash -= costOfLiving;
 				cash -= carAndExpenses;
-				
 
 			} else if (age < 65) { // retire
 				// salary - 12% tax
 				double salary = 200_000 * 1.0;
-				double Investment = 100_000; 
+				double Investment = 100_000;
 				// 2 bedroom house with 2 bathrooms + electric/ water/ wi-fi bills
 				double rent = 12 * (3000 + 800);
 
@@ -114,111 +113,93 @@ public class Calculator {
 				// 4,000 a year on car fixes
 				// montly car payment 500
 				double carAndExpenses = 800 * 12 + 4_000;
-				
-				 cash += salary;
-				 cash += Investment; 
-				  cash -= food;
-				  cash -= rent;
-				  cash -= carAndExpenses;
-				  
-				
-				
+
+				cash += salary;
+				cash += Investment;
+				cash -= food;
+				cash -= rent;
+				cash -= carAndExpenses;
+
 			} else {// Living the dream
 			}
 			// -----=====88888=====-----
 //		     Additional Logic
-		// -----=====88888=====-----
+			// -----=====88888=====-----
 
-		// Buy a used car after college. Could you afford it? 
-		if(age == 24 && cash >= 15_000){
-		        double usedCarPrice = 5_000.00;
-		        cash -= usedCarPrice;
-		} // New cars with loan interest are a bad investment! 
-		else if(age == 24 && cash < 15_000){
-		        double newCarPrice = 35_000;
-		        double downPayment = 5_000;
-		        // Loan interest is Based on your credit score
-		        //It is higher if you're under 25, have debt, are unemployed, etc.
-		        double interestRate = 0.05;
-		        double payment = 400;
+			// Buy a used car after college. Could you afford it?
+			if (age == 24 && cash >= 15_000) {
+				double usedCarPrice = 5_000.00;
+				cash -= usedCarPrice;
+			} // New cars with loan interest are a bad investment!
+			else if (age == 24 && cash < 15_000) {
+				double newCarPrice = 35_000;
+				double downPayment = 5_000;
+				// Loan interest is Based on your credit score
+				// It is higher if you're under 25, have debt, are unemployed, etc.
+				double interestRate = 0.05;
+				double payment = 400;
 
-		        loans.add( new Loan("Car Loan", 
-		                  (newCarPrice - downPayment), 
-		                  interestRate, 
-		                  payment , 
-		                  age) );
-		      //Monthly loan payments
+				loans.add(new Loan("Car Loan", (newCarPrice - downPayment), interestRate, payment, age));
+				// Monthly loan payments
 				for (Loan loan : loans) {
 					for (int month = 0; month < 12; month++) {
 						if (loan.getBalance() > 0 && loan.differed == false) {
 							cash -= loan.makePayment();
-							
-		   }
-		 }
-		}
 
-			//Calculate Debt Balance
-			double debt = 0;
-			for(Loan loan : loans)
-				debt += loan.getBalance();
-			
-		// -----=====88888=====-----
+						}
+					}
+				}
+
+				// -----=====88888=====-----
 //		     Additional Logic
-		// -----=====88888=====-----
+				// -----=====88888=====-----
 
-		// Buy a House at 35
-		if(age == 35 && cash >= 200_000){
-		        double cashPrice = 150_000;
-		        cash -= cashPrice;
+				// Buy a House at 35
+				if (age == 35 && cash >= 200_000) {
+					double cashPrice = 150_000;
+					cash -= cashPrice;
 
-		        System.out.println("Bought a House for: " + newCarPrice);
-		}
-		else if(age == 35 && cash >= 100_000){
-		        double housePrice = 75_000;
-		        cash -= housePrice;
+					System.out.println("Bought a House for: " + newCarPrice);
+				} else if (age == 35 && cash >= 100_000) {
+					double housePrice = 500_000;
+					cash -= housePrice;
 
-		        System.out.println("Bought an house for: " + newCarPrice);
-		}
-		else if(age == 35 &&  cash > 200_000){
-		        double housePrice = 500_000;
-		        double yearlyInterestRate = housePrice * 0.15;
-		        double montlyInterestRate = 0.03;
-		        // int repaymentYears = 15;
-		        int repaymentYears = 30;
-		        
-		        cash-= yearlyInterestRate;
-		        cash-= montlyInterestRate;
+					System.out.println("Bought an house for: " + newCarPrice);
+				} else if (age == 35 && cash > 200_000) {
+					double housePrice = 500_000;
+					double yearlyInterestRate = housePrice * 0.15;
+					double montlyInterestRate = 0.03;
+					// int repaymentYears = 15;
+					int repaymentYears = 30;
 
-		        Loan mortgageLoan = new Loan("My first home", 
-		                (housePrice - downPayment),
-		                interestRate, 
-		                repaymentYears, repaymentYears);
-		        loans.add( mortgageLoan );
+					cash -= yearlyInterestRate;
+					cash -= montlyInterestRate;
 
-		        System.out.println("House mortgage: " + mortgageLoan.getMontlyPayment() + " For a total of " + mortgageLoan.getTotalPayment() );
-		}
+					Loan mortgageLoan = new Loan("My first home", (housePrice - downPayment), interestRate,
+							repaymentYears, repaymentYears);
+					loans.add(mortgageLoan);
+
+					System.out.println("House mortgage: " + mortgageLoan.getMontlyPayment() + " For a total of "
+							+ mortgageLoan.getTotalPayment());
+				}
+
+			}
+			
+			
+			// Calculate Debt Balance
+			double debt = 0;
+			for (Loan loan : loans)
+				debt += loan.getBalance();
 			
 			// Output year-end review
 			System.out.println("Balance at age: " + age + " is: " + cash + " with a debt of " + debt + " and "
-			    + invested + " invested.");
-		}
-			
+					+ invested + " invested.");
+			// Did you make it?
+			if (cash < 0) {
+				System.out.println("Out of cash. You Died!");
 			}
-			
-
-	
-	
-	
-	// Did you make it?
-	if(cash < 0) {
-	  System.out.println("Out of cash. You Died!");
-	}
-
-
-
-
-
 		}
 
 	}
 
+}
