@@ -23,6 +23,8 @@ else if(age == 24 && cash > 6_000) {
         double interestRate = 0.05;
         int repaymentYears = 6;
 
+        cash -= downPayment;
+        
         Loan carLoan = new Loan("Car Loan", 
                                 (newCarPrice - downPayment),
                                 interestRate, 
