@@ -59,7 +59,7 @@ public class Calculator {
 				}
 
 				
-			} else if (age < 24) { // Working finished studies
+			else if (age < 24) { // Working finished studies
 				
 				loans.get(0).differed = false;
 				String location = "PA";
