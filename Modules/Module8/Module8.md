@@ -1,19 +1,23 @@
 <div style="text-align:center">
-        <img    src="../../images/csi.png" 
-                title="Colegio San Ignacio" 
-                width="20%" 
-                height="20%" />
+        <img    src="Boolean-Algebra-Laws.png" 
+                title="Boolean Algebra Laws" 
+                width="50%" 
+                height="50%" />
 </div>
 <br>
 
-# Module 7: [Unary Mathematics](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html)
+# Module 8: [Boolean Algebra](https://www.electrical4u.com/boolean-algebra-theorems-and-laws-of-boolean-algebra/)
 
 
 <br>
 
-## [Program-Your-Life corresponds to this lecture. ->](/../../tree/main/Projects/Program-Your-Life/Program-Your-Life.md)
+<img    src="What-is-Boolean-Algebra.png" 
+        title="DeMorgan" 
+        width="70%" 
+        height="70%" />
 
 <br>
+
 
 # Class Discussion
 ## Answer the questions on the Markdown file located within your `Module8` directory (Module8.md).`(0pts)`
@@ -41,4 +45,4 @@ Lackluster responses may result in point deductions.
 
 <br>
 
-## [Next Module ->](/../../tree/main/Modules/Module7/Module7.md)
+## [Next Module ->](/../../tree/main/Modules/Module9/Module9.md)

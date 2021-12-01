@@ -46,6 +46,8 @@ At least 300 points.
 * [Java Class Structure](/../../tree/main/Modules/Module4/Module4.md)
 * [If Statement and Logic operators](/../../tree/main/Modules/Module5/Module5.md)
 * [Arrays and Iteration](/../../tree/main/Modules/Module6/Module6.md)
+* [Unary Mathematics](/../../tree/main/Modules/Module7/Module7.md)
+* [Boolean Algebra](/../../tree/main/Modules/Module8/Module8.md)
 * Arithmetic and unary operators
 * Inheritance and Overloading
 * Abstract classes and Interfaces
