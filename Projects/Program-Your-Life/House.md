@@ -38,6 +38,8 @@ else if(age == 35 &&  cash > 15_000){
         // int repaymentYears = 15;
         int repaymentYears = 30;
 
+        cash -= downPayment;
+        
         Loan mortgageLoan = new Loan("My first home", 
                 (apartmentPrice - downPayment),
                 interestRate, 
