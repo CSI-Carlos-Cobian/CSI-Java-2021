@@ -16,7 +16,7 @@
 <br>
 
 # Class Discussion
-## Answer the questions on the Markdown file located within your `Module8` directory (Module8.md).`(0pts)`
+## Answer the questions on the Markdown file located within your `Module7` directory (Module7.md).`(0pts)`
 
 <!-- This is a comment. It is not processed by the code -->
 <!-- Welcome! These are your questions. -->
@@ -41,4 +41,4 @@ Lackluster responses may result in point deductions.
 
 <br>
 
-## [Next Module ->](/../../tree/main/Modules/Module7/Module7.md)
+## [Next Module ->](/../../tree/main/Modules/Module8/Module8.md)
