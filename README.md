@@ -48,7 +48,6 @@ At least 300 points.
 * [Arrays and Iteration](/../../tree/main/Modules/Module6/Module6.md)
 * [Unary Mathematics](/../../tree/main/Modules/Module7/Module7.md)
 * [Boolean Algebra](/../../tree/main/Modules/Module8/Module8.md)
-* Arithmetic and unary operators
 * Inheritance and Overloading
 * Abstract classes and Interfaces
 * Polymorphism
@@ -57,5 +56,6 @@ At least 300 points.
 * [ASCII-Art](/../../tree/main/Projects/ASCII-Art/ASCII-Art.md)
 * [DNA](/../../tree/main/Projects/DNA/DNA.md)
 * [Program-Your-Life](/../../tree/main/Projects/Program-Your-Life/Program-Your-Life.md)
+* Snake 2D
 * Conway's game of life
 * Taxonomic data
