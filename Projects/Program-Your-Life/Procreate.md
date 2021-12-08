@@ -23,4 +23,21 @@
 
 <br>
 
+### Infant expenses
+
+| Expense | Monthly | Yearly |
+|---------|---------|--------|
+| Plan Medico | 120 | 1,400 |
+| Escuelita Matricula |  | 1,100 |
+| Escuelita | 520 | 6240 |
+| Cuido Extendido | 200 | 2,400 |
+| Ropa |  | 400 |
+| Papmers/Chubs | 70 | 840 |
+| Comida | 100 | 1,200 |
+| Productos/Medicina | 50 | 600 |
+| Jugetes |  | 700 |
+
+*Est. 2021*: **$14,920** a year
+
+
 ## [Back to Decisions](/../../tree/main/Projects/Program-Your-Life/Decision-Forest.md)
