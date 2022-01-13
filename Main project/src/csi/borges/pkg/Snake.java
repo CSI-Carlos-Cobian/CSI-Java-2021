@@ -3,9 +3,16 @@ package csi.borges.pkg;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 
+import com.zetcode.Board;
+
 public class Snake extends JFrame {
 
-    public Snake() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public Snake() {
         
         initUI();
     }
