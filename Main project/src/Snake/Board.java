@@ -23,10 +23,10 @@ public class Board extends JPanel implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	private final int B_WIDTH = 1000;
     private final int B_HEIGHT = 1000;
-    private final int DOT_SIZE = 50;
+    private final int DOT_SIZE = 20;
     private final int ALL_DOTS = 50;
     private final int RAND_POS = 29;
-    private final int DELAY = 140;
+    private final int DELAY = 120;
 
     private final int x[] = new int[ALL_DOTS];
     private final int y[] = new int[ALL_DOTS];
