@@ -1,9 +1,7 @@
-package csi.borges.pkg;
+package Snake;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
-
-import com.zetcode.Board;
 
 public class Snake extends JFrame {
 
