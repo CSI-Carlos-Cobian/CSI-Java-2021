@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Board;
+package csi.borges.pkg;
 
 import java.awt.Component;
 
