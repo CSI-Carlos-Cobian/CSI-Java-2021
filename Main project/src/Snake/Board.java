@@ -122,14 +122,19 @@ public class Board extends JPanel implements ActionListener {
         
         String msg = "Game Over";
         Font small = new Font("Helvetica", Font.BOLD, 14);
-        FontMetrics metr = getFontMetrics(small);
+        FontMetrics metr = getFontMetrics("Times New Roman", Font.BOLD, 20);
 
         g.setColor(Color.white);
         g.setFont(small);
         g.drawString(msg, (B_WIDTH - metr.stringWidth(msg)) / 2, B_HEIGHT / 2);
     }
 
-    private void checkApple() {
+    private FontMetrics getFontMetrics(String string, int bold, int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private void checkApple() {
 
         if ((x[0] == apple_x) && (y[0] == apple_y)) {
 
