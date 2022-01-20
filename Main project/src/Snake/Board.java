@@ -24,8 +24,8 @@ public class Board extends JPanel implements ActionListener {
 	private final int B_WIDTH = 1000;
     private final int B_HEIGHT = 1000;
     private final int DOT_SIZE = 50;
-    private final int ALL_DOTS = 50;
-    private final int RAND_POS = 19;
+    private final int ALL_DOTS = 10;
+    private final int RAND_POS = 10;
     private final int DELAY = 120;
 
     private final int x[] = new int[ALL_DOTS];
