@@ -155,7 +155,7 @@ public class Board extends JPanel implements ActionListener {
 		// TODO Auto-generated method stub
     	randomColor= (new Color(0, 131, 22));
     	randomColor= (new Color(153, 102, 0));
-    	randomColor= (new Color(255, 132, 0));
+    	randomColor= (new Color(255, 102, 0));
     	
     	
 	}
