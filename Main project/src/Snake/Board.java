@@ -47,6 +47,7 @@ public class Board extends JPanel implements ActionListener {
     private Image apple;
     private Image head;
 
+    
     public Board() {
         
         initBoard();
@@ -140,7 +141,7 @@ public class Board extends JPanel implements ActionListener {
     private void checkApple() {
 
         if ((x[0] == apple_x) && (y[0] == apple_y)) {
-
+        	setBackground(new Color(153, 102, 0));
             dots++;
             locateApple();
         }
