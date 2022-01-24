@@ -46,6 +46,7 @@ public class Board extends JPanel implements ActionListener {
     private Image ball;
     private Image apple;
     private Image head;
+	private Color randomColor;
 
     
     public Board() {
@@ -141,13 +142,21 @@ public class Board extends JPanel implements ActionListener {
     private void checkApple() {
 
         if ((x[0] == apple_x) && (y[0] == apple_y)) {
-        	setBackground(new Color(153, 102, 0));
+        	setBackground(randomColor);
+        	setRandomColor(new Color(0, 131, 22));
+        	
             dots++;
             locateApple();
         }
     }
 
-    private void move() {
+    @SuppressWarnings("unused")
+	private void changeRandomColor(final Color color) {
+    	changeRandomColor(new Color(153, 102, 0));
+    	changeRandomColor(new Color(255, 239, 0));
+	}
+
+	private void move() {
 
         for (int z = dots; z > 0; z--) {
             x[z] = x[(z - 1)];
@@ -223,7 +232,15 @@ public class Board extends JPanel implements ActionListener {
         repaint();
     }
 
-    private class TAdapter extends KeyAdapter {
+    public Color getRandomColor(Color color) {
+		return randomColor;
+	}
+
+	public void setRandomColor(Color randomColor) {
+		this.randomColor = randomColor;
+	}
+
+	private class TAdapter extends KeyAdapter {
 
         @Override
         public void keyPressed(KeyEvent e) {
