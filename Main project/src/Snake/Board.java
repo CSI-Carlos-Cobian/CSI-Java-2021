@@ -56,9 +56,9 @@ public class Board extends JPanel implements ActionListener {
 
         addKeyListener(new TAdapter());
         setBackground(new Color(0, 131, 22));
-        if (inGame) actionPerformed(ActionEvent);
         changeBackground(new Color(153, 102, 0));
-        setFocusable(true);
+        if (inGame) actionPerformed(ActionEvent);
+        setFocusable(true); 
 
         setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
         loadImages();
