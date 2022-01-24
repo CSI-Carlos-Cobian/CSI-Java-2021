@@ -144,16 +144,20 @@ public class Board extends JPanel implements ActionListener {
         if ((x[0] == apple_x) && (y[0] == apple_y)) {
         	setBackground(randomColor);
         	setRandomColor(new Color(0, 131, 22));
-        	changeRandomColor(new Color(153, 102, 0));
-        	changeRandomColor(new Color(255, 239, 0));
+        	changeRandomColor();
+        	changeRandomColor();
             dots++;
             locateApple();
         }
     }
 
-    private void changeRandomColor(Color color) {
+    private void changeRandomColor() {
 		// TODO Auto-generated method stub
-		
+    	randomColor= (new Color(0, 131, 22));
+    	randomColor= (new Color(153, 102, 0));
+    	randomColor= (new Color(255, 132, 0));
+    	
+    	
 	}
 
 	private void move() {
