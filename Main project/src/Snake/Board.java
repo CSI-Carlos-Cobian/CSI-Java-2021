@@ -144,7 +144,7 @@ public class Board extends JPanel implements ActionListener {
 
         if ((x[0] == apple_x) && (y[0] == apple_y)) {
         	setBackground(randomColor);
-        	setRandomColor(new Color(0, 131, 22));
+        	setRandomColor(randomColor);
         	changeRandomColor();
         	changeRandomColor();
             dots++;
@@ -153,7 +153,7 @@ public class Board extends JPanel implements ActionListener {
     }
 
     private void changeRandomColor() {
-    	setColorLists(new String[] {"yellow","Green" });
+    	setColorLists(new String[] {"yellow","Green","brown" });
     	randomColor= (new Color(0, 131, 22));
     	randomColor= (new Color(153, 102, 0));
     	randomColor= (new Color(238, 246, 0));
