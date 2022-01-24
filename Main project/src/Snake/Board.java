@@ -21,6 +21,7 @@ public class Board extends JPanel implements ActionListener {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	private static final ActionEvent ActionEvent = null;
 	private final int B_WIDTH = 1000;
     private final int B_HEIGHT = 1000;
     private final int DOT_SIZE = 50;
@@ -55,6 +56,8 @@ public class Board extends JPanel implements ActionListener {
 
         addKeyListener(new TAdapter());
         setBackground(new Color(0, 131, 22));
+        if (inGame) actionPerformed(ActionEvent);
+        changeBackground(new Color(153, 102, 0));
         setFocusable(true);
 
         setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
@@ -62,7 +65,12 @@ public class Board extends JPanel implements ActionListener {
         initGame();
     }
 
-    private void loadImages() {
+    private void changeBackground(Color color) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void loadImages() {
 
         ImageIcon iid = new ImageIcon("src/resources/dot50.png");
         ball = iid.getImage();
