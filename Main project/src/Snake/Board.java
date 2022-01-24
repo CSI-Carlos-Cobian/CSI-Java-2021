@@ -47,6 +47,7 @@ public class Board extends JPanel implements ActionListener {
     private Image apple;
     private Image head;
 	private Color randomColor;
+	private String[] colorLists;
 
     
     public Board() {
@@ -152,10 +153,10 @@ public class Board extends JPanel implements ActionListener {
     }
 
     private void changeRandomColor() {
-		// TODO Auto-generated method stub
+    	setColorLists(new String[] {"yellow","Green" });
     	randomColor= (new Color(0, 131, 22));
     	randomColor= (new Color(153, 102, 0));
-    	randomColor= (new Color(255, 102, 0));
+    	randomColor= (new Color(238, 246, 0));
     	
     	
 	}
@@ -242,6 +243,14 @@ public class Board extends JPanel implements ActionListener {
 
 	public void setRandomColor(Color randomColor) {
 		this.randomColor = randomColor;
+	}
+
+	public String[] getColorLists() {
+		return colorLists;
+	}
+
+	public void setColorLists(String[] colorLists) {
+		this.colorLists = colorLists;
 	}
 
 	private class TAdapter extends KeyAdapter {
