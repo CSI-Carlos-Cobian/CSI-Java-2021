@@ -49,7 +49,7 @@ public class Board extends JPanel implements ActionListener {
     private Image ball;
     private Image apple;
     private Image head;
-    private Color background;
+    private Image background;
 	private Color randomColor;
 	private String[] colorLists;
 
@@ -123,6 +123,7 @@ public class Board extends JPanel implements ActionListener {
         if (inGame) {
 
             g.drawImage(apple, apple_x, apple_y, this);
+            g.drawImage(background, 0, 0, null);
 
             for (int z = 0; z < dots; z++) {
                 if (z == 0) {
@@ -309,8 +310,8 @@ public class Board extends JPanel implements ActionListener {
 		this.restartButton = restartButton;
 	}
 
-	public Color getBackground() {
-		return background;
+	public void getBackground(Image background) {
+		this.background = background;
 	}
 
 	public void setBackground(Image background) {
