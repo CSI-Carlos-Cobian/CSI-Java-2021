@@ -49,7 +49,7 @@ public class Board extends JPanel implements ActionListener {
     private Image ball;
     private Image apple;
     private Image head;
-    private Color background;
+    private Image background;
 	private Color randomColor;
 	private String[] colorLists;
 
@@ -89,7 +89,7 @@ public class Board extends JPanel implements ActionListener {
         head = iih.getImage();
         
         
-        ImageIcon back = new ImageIcon("src/resources/background2");
+        ImageIcon back = new ImageIcon("src/resources/background2.jfif");
         setBackground(back.getImage());
 
         
@@ -308,11 +308,11 @@ public class Board extends JPanel implements ActionListener {
 		this.restartButton = restartButton;
 	}
 
-	public Color getBackground() {
+	public Image getBackground() {
 		return background;
 	}
 
-	public void setBackground(Color background) {
+	public void setBackground(Image background) {
 		this.background = background;
 	}
 
