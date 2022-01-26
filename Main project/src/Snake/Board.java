@@ -144,7 +144,7 @@ public class Board extends JPanel implements ActionListener {
     private void gameOver(Graphics g) {
         
     	 String msg = "Game Over";
-         Font small = new Font("Helvetica", Font.ITALIC, 130);
+         Font small = new Font("Arcade Regular", Font.ITALIC, 130);
          FontMetrics metr = getFontMetrics(small);
 
          g.setColor(Color.white);
