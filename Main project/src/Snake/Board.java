@@ -40,6 +40,7 @@ public class Board extends JPanel implements ActionListener {
     private boolean rightDirection = true;
     private boolean upDirection = false;
     private boolean downDirection = false;
+    private boolean restartButton = true; 
     private boolean inGame = true;
 
     private Timer timer;
@@ -109,36 +110,47 @@ public class Board extends JPanel implements ActionListener {
     
     private void doDrawing(Graphics g) {
         
-        if (inGame) {
+    	 if (inGame) {
 
-            g.drawImage(apple, apple_x, apple_y, this);
+             g.drawImage(apple, apple_x, apple_y, this);
 
-            for (int z = 0; z < dots; z++) {
-                if (z == 0) {
-                    g.drawImage(head, x[z], y[z], this);
-                } else {
-                    g.drawImage(ball, x[z], y[z], this);
-                }
-            }
+             for (int z = 0; z < dots; z++) {
+                 if (z == 0) {
+                     g.drawImage(head, x[z], y[z], this);
+                 } else {
+                     g.drawImage(ball, x[z], y[z], this);
+                 }
+             }
+             scoreBoard(g);
 
-            Toolkit.getDefaultToolkit().sync();
+             Toolkit.getDefaultToolkit().sync();
 
-        } else {
-
-            gameOver(g);
-        }        
+         } else {
+         	
+             gameOver(g);
+         }        
     }
 
     private void gameOver(Graphics g) {
         
-        String msg = "Game Over";
-        Font small = new Font("Tsuki Typeface", Font.BOLD, 50);
-        FontMetrics metr = getFontMetrics(small);
+    	 String msg = "Game Over";
+         Font small = new Font("Helvetica", Font.ITALIC, 130);
+         FontMetrics metr = getFontMetrics(small);
 
-        g.setColor(Color.white);
-        g.setFont(small);
-        g.drawString(msg, (B_WIDTH - metr.stringWidth(msg)) / 2, B_HEIGHT / 2);
-    }
+         g.setColor(Color.white);
+         g.setFont(small);
+         g.drawString(msg, (B_WIDTH - metr.stringWidth(msg)) / 2, B_HEIGHT / 2);
+         
+         
+         String msgB = "          Press Enter to Restart";
+         Font smallB = new Font("Helvetica", Font.ITALIC, 50);
+         FontMetrics metrB = getFontMetrics(smallB);
+
+         g.setColor(Color.white);
+         g.setFont(smallB);
+         g.drawString(msgB, (B_WIDTH - metr.stringWidth(msgB)) / 30 * 2 /30 , B_HEIGHT * 2 / 3);
+     
+     }
 
     private void checkApple() {
 
@@ -148,8 +160,36 @@ public class Board extends JPanel implements ActionListener {
         	changeRandomColor();
         	changeRandomColor();
             dots++;
+            score++; 
             locateApple();
         }
+    }
+    
+    private void scoreBoard(Graphics g) {
+
+   	 String msgA = "Current Score: " + score + "     ";
+   	 Font smallA = new Font("Helvetica", Font.ITALIC, 20);
+        FontMetrics metrA = getFontMetrics(smallA);
+
+        g.setColor(Color.white);
+        g.setFont(smallA);
+        g.drawString(msgA, (B_WIDTH - metrA.stringWidth(msgA)) / 1 , B_HEIGHT / 10 );
+        
+    }
+    
+    public void restart() {
+
+    	inGame = true;
+    	initGame();
+    	score = 0; 
+    	
+    	 rightDirection = true;
+         upDirection = false;
+         downDirection = false;
+         leftDirection = false;
+
+    	
+    	
     }
 
     private void changeRandomColor() {
@@ -253,6 +293,14 @@ public class Board extends JPanel implements ActionListener {
 		this.colorLists = colorLists;
 	}
 
+	public boolean isRestartButton() {
+		return restartButton;
+	}
+
+	public void setRestartButton(boolean restartButton) {
+		this.restartButton = restartButton;
+	}
+
 	private class TAdapter extends KeyAdapter {
 
         @Override
@@ -282,6 +330,11 @@ public class Board extends JPanel implements ActionListener {
                 downDirection = true;
                 rightDirection = false;
                 leftDirection = false;
+                
+            }
+            if ((key == KeyEvent.VK_ENTER && (!inGame))) {
+            	restart(); 
+            	
             }
         }
     }
