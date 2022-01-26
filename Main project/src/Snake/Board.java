@@ -49,6 +49,7 @@ public class Board extends JPanel implements ActionListener {
     private Image ball;
     private Image apple;
     private Image head;
+    private Image background;
 	private Color randomColor;
 	private String[] colorLists;
 
@@ -86,6 +87,12 @@ public class Board extends JPanel implements ActionListener {
 
         ImageIcon iih = new ImageIcon("src/resources/head50.png");
         head = iih.getImage();
+        
+        
+        ImageIcon back = new ImageIcon("src/resources/background2");
+        setBackground(back.getImage());
+
+        
     }
 
     private void initGame() {
@@ -146,8 +153,6 @@ public class Board extends JPanel implements ActionListener {
          
          String msgB = "          Press Enter to Restart";
          Font smallB = new Font("Helvetica", Font.ITALIC, 50);
-         FontMetrics metrB = getFontMetrics(smallB);
-
          g.setColor(Color.white);
          g.setFont(smallB);
          g.drawString(msgB, (B_WIDTH - metr.stringWidth(msgB)) / 30 * 2 /30 , B_HEIGHT * 2 / 3);
@@ -301,6 +306,14 @@ public class Board extends JPanel implements ActionListener {
 
 	public void setRestartButton(boolean restartButton) {
 		this.restartButton = restartButton;
+	}
+
+	public Image getBackground() {
+		return background;
+	}
+
+	public void setBackground(Image background) {
+		this.background = background;
 	}
 
 	private class TAdapter extends KeyAdapter {
