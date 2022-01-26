@@ -97,19 +97,20 @@ public class Board extends JPanel implements ActionListener {
 
     private void initGame() {
 
-        dots = 3;
+    	  dots = 3;
 
-        for (int z = 0; z < dots; z++) {
-            x[z] = 50 - z * 10;
-            y[z] = 50;
-        }
-        
-        locateApple();
+          for (int z = 0; z < dots; z++) {
+              x[z] = 50 - z * 10;
+              y[z] = 50;
+          }
+          
+          locateApple();
 
-        timer = new Timer(DELAY, this);
-        timer.start();
-    }
+          timer = new Timer(DELAY, this);
+          timer.start();
+      }
 
+  
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -117,27 +118,27 @@ public class Board extends JPanel implements ActionListener {
         doDrawing(g);
     }
     
-    private void doDrawing(Graphics g) {
+ private void doDrawing(Graphics g) {
         
-    	 if (inGame) {
+        if (inGame) {
 
-             g.drawImage(apple, apple_x, apple_y, this);
+            g.drawImage(apple, apple_x, apple_y, this);
 
-             for (int z = 0; z < dots; z++) {
-                 if (z == 0) {
-                     g.drawImage(head, x[z], y[z], this);
-                 } else {
-                     g.drawImage(ball, x[z], y[z], this);
-                 }
-             }
-             scoreBoard(g);
+            for (int z = 0; z < dots; z++) {
+                if (z == 0) {
+                    g.drawImage(head, x[z], y[z], this);
+                } else {
+                    g.drawImage(ball, x[z], y[z], this);
+                }
+            }
+            scoreBoard(g);
 
-             Toolkit.getDefaultToolkit().sync();
+            Toolkit.getDefaultToolkit().sync();
 
-         } else {
-         	
-             gameOver(g);
-         }        
+        } else {
+        	
+            gameOver(g);
+        }        
     }
 
     private void gameOver(Graphics g) {
