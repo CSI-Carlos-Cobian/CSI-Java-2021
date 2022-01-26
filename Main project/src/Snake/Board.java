@@ -49,7 +49,7 @@ public class Board extends JPanel implements ActionListener {
     private Image ball;
     private Image apple;
     private Image head;
-    private Image background;
+    private Color background;
 	private Color randomColor;
 	private String[] colorLists;
 
@@ -153,7 +153,7 @@ public class Board extends JPanel implements ActionListener {
          
          
          String msgB = "          Press Enter to Restart";
-         Font smallB = new Font("Helvetica", Font.ITALIC, 50);
+         Font smallB = new Font("Arcade Regular", Font.ITALIC, 50);
          g.setColor(Color.white);
          g.setFont(smallB);
          g.drawString(msgB, (B_WIDTH - metr.stringWidth(msgB)) / 30 * 2 /30 , B_HEIGHT * 2 / 3);
@@ -176,7 +176,7 @@ public class Board extends JPanel implements ActionListener {
     private void scoreBoard(Graphics g) {
 
    	 String msgA = "Current Score: " + score + "     ";
-   	 Font smallA = new Font("Helvetica", Font.ITALIC, 20);
+   	 Font smallA = new Font("Arcade Regular", Font.ITALIC, 20);
         FontMetrics metrA = getFontMetrics(smallA);
 
         g.setColor(Color.white);
@@ -309,7 +309,7 @@ public class Board extends JPanel implements ActionListener {
 		this.restartButton = restartButton;
 	}
 
-	public Image getBackground() {
+	public Color getBackground() {
 		return background;
 	}
 
