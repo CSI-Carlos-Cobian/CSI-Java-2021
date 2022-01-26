@@ -123,7 +123,7 @@ public class Board extends JPanel implements ActionListener {
         if (inGame) {
 
             g.drawImage(apple, apple_x, apple_y, this);
-            g.drawImage(background, 0, 0, null);
+            g.drawImage(background, 10, 10, null);
 
             for (int z = 0; z < dots; z++) {
                 if (z == 0) {
