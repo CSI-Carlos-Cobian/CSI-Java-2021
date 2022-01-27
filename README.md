@@ -56,6 +56,6 @@ At least 300 points.
 * [ASCII-Art](/../../tree/main/Projects/ASCII-Art/ASCII-Art.md)
 * [DNA](/../../tree/main/Projects/DNA/DNA.md)
 * [Program-Your-Life](/../../tree/main/Projects/Program-Your-Life/Program-Your-Life.md)
-* Snake 2D
+* [Snake](/../../tree/main/Projects/Snake/Snake.md)
 * Conway's game of life
 * Taxonomic data
