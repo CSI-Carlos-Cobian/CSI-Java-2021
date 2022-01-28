@@ -62,20 +62,23 @@ public class Board extends JPanel implements ActionListener {
     private void initBoard() {
 
         addKeyListener(new TAdapter());
-        setBackground(new Color(0, 131, 22));
-        changeBackground(new Color(153, 102, 0));
-        if (inGame) actionPerformed(ActionEvent);
+//        setBackground(new Color(0, 131, 22));
+//        changeBackground(new Color(153, 102, 0));
+//        if (inGame) {
+        	actionPerformed(ActionEvent);
+//        }
         setFocusable(true); 
 
         setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
         loadImages();
         initGame();
+        
     }
 
-    private void changeBackground(Color color) {
-		// TODO Auto-generated method stub
-		
-	}
+//    private void changeBackground(Color color) {
+//		// TODO Auto-generated method stub
+//		
+//	}
 
 	private void loadImages() {
 
@@ -87,7 +90,6 @@ public class Board extends JPanel implements ActionListener {
 
         ImageIcon iih = new ImageIcon("src/resources/head50.png");
         head = iih.getImage();
-        
         
         ImageIcon back = new ImageIcon("src/resources/background2.png");
         setBackground(back.getImage());
@@ -114,16 +116,16 @@ public class Board extends JPanel implements ActionListener {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-
+        
         doDrawing(g);
     }
     
  private void doDrawing(Graphics g) {
         
         if (inGame) {
-
+        	g.drawImage(background, 0, 0, null);
             g.drawImage(apple, apple_x, apple_y, this);
-            g.drawImage(background, 0, 0, null);
+            
 
             for (int z = 0; z < dots; z++) {
                 if (z == 0) {
@@ -310,9 +312,9 @@ public class Board extends JPanel implements ActionListener {
 		this.restartButton = restartButton;
 	}
 
-	public void getBackground(Image background) {
-		this.background = background;
-	}
+//	public void getBackground(Image background) {
+//		this.background = background;
+//	}
 
 	public void setBackground(Image background) {
 		this.background = background;
