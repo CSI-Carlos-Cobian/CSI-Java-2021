@@ -1,7 +1,7 @@
 <div style="text-align:center">
         <img    src="https://www3.minijuegosgratis.com/v3/games/thumbnails/1295_1.jpg"
                 title="Original Snake Game" 
-                width="60%" 
+                width="40%" 
                 height="40%" />
 </div>
 <br>
