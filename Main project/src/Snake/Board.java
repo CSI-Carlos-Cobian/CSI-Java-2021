@@ -35,6 +35,9 @@ public class Board extends JPanel implements ActionListener {
     private int dots;
     private int apple_x;
     private int apple_y;
+   // private int bomb_x;
+   // private int bomb_y;
+    
     
     private int score = 0;
 
@@ -50,6 +53,7 @@ public class Board extends JPanel implements ActionListener {
     private Image apple;
     private Image head;
     private Image background;
+    //private Image bomb; 
 	private Color randomColor;
 	private String[] colorLists;
 
@@ -88,8 +92,8 @@ public class Board extends JPanel implements ActionListener {
         ImageIcon iia = new ImageIcon("src/resources/banana50.png");
         apple = iia.getImage();
 
-        ImageIcon iia = new ImageIcon("src/resources/banana50.png");
-        apple = iia.getImage();
+        //ImageIcon iia1 = new ImageIcon("src/resources/bomb50.png");
+       // bomb = iia1.getImage();
         
         ImageIcon iih = new ImageIcon("src/resources/head50.png");
         head = iih.getImage();
@@ -128,7 +132,7 @@ public class Board extends JPanel implements ActionListener {
         if (inGame) {
         	g.drawImage(background, 0, 0, null);
             g.drawImage(apple, apple_x, apple_y, this);
-            g.drawImage(bomb, bomb_x, bomb_y, this);
+            //g.drawImage(bomb, bomb_x, bomb_y, this);
 
             for (int z = 0; z < dots; z++) {
                 if (z == 0) {
@@ -169,13 +173,16 @@ public class Board extends JPanel implements ActionListener {
     private void checkApple() {
 
         if ((x[0] == apple_x) && (y[0] == apple_y)) {
+        //	 if ((x[0] == bomb_x) && (y[0] == bomb_y)) {
         	setBackground(randomColor);
         	setRandomColor(randomColor);
         	changeRandomColor();
         	changeRandomColor();
             dots++;
             score++; 
+           // locateBomb(); 
             locateApple();
+     //   }
         }
     }
     
@@ -277,13 +284,22 @@ public class Board extends JPanel implements ActionListener {
         r = (int) (Math.random() * RAND_POS);
         apple_y = ((r * DOT_SIZE));
     }
+    //private void locateBomb() {
 
+       // int r = (int) (Math.random() * RAND_POS);
+        //bomb_x = ((r * DOT_SIZE));
+
+       // r = (int) (Math.random() * RAND_POS);
+      //  bomb_y = ((r * DOT_SIZE));
+    //}
+    
     @Override
     public void actionPerformed(ActionEvent e) {
 
         if (inGame) {
 
             checkApple();
+            //checkBomb();
             checkCollision();
             move();
         }
@@ -291,7 +307,12 @@ public class Board extends JPanel implements ActionListener {
         repaint();
     }
 
-    public Color getRandomColor(Color color) {
+   // private void checkBomb() {
+		// TODO Auto-generated method stub
+		
+	//}
+
+	public Color getRandomColor(Color color) {
 		return randomColor;
 	}
 
