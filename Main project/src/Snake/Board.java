@@ -88,6 +88,9 @@ public class Board extends JPanel implements ActionListener {
         ImageIcon iia = new ImageIcon("src/resources/banana50.png");
         apple = iia.getImage();
 
+        ImageIcon iia = new ImageIcon("src/resources/banana50.png");
+        apple = iia.getImage();
+        
         ImageIcon iih = new ImageIcon("src/resources/head50.png");
         head = iih.getImage();
         
@@ -125,7 +128,7 @@ public class Board extends JPanel implements ActionListener {
         if (inGame) {
         	g.drawImage(background, 0, 0, null);
             g.drawImage(apple, apple_x, apple_y, this);
-            
+            g.drawImage(bomb, bomb_x, bomb_y, this);
 
             for (int z = 0; z < dots; z++) {
                 if (z == 0) {
