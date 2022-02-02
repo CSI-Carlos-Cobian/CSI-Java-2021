@@ -42,6 +42,9 @@ if(age < 18){
 * We don't have `debt` or `invested` yet so we will create temporary variables to use.
 
 ```java
+  double debt = 0;
+  double invested = 0;
+
   // Output year-end review
   System.out.println("Balance at age: " + age + " is: " + cash + " with a debt of " + debt + " and " + invested + " invested.");
 
