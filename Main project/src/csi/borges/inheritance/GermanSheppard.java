@@ -6,10 +6,8 @@ public class GermanSheppard extends Dog {
 	this.size = 88; 
 	this.wild = false; 
 }
-	
 	@Override 
-	NoiseBark(){
 	
+	NoiseBark(){
 	return new Noise(Loud);
-
 }
