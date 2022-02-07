@@ -5,28 +5,36 @@ public class Dog {
 	int size;
 	boolean wild = false;
 
-	void piss() {
+	public void piss() {
 	}
 
-	Shit eat(){
+	public Shit eat() {
 		return null;
 	}
 
-	void die() {
+	public void die() {
 	}
 
-	Bark() {
+	public Noise bark() {
 		return null;
 	}
 
-	void wagTRail() {
+	void wagTail() {
 	}
 
-	public class Shit()
-	{
+	public class Shit {
+		int smelly;
+		int mushy; 
+		int heavy; 
+		
+		
+		public Shit() {
+			
 		}
+		
+	}
 
-	public class Noise ()
+	public class Noise {
 	}
 
 }
