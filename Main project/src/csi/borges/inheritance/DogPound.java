@@ -1,12 +1,7 @@
-/**
- * 
- */
-package csi.borges.inheritance;
 
-/**
- * @author user
- *
- */
+package csi.borges.inheritance;
 public class DogPound {
 
+	Main(){}
+	Dog [] dogs
 }
