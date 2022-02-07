@@ -35,6 +35,15 @@ public class Dog {
 	}
 
 	public class Noise {
-	}
+		int loud; 
+		int annoying;
+		int continuous; 
+		
+		
 
+		public Noise() {
+			
+		}
+		
+	}
 }
