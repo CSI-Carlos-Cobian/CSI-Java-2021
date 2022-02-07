@@ -1,21 +1,32 @@
-/**
- * 
- */
 package csi.borges.inheritance;
 
-/**
- * @author user
- *
- */
 public class Dog {
-String pelo; 
-int size ; 
-boolean wild= false; 
+	String pelo;
+	int size;
+	boolean wild = false;
 
-void piss() {}
-void eat(food){return null;}
-void die(){}
-void Bark() {return null;}
-void wagtail() {}
+	void piss() {
+	}
+
+	Shit eat(){
+		return null;
+	}
+
+	void die() {
+	}
+
+	Bark() {
+		return null;
+	}
+
+	void wagTRail() {
+	}
+
+	public class Shit()
+	{
+		}
+
+	public class Noise ()
+	}
 
 }
