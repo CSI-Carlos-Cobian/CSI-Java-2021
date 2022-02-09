@@ -5,7 +5,7 @@ import csi.borges.inheritance.Dog.Noise;
 public class GermanSheppard extends Dog {
 
 	public GermanSheppard() {
-	Super(Bark);{
+	Super(bark);{
 		
 	}
 		this.size = 88; 
