@@ -1,7 +1,7 @@
 <div style="text-align:center">
         <img    src="https://www3.minijuegosgratis.com/v3/games/thumbnails/1295_1.jpg"
                 title="Original Snake Game" 
-                width="60%" 
+                width="40%" 
                 height="40%" />
 </div>
 <br>
@@ -51,3 +51,4 @@ You will notice that when you try to run the code it does not succeed. This is b
 <br>
 
 ### Implement a Bomb. `(5 Bonus)`
+
