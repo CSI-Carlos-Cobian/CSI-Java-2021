@@ -1,28 +1,56 @@
 package csi.borges.inheritance;
 
+import csi.borges.inheritance.Dog.Noise;
+
 public class Dog {
 	String hair;
 	int size;
 	boolean wild = false;
 	boolean gender= true; 
 
-	public void piss(Food f) {
-		return f.digest(); 
+	
+	
+//	constructors
+	
+	
+	
+//	functions
+	
+	public void piss() { 
+	}
+	
+	public void Piss() {
+		if(gender==true) {
+			System.out.println("raise leg");
+		}
+		System.out.println("Tsssss");
+		
 	}
 
-	public Shit eat() {
-		return null;
+	public Shit eat(Food f) {
+		return f.digest();
 	}
 
 	public void die() {
 	}
 
 	public Noise bark() {
-		return null;
+		return new Noise();
 	}
 
 	void wagTail() {
 	}
+	
+	public void Die() {}
+	public void wagTail() {}
+	public void mate(Dog D) {
+	}
+	public Noise bark() {
+		return new Noise();
+	}
+	
+	
+//	classes
 
 	public class Shit {
 		int smelly;
@@ -35,36 +63,27 @@ public class Dog {
 		}
 		
 	}
-	public void Piss() {
-		if(gender==true) {
-			System.out.println("raise leg");
-		}
-		System.out.println("Tsssss");
-		
-	}
 
-	public class Noise Bark(){
-		return new Noise();
-	}
-	public void Die() {}
-	public void wagTail() {}
-	public void mate(Dog D) {
-	}
-		public Noise() {
-			
-		}
-		
-	
 	public class Food {
-		int tasty; 
-		int colorful;
-		int sweet; 
-		
+
+		public Shit digest() {
+			// TODO Auto-generated method stub
+			return null;
+	}
 		
 
 		public Food() {
 			
 		}
+		
+	}
+
+	public class Noise{
+		public Noise bark() {
+			return new Noise();
+		}
+		
+		
 		
 	}
 }
