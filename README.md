@@ -48,6 +48,7 @@ At least 300 points.
 * [Arrays and Iteration](/../../tree/main/Modules/Module6/Module6.md)
 * [Unary Mathematics](/../../tree/main/Modules/Module7/Module7.md)
 * [Boolean Algebra](/../../tree/main/Modules/Module8/Module8.md)
+* [Inheritance](/../../tree/main/Modules/Module9/Module9.md)
 * Inheritance and Overloading
 * Abstract classes and Interfaces
 * Polymorphism

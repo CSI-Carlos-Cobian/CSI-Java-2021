@@ -6,7 +6,7 @@
 </div>
 <br>
 
-# Module 9: Inheritance and Polymorphism        
+# Module 9: Inheritance
 
 Inheritance is a common and useful practice when you're trying to reuse code. It allows you to use the code defined in a class in a similar other one. To inherit from a class you must create a second class and use the `extends` keyword.
 
