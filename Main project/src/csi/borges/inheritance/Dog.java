@@ -59,7 +59,8 @@ public class Dog {
 		
 		
 		public Shit() {
-			
+			Food f;
+			return;
 		}
 		
 	}
