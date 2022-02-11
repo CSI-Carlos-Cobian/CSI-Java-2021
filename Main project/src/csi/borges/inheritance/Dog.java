@@ -12,7 +12,22 @@ public class Dog {
 	
 	
 //	constructors
+
 	
+	public Dog(String hair, int size, boolean wild, boolean gender, String icon) {
+		super();
+		this.hair = hair;
+		this.size = size;
+		this.wild = wild;
+		this.gender = gender;
+		this.icon = new ImageIcon(getClass().getResource(icon));;
+	}
+	
+
+	
+	public Dog() {
+
+	}
 	
 	
 //	functions
@@ -25,13 +40,13 @@ public class Dog {
 		
 	}
 
+
 	public Shit eat(Food f) {
 		return f.digest();
 	}
 
 	public void die() {
 	}
-
 	public Noise bark() {
 		return new Noise();
 	}
