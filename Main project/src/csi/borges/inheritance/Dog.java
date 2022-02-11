@@ -1,12 +1,13 @@
 package csi.borges.inheritance;
 
-import csi.borges.inheritance.Dog.Noise;
+import javax.swing.ImageIcon;
 
 public class Dog {
 	String hair;
 	int size;
 	boolean wild = false;
 	boolean gender= true; 
+	private ImageIcon icon;
 
 	
 	
@@ -17,9 +18,6 @@ public class Dog {
 //	functions
 	
 	public void piss() { 
-	}
-	
-	public void Piss() {
 		if(gender==true) {
 			System.out.println("raise leg");
 		}
@@ -42,12 +40,10 @@ public class Dog {
 	}
 	
 	public void Die() {}
-	public void wagTail() {}
+
 	public void mate(Dog D) {
 	}
-	public Noise bark() {
-		return new Noise();
-	}
+	
 	
 	
 //	classes
