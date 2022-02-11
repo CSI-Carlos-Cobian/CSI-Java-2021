@@ -20,7 +20,7 @@ public class Dog {
 		this.size = size;
 		this.wild = wild;
 		this.gender = gender;
-		this.icon = new ImageIcon(getClass().getResource(icon));;
+		this.icon = new ImageIcon(getClass().getResource(icon));
 	}
 	
 
