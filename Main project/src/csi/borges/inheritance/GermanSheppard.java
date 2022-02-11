@@ -3,7 +3,7 @@ package csi.borges.inheritance;
 public class GermanSheppard extends Dog {
 
 	public GermanSheppard() {
-		super("thick","88","wild","male");
+		super("thick",88,true,true,"germansheppard.png");
 
 		
 	
