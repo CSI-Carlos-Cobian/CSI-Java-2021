@@ -1,6 +1,9 @@
 
 package csi.borges.inheritance;
-public class DogPound {
+
+import javax.swing.JFrame;
+
+public class DogPound extends JFrame {
 
 	Main(){}
 	Dog [] dogs
