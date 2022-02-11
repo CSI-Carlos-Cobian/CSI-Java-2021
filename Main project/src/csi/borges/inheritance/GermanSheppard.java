@@ -1,16 +1,19 @@
 package csi.borges.inheritance;
 
-import csi.borges.inheritance.Dog.Noise;
-
 public class GermanSheppard extends Dog {
 
 	public GermanSheppard() {
-	Super(bark);{
+		super("thick","88","wild","male");
+
 		
-	}
+	
 		this.size = 88; 
 	this.wild = false; 
-}
+	}
+//	private void Super(Object bark) {
+//		// TODO Auto-generated method stub
+//		
+//	}
 	@Override
 	public Noise bark() {
 		return new Noise();
