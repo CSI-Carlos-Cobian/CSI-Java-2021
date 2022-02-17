@@ -16,15 +16,16 @@ public class GermanSheppard extends Dog {
 			this.icon = new ImageIcon(getClass().getResource("germansheppard.png"));
 		}
 	
-//	private void Super(Object bark) {
-//		// TODO Auto-generated method stub
-//		
-//	}
-	
-	public Noise bark() {
+		@Override
+		public Noise bark() {
 
-		return new Noise(120, true);
-	}
+			return new Noise(120, true);
+		}
+		public void wagTail() {
+			
+			System.out.println("Wiggle side to side");
+			
+		}
 	
 	public Shit eat() {
 
