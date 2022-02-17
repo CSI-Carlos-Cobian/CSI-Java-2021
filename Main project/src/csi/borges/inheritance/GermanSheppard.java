@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import csi.borges.snake.Board;
 
 public class GermanSheppard extends Dog {
-
+	
 	public GermanSheppard() {
 		super("thick",88,true,true,"germansheppard.png");
 
@@ -51,7 +51,6 @@ public class GermanSheppard extends Dog {
         
         EventQueue.invokeLater(() -> {
             Dog ex = new Dog();
-            ex.setVisible(true);
         });
     }
 }
