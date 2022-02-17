@@ -191,19 +191,22 @@ public class DogPound extends JPanel implements ActionListener {
 	 @Override
      public void paintComponent(Graphics g) {
          super.paintComponent(g);
-         if (isRunning) 
-	            for (int z = 0; z < dogs; z++) 
+         g.drawImage(background, 0, 0, null);
+         doDrawing(g);
+     }
+	 private void doDrawing(Graphics g) {
+		   
+		   
+		   if (isRunning) {
+	            for (int z = 0; z < dogs; z++) {
 	                if (z == 0) {
 	                    g.drawImage(GermanSheppard, x[z], y[z], this);
 	                } else {
 	                	g.drawImage(GermanSheppard, x[z], y[z], this);
 	                }
-         g.drawImage(background, 0, 0, null);
-         doDrawing(g);
-     }
-     private void doDrawing(Graphics g) {
-         
-            Toolkit.getDefaultToolkit().sync();
+	            }
+	            Toolkit.getDefaultToolkit().sync();
+		   }
 
  }
 	            //	   private void addKeyListener(TAdapter tAdapter) {
