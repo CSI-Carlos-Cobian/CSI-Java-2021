@@ -8,22 +8,31 @@ import csi.borges.snake.Board;
 
 public class GermanSheppard extends Dog {
 	
-	public GermanSheppard() {
-		super("thick",88,true,true,"germansheppard.png");
-
-		
+		public GermanSheppard() {
+			super();
+			this.size = 88;
+			this.wild = false;
+			this.hair = "brown";
+			this.gender = true;
+			this.icon = new ImageIcon(getClass().getResource("germansheppard.png"));
+		}
 	
-		this.size = 88; 
-	this.wild = false; 
-	}
 //	private void Super(Object bark) {
 //		// TODO Auto-generated method stub
 //		
 //	}
+	
 	@Override
 	public Noise bark() {
-		return new Noise();
+
+		return new Noise(120, true);
 	}
+	
+	public Shit eat() {
+
+		return new Shit(true, 3, "Apple");
+	}
+	
 	class simulation extends JFrame {
 	/**
 		 * 
