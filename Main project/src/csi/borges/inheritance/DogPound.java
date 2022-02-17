@@ -9,6 +9,8 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -88,24 +90,97 @@ public class DogPound extends JPanel implements ActionListener {
 	  
 	
 
-	@Override
-    public void actionPerformed(ActionEvent e) {
+	 @Override
+	   public void actionPerformed(ActionEvent e) {
 
-        repaint();
-        //move;
-    }
-	            @Override
-	            public void paintComponent(Graphics g) {
-	                super.paintComponent(g);
-	                
-	                g.drawImage(background, 0, 0, null);
-	                doDrawing(g);
-	            }
-	            private void doDrawing(Graphics g) {
-	                
-	                   Toolkit.getDefaultToolkit().sync();
-
+	        if (isRunning) {
+	            checkCollision();
+	            move();
 	        }
+	        repaint();
+	    }
+	 private void checkCollision() {
+
+	    	for (int z = dogs; z > 0; z--) {
+
+	    	    if ((z > 4) && (x[0] == x[z]) && (y[0] == y[z])) {
+	    	        isRunning = false;
+	    	    }
+	    	}
+
+	        if (y[0] >= B_HEIGHT) {
+	            isRunning = false;
+	        }
+
+	        if (y[0] < 0) {
+	            isRunning = false;
+	        }
+
+	        if (x[0] >= B_WIDTH) {
+	            isRunning = false;
+	        }
+
+	        if (x[0] < 0) {
+	            isRunning = false;
+	        }
+	        
+	        if (!isRunning) {
+	            
+	        }
+	    }
+	   
+	 private class TAdapter extends KeyAdapter {
+
+	        @Override
+	        public void keyPressed(KeyEvent e) {
+
+	            int key = e.getKeyCode();
+	            
+	            if ((key == KeyEvent.VK_S) && (!upDirection)) {
+	                downDirection = true;
+	                rightDirection = false;
+	                leftDirection = false;
+	            }
+	            
+	            if ((key == KeyEvent.VK_A) && (!rightDirection)) {
+	                leftDirection = true;
+	                upDirection = false;
+	                downDirection = false;
+	            }
+
+	            if ((key == KeyEvent.VK_D) && (!leftDirection)) {
+	                rightDirection = true;
+	                upDirection = false;
+	                downDirection = false;
+	            }
+
+	            if ((key == KeyEvent.VK_W) && (!downDirection)) {
+	                upDirection = true;
+	                rightDirection = false;
+	                leftDirection = false;
+	            } 
+	            if ((key == KeyEvent.VK_ENTER && (!isRunning))) {
+	            	
+	            	
+	            }
+	        }
+	    }
+	 @Override
+     public void paintComponent(Graphics g) {
+         super.paintComponent(g);
+         
+         g.drawImage(background, 0, 0, null);
+         doDrawing(g);
+     }
+     private void doDrawing(Graphics g) {
+         
+            Toolkit.getDefaultToolkit().sync();
+
+ }
+	            private void move() {
+		// TODO Auto-generated method stub
+		
+	}
 	            //	   private void addKeyListener(TAdapter tAdapter) {
 	            			// TODO Auto-generated method stub
 	            			
