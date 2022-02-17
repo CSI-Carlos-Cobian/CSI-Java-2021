@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 
 public class Simulation extends JFrame {
 	
+	private static final long serialVersionUID = 1L;
 
 	public Simulation() {
         
