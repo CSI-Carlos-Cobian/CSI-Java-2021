@@ -4,21 +4,20 @@ package csi.borges.inheritance;
 
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.event.ActionEvent;
 import java.awt.Font;
 import java.awt.FontMetrics;
+import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
-import javax.swing.Timer;
+
 
 public class DogPound extends JPanel implements ActionListener {
 
@@ -49,7 +48,7 @@ public class DogPound extends JPanel implements ActionListener {
 
 	        setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
 
-	        addKeyListener(new TAdapter());
+	     //   addKeyListener(new TAdapter());
 	        actionPerformed(ActionEvent);
 	        setFocusable(true); 
 
@@ -80,10 +79,10 @@ public class DogPound extends JPanel implements ActionListener {
 	                   Toolkit.getDefaultToolkit().sync();
 
 	        }
-	            	   private void addKeyListener(TAdapter tAdapter) {
+	            //	   private void addKeyListener(TAdapter tAdapter) {
 	            			// TODO Auto-generated method stub
 	            			
-	            		}
+	            		
 	            				private void loadImages() {
 	            			// TODO Auto-generated method stub
 	            			
@@ -92,29 +91,18 @@ public class DogPound extends JPanel implements ActionListener {
 	            			// TODO Auto-generated method stub
 	            			
 	            		}
-				}
-				private class TAdapter
+				
+			//	private class TAdapter
 
-	            public TAdapter() {
+	        //    public TAdapter() {
 						// TODO Auto-generated constructor stub
-					}
+					
 
-				public void keyPressed(KeyEvent e) {
+			//	public void keyPressed(KeyEvent e) {
 
-	                int key = e.getKeyCode();
-	 }
-
-	private void checkCollision() {
-				// TODO Auto-generated method stub
+	              //  int key = e.getKeyCode();
 				
 			}
-	private void initGame() {
-		// TODO Auto-generated method stub
-		
-	}
 
-	private void loadImages() {
-		
-	}
-	    }
+	    
 
