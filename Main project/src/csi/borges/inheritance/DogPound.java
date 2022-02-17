@@ -58,26 +58,28 @@ public class DogPound extends JPanel implements ActionListener {
 	        initGame();
 	 }
 			
-			public void actionPerformed(ActionEvent e) {
+	@Override
+    public void actionPerformed(ActionEvent e) {
 
-	            boolean inGame;
-				if (inGame) {
-	                checkCollision();
-	                // move();
-	            }
-	        }
+        repaint();
+        //move;
+    }
 	            private void checkCollision() {
 				// TODO Auto-generated method stub
 				
 			}
-				@Override
+	            @Override
 	            public void paintComponent(Graphics g) {
-	                super.paintComponent(g); 
+	                super.paintComponent(g);
+	                
+	                g.drawImage(background, 0, 0, null);
 	                doDrawing(g);
-	            }  
-	            private void doDrawing(Graphics g) {
-					// TODO Auto-generated method stub
 	            }
+	            private void doDrawing(Graphics g) {
+	                
+	                   Toolkit.getDefaultToolkit().sync();
+
+	        }
 	            	   private void addKeyListener(TAdapter tAdapter) {
 	            			// TODO Auto-generated method stub
 	            			
