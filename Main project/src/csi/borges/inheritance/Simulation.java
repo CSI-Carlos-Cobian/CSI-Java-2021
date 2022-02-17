@@ -1,6 +1,11 @@
 package csi.borges.inheritance;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
+
+
+
+
+
 public class Simulation extends JFrame {
 	
 
