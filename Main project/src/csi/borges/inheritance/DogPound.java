@@ -4,14 +4,11 @@ package csi.borges.inheritance;
 
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,28 +19,42 @@ import javax.swing.JPanel;
 public class DogPound extends JPanel implements ActionListener {
 
 	
-	 private boolean inGame = true;
-	 private static final long serialVersionUID = 1L;
-		private static final ActionEvent ActionEvent = null;
+	private boolean inGame = true;
+	private static final long serialVersionUID = 1L;
+	private static final ActionEvent ActionEvent = null;
 		
-		List<Dog> dogs = new ArrayList<Dog>();
+	
+		//List<Dog> dogs = new ArrayList<Dog>();
+	
 		private int B_WIDTH = 800;
 		private int B_HEIGHT = 800; 
-	    private final int DOT_SIZE = 50;
-	    private final int ALL_DOTS = 50;
+	    private final int DOG_SIZE = 50;
+	    private final int ALL_DOGS = 50;
 
 
-	    private final int x[] = new int[ALL_DOTS];
-	    private final int y[] = new int[ALL_DOTS];
+	    private final int x[] = new int[ALL_DOGS];
+	    private final int y[] = new int[ALL_DOGS];
+		
+	    private int dogs;
+	    
+	    private boolean leftDirection = false;
+	    private boolean rightDirection = true;
+	    private boolean upDirection = false;
+	    private boolean downDirection = false;
+	    private boolean isRunning = true;
+	    
 	    
 	    private Image dog;
 	    private Image background;
-	    
 	    private Image GermanSheppard; 
 	    
-	private void initDogPound() {
-
-		 setBackground(new Color(240, 240, 200));
+	public DogPound() {
+	
+	initBoard(); 
+	}
+	private void initBoard() {
+			addKeyListener(new TAdapter());
+		 	setBackground(new Color(240, 240, 200));
 	        setFocusable(true);
 
 	        setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
@@ -55,18 +66,34 @@ public class DogPound extends JPanel implements ActionListener {
 	        setPreferredSize(new Dimension(WIDTH, HEIGHT));
 	        loadImages();
 	        initGame();
+	        initSimulation();
+			return;
 	 }
-			
+	 private void initSimulation() {
+
+	        dogs = 3;
+
+	        for (int z = 0; z < dogs; z++) {
+	            x[z] = 50 - z * 10;
+	            y[z] = 50;
+	        }
+	   }
+	 public void loadImages() {
+
+	        ImageIcon iid = new ImageIcon(getClass().getResource("GermanSheppard.png"));
+	        GermanSheppard = iid.getImage().getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
+	        iid = new ImageIcon(GermanSheppard);
+	        
+	   }
+	  
+	
+
 	@Override
     public void actionPerformed(ActionEvent e) {
 
         repaint();
         //move;
     }
-	            private void checkCollision() {
-				// TODO Auto-generated method stub
-				
-			}
 	            @Override
 	            public void paintComponent(Graphics g) {
 	                super.paintComponent(g);
@@ -82,11 +109,6 @@ public class DogPound extends JPanel implements ActionListener {
 	            //	   private void addKeyListener(TAdapter tAdapter) {
 	            			// TODO Auto-generated method stub
 	            			
-	            		
-	            				private void loadImages() {
-	            			// TODO Auto-generated method stub
-	            			
-	            		}
 	            				private void initGame() {
 	            			// TODO Auto-generated method stub
 	            			
