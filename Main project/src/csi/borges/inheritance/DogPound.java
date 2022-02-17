@@ -17,11 +17,25 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-public class DogPound extends JPanel {
+public class DogPound extends JPanel implements ActionListener {
 
-	 private static final ActionEvent ActionEvent = null;
+	
 	 private boolean inGame = true;
-	 
+	 private static final long serialVersionUID = 1L;
+		private static final ActionEvent ActionEvent = null;
+		private final int B_WIDTH = 800;
+	    private final int B_HEIGHT = 800;
+	    private final int DOT_SIZE = 50;
+	    private final int ALL_DOTS = 50;
+	    private final int RAND_POS = 10;
+	    private final int DELAY = 120;
+
+	    private final int x[] = new int[ALL_DOTS];
+	    private final int y[] = new int[ALL_DOTS];
+
+	    private int dots;
+	    private int apple_x;
+	    private int apple_y;
 	private void initDogPound() {
 
 	        addKeyListener(new TAdapter());
