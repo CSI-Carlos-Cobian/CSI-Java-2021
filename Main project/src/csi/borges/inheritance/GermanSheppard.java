@@ -1,18 +1,17 @@
 package csi.borges.inheritance;
+import javax.swing.ImageIcon;
 
-import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-
-import csi.borges.snake.Board;
 
 public class GermanSheppard extends Dog {
 	
+		private ImageIcon icon;
+
 		public GermanSheppard() {
 			super();
 			this.size = 88;
 			this.wild = false;
-			this.hair = "brown";
+			this.hair = "golden brown";
 			this.gender = true;
 			this.icon = new ImageIcon(getClass().getResource("germansheppard.png"));
 		}
@@ -22,7 +21,6 @@ public class GermanSheppard extends Dog {
 //		
 //	}
 	
-	@Override
 	public Noise bark() {
 
 		return new Noise(120, true);
@@ -30,38 +28,7 @@ public class GermanSheppard extends Dog {
 	
 	public Shit eat() {
 
-		return new Shit(true, 3, "Apple");
+		return new Shit(true, 3, "chocolate");
 	}
-	
-	class simulation extends JFrame {
-	/**
-		 * 
-		 */
-		private static final long serialVersionUID = 1L;
-
-	public void Dog() {
-        
-        initUI();
-    }
-    
-    private void initUI() {
-        
-        add(new Board());
-        
-        setResizable(false);
-        pack();
-        
-        setTitle("GermanSheppard");
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
-    
-    public static void main(String[] args) {
-        
-        EventQueue.invokeLater(() -> {
-            Dog ex = new Dog();
-        });
-    }
-}
 }
 
