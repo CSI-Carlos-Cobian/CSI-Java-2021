@@ -13,6 +13,9 @@ import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
@@ -23,20 +26,28 @@ public class DogPound extends JPanel implements ActionListener {
 	 private boolean inGame = true;
 	 private static final long serialVersionUID = 1L;
 		private static final ActionEvent ActionEvent = null;
-		private final int B_WIDTH = 800;
-	    private final int B_HEIGHT = 800;
+		
+		List<Dog> dogs = new ArrayList<Dog>();
+		private int B_WIDTH = 800;
+		private int B_HEIGHT = 800; 
 	    private final int DOT_SIZE = 50;
 	    private final int ALL_DOTS = 50;
-	    private final int RAND_POS = 10;
-	    private final int DELAY = 120;
+
 
 	    private final int x[] = new int[ALL_DOTS];
 	    private final int y[] = new int[ALL_DOTS];
-
-	    private int dots;
-	    private int apple_x;
-	    private int apple_y;
+	    
+	    private Image dog;
+	    private Image background;
+	    
+	    private Image GermanSheppard; 
+	    
 	private void initDogPound() {
+
+		 setBackground(new Color(240, 240, 200));
+	        setFocusable(true);
+
+	        setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
 
 	        addKeyListener(new TAdapter());
 	        actionPerformed(ActionEvent);
