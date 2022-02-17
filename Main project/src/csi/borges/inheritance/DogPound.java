@@ -99,6 +99,29 @@ public class DogPound extends JPanel implements ActionListener {
 	        }
 	        repaint();
 	    }
+	 private void move() {
+
+	        for (int z = dogs; z > 0; z--) {
+	            x[z] = x[(z - 1)];
+	            y[z] = y[(z - 1)];
+	        }
+
+	        if (leftDirection) {
+	            x[0] -= DOG_SIZE;
+	        }
+
+	        if (rightDirection) {
+	            x[0] += DOG_SIZE;
+	        }
+
+	        if (upDirection) {
+	            y[0] -= DOG_SIZE;
+	        }
+
+	        if (downDirection) {
+	            y[0] += DOG_SIZE;
+	        }
+	    }
 	 private void checkCollision() {
 
 	    	for (int z = dogs; z > 0; z--) {
@@ -168,7 +191,13 @@ public class DogPound extends JPanel implements ActionListener {
 	 @Override
      public void paintComponent(Graphics g) {
          super.paintComponent(g);
-         
+         if (isRunning) 
+	            for (int z = 0; z < dogs; z++) 
+	                if (z == 0) {
+	                    g.drawImage(GermanSheppard, x[z], y[z], this);
+	                } else {
+	                	g.drawImage(GermanSheppard, x[z], y[z], this);
+	                }
          g.drawImage(background, 0, 0, null);
          doDrawing(g);
      }
@@ -177,10 +206,6 @@ public class DogPound extends JPanel implements ActionListener {
             Toolkit.getDefaultToolkit().sync();
 
  }
-	            private void move() {
-		// TODO Auto-generated method stub
-		
-	}
 	            //	   private void addKeyListener(TAdapter tAdapter) {
 	            			// TODO Auto-generated method stub
 	            			
