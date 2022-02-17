@@ -9,18 +9,18 @@ public class Dog {
 	boolean wild = false;
 	boolean gender= true; 
 	private ImageIcon icon;
-	int weight;
+	//int weight;
 
 	
 	
 //	constructors
 
 	
-	public Dog(String hair, int weight,int size,boolean smelly, boolean wild, boolean gender, String icon) {
+	public Dog(String hair,int size,boolean smelly, boolean wild, boolean gender, String icon) {
 		super();
 		this.hair = hair;
 		this.smelly = smelly;
-		this.weight = weight;
+		//this.weight = weight;
 		this.size = size;
 		this.wild = wild;
 		this.gender = gender;
@@ -70,7 +70,7 @@ public class Dog {
 
 	public class Shit {
 		boolean smelly;
-		int weight; 
+		//int weight; 
 		int size; 
 		String shape;
 		private Food f; 
@@ -80,10 +80,10 @@ public class Dog {
 		public Shit() {
 			return;
 		}
-		public Shit(boolean smelly, int weight, int size, String shape) {
+		public Shit(boolean smelly, int size, String shape) {
 			super();
 			this.smelly = smelly;
-			this.weight = weight; 
+			//this.weight = weight; 
 			this.size = size;
 			this.shape = shape;
 		}
