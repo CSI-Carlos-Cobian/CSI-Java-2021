@@ -53,8 +53,6 @@ public class Dog {
 
 	void wagTail() {
 	}
-	
-	public void Die() {}
 
 	public void mate(Dog D) {
 	}
