@@ -62,16 +62,24 @@ public class Dog {
 //	classes
 
 	public class Shit {
-		int smelly;
-		int mushy; 
-		int heavy; 
+		boolean smelly;
+		int weight; 
+		int size; 
+		String shape; 
+		
 		
 		
 		public Shit() {
 			Food f;
 			return;
 		}
-		
+		public Shit(boolean hard, int size, String shape) {
+			super();
+			this.smelly = smelly;
+			this.weight = weight; 
+			this.size = size;
+			this.shape = shape;
+		}
 	}
 
 	public class Food {
