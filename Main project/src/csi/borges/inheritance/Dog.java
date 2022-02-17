@@ -124,4 +124,11 @@ public class Dog {
 
 
 
+	public Noise bark() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
 }
