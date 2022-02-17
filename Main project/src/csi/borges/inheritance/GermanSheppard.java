@@ -13,7 +13,7 @@ public class GermanSheppard extends Dog {
 			this.wild = false;
 			this.hair = "golden brown";
 			this.gender = true;
-			this.icon = new ImageIcon(getClass().getResource("germansheppard.png"));
+			this.icon = new ImageIcon(getClass().getResource("GermanSheppard.png"));
 		}
 	
 		@Override
@@ -29,7 +29,7 @@ public class GermanSheppard extends Dog {
 	
 	public Shit eat() {
 
-		return new Shit(true, 3, "chocolate");
+		return new Shit(true, 3, "Chocolate");
 	}
 }
 
