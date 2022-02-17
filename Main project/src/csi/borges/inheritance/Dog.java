@@ -81,7 +81,13 @@ public class Dog {
 			this.shape = shape;
 		}
 	}
-
+	public void digest() {
+		
+		
+		
+		
+		return;
+	}
 	public class Food {
 
 		public Shit digest() {
@@ -96,13 +102,12 @@ public class Dog {
 		
 	}
 
-	public class Noise{
-		public Noise bark() {
-			return new Noise();
+	public class Noise {
+		public Noise(int i, boolean b) {
+			
 		}
-		
-		
-		
+		int decibels = 0;
+		boolean recurring = false;
 	}
 
 
