@@ -15,10 +15,14 @@ Inheritance is a common and useful practice when you're trying to reuse code. It
 class Dog{
         // variables
         boolean wild = true;
+        
         // constructors
+        
         // methods
         public void piss(){}
+        
         // internal classes
+        
 }
 ```
 
