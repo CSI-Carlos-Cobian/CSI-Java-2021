@@ -83,7 +83,7 @@ public class DogPound extends JPanel implements ActionListener {
 	 public void loadImages() {
 
 	        ImageIcon iid = new ImageIcon(getClass().getResource("GermanSheppard.png"));
-	        GermanSheppard = iid.getImage().getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
+	        GermanSheppard = iid.getImage().getScaledInstance(50, 50,  java.awt.Image.SCALE_SMOOTH);
 	        iid = new ImageIcon(GermanSheppard);
 	        
 	   }
