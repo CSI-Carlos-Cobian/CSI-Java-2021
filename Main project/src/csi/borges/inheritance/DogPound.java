@@ -11,9 +11,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
@@ -21,7 +18,7 @@ import javax.swing.JPanel;
 public class DogPound extends JPanel implements ActionListener {
 
 	
-	private boolean inGame = true;
+	
 	private static final long serialVersionUID = 1L;
 	private static final ActionEvent ActionEvent = null;
 		
@@ -44,9 +41,6 @@ public class DogPound extends JPanel implements ActionListener {
 	    private boolean upDirection = false;
 	    private boolean downDirection = false;
 	    private boolean isRunning = true;
-	    
-	    
-	    private Image dog;
 	    private Image background;
 	    private Image GermanSheppard; 
 	    
@@ -210,17 +204,14 @@ public class DogPound extends JPanel implements ActionListener {
 
  }
 	            //	   private void addKeyListener(TAdapter tAdapter) {
-	            			// TODO Auto-generated method stub
 	            			
 	            				private void initGame() {
-	            			// TODO Auto-generated method stub
 	            			
 	            		}
 				
 			//	private class TAdapter
 
 	        //    public TAdapter() {
-						// TODO Auto-generated constructor stub
 					
 
 			//	public void keyPressed(KeyEvent e) {
