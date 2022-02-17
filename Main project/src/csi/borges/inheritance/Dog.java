@@ -5,18 +5,22 @@ import javax.swing.ImageIcon;
 public class Dog {
 	String hair;
 	int size;
+	boolean smelly;
 	boolean wild = false;
 	boolean gender= true; 
 	private ImageIcon icon;
+	int weight;
 
 	
 	
 //	constructors
 
 	
-	public Dog(String hair, int size, boolean wild, boolean gender, String icon) {
+	public Dog(String hair, int weight,int size,boolean smelly, boolean wild, boolean gender, String icon) {
 		super();
 		this.hair = hair;
+		this.smelly = smelly;
+		this.weight = weight;
 		this.size = size;
 		this.wild = wild;
 		this.gender = gender;
@@ -68,15 +72,15 @@ public class Dog {
 		boolean smelly;
 		int weight; 
 		int size; 
-		String shape; 
+		String shape;
+		private Food f; 
 		
 		
 		
 		public Shit() {
-			Food f;
 			return;
 		}
-		public Shit(boolean hard, int size, String shape) {
+		public Shit(boolean smelly, int weight, int size, String shape) {
 			super();
 			this.smelly = smelly;
 			this.weight = weight; 
