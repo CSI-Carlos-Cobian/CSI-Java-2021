@@ -57,18 +57,6 @@ public class DogPound extends JPanel implements ActionListener {
 	        loadImages();
 	        initGame();
 	 }
-	        private void addKeyListener(TAdapter tAdapter) {
-		// TODO Auto-generated method stub
-		
-	}
-			private void loadImages() {
-		// TODO Auto-generated method stub
-		
-	}
-			private void initGame() {
-		// TODO Auto-generated method stub
-		
-	}
 			
 			public void actionPerformed(ActionEvent e) {
 
@@ -89,11 +77,27 @@ public class DogPound extends JPanel implements ActionListener {
 	            }  
 	            private void doDrawing(Graphics g) {
 					// TODO Auto-generated method stub
-					
+	            }
+	            	   private void addKeyListener(TAdapter tAdapter) {
+	            			// TODO Auto-generated method stub
+	            			
+	            		}
+	            				private void loadImages() {
+	            			// TODO Auto-generated method stub
+	            			
+	            		}
+	            				private void initGame() {
+	            			// TODO Auto-generated method stub
+	            			
+	            		}
 				}
 				private class TAdapter
 
-	            public void keyPressed(KeyEvent e) {
+	            public TAdapter() {
+						// TODO Auto-generated constructor stub
+					}
+
+				public void keyPressed(KeyEvent e) {
 
 	                int key = e.getKeyCode();
 	 }
