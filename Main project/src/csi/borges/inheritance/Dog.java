@@ -42,15 +42,18 @@ public class Dog {
 
 
 	public Shit eat(Food f) {
-		return f.digest();
+		
+		return new Shit();
 	}
 
 	public void die() {
 	}
-	public Noise bark() {
-		return new Noise();
+	public Noise bark(Noise n) {
+		
+		
+		return new Noise(n.decibels, n.recurring);
 	}
-
+	
 	void wagTail() {
 	}
 
@@ -89,11 +92,12 @@ public class Dog {
 		return;
 	}
 	public class Food {
-
-		public Shit digest() {
-			// TODO Auto-generated method stub
-			return null;
-	}
+		public Food(String flavor, String color, boolean dogFood) {
+			
+		}
+		String flavor;
+		String color;
+		boolean dogFood;
 		
 
 		public Food() {
