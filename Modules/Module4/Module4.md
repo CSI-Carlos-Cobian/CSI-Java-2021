@@ -243,6 +243,15 @@ Here is an incomplete example of the `Animal` toString() function.
 
 <br>
 
+```java
+...
+Animal a2 = new Animal("Dog",3);
+System.out.println(a2);
+...
+```
+
+<br>
+
 ### Create an Animal Array. `(10 pts)`
 * Create a new class named `AnimalFarm`
 * Add a field called `animals`. It should be a `List` of type `Animal`
