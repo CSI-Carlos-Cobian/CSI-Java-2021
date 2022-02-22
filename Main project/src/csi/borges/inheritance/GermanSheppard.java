@@ -5,16 +5,16 @@ import javax.swing.ImageIcon;
 
 public class GermanSheppard extends Dog {
 	
-		private ImageIcon icon;
+	
 
 		public GermanSheppard() {
-			super();
-			this.size = 88;
-			this.smelly = true;
-			this.wild = false;
-			this.hair = "golden brown";
-			this.gender = true;
-			this.icon = new ImageIcon(getClass().getResource("GermanSheppard.png"));
+			super("Golden Brown",88,true,false, true,"GermanSheppard.png");
+//			this.size = 88;
+//			this.smelly = true;
+//			this.wild = false;
+//			this.hair = "golden brown";
+//			this.gender = true;
+//			this.icon = new ImageIcon(getClass().getResource("GermanSheppard.png"));
 		}
 	
 		@Override
