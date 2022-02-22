@@ -2,27 +2,21 @@ package csi.borges.inheritance;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 
-
-
-
-
 public class Simulation extends JFrame {
-	
-	private static final long serialVersionUID = 1L;
 
-	public Simulation() {
+    public Simulation() {
         
         initUI();
     }
     
     private void initUI() {
         
-        add(new Simulation());
+        add(new DogPound());
         
         setResizable(false);
         pack();
         
-        setTitle("Simulation");
+        setTitle("DogPound");
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
