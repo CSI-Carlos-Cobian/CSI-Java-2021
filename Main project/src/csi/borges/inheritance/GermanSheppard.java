@@ -10,6 +10,7 @@ public class GermanSheppard extends Dog {
 		public GermanSheppard() {
 			super();
 			this.size = 88;
+			this.smelly = true;
 			this.wild = false;
 			this.hair = "golden brown";
 			this.gender = true;
