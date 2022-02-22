@@ -4,6 +4,8 @@ package csi.borges.inheritance;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -11,61 +13,55 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 
-public class DogPound extends JPanel implements ActionListener {
+
+public class DogPound extends JPanel implements ActionListener{
+	
+//	List<Dog> dogs1 = new ArrayList<Dog>();
+	
+	private int B_WIDTH = 800;
+	private int B_HEIGHT = 800; 
+	private int DOG_SIZE = 120;
+	private int ALL_DOGS = 120;
+	
+	private final int x[] = new int[ALL_DOGS];
+    private final int y[] = new int[ALL_DOGS];
+	
+    private int dogs;
+    
+    private boolean leftDirection = false;
+    private boolean rightDirection = true;
+    private boolean upDirection = false;
+    private boolean downDirection = false;
+    private boolean isRunning = true;
+    
+    
 
 	
+	private Image GermanSheppard; 
 	
-	private static final long serialVersionUID = 1L;
-	private static final ActionEvent ActionEvent = null;
-		
-	
-		//List<Dog> dogs = new ArrayList<Dog>();
-	
-		private int B_WIDTH = 800;
-		private int B_HEIGHT = 800; 
-	    private final int DOG_SIZE = 50;
-	    private final int ALL_DOGS = 50;
-
-
-	    private final int x[] = new int[ALL_DOGS];
-	    private final int y[] = new int[ALL_DOGS];
-		
-	    private int dogs;
+	  public DogPound() {
+	        
+	        initBoard();
+	    }
 	    
-	    private boolean leftDirection = false;
-	    private boolean rightDirection = true;
-	    private boolean upDirection = false;
-	    private boolean downDirection = false;
-	    private boolean isRunning = true;
-	    private Image background;
-	    private Image GermanSheppard; 
-	    
-	public DogPound() {
-	
-	initBoard(); 
-	}
-	private void initBoard() {
-			addKeyListener(new TAdapter());
-		 	setBackground(new Color(240, 240, 200));
+	   private void initBoard() {
+
+	        addKeyListener(new TAdapter());
+	        setBackground(new Color(50, 150, 150));
 	        setFocusable(true);
 
 	        setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
-
-	     //   addKeyListener(new TAdapter());
-	        actionPerformed(ActionEvent);
-	        setFocusable(true); 
-
-	        setPreferredSize(new Dimension(WIDTH, HEIGHT));
-	        loadImages();
-	        initGame();
 	        initSimulation();
-			return;
-	 }
-	 private void initSimulation() {
+	        loadImages();
+	        
+	    }
+	   
+	   private void initSimulation() {
 
 	        dogs = 3;
 
@@ -74,26 +70,63 @@ public class DogPound extends JPanel implements ActionListener {
 	            y[z] = 50;
 	        }
 	   }
-	 public void loadImages() {
+	   
+	   
+	   public void loadImages() {
 
 	        ImageIcon iid = new ImageIcon(getClass().getResource("GermanSheppard.png"));
-	        GermanSheppard = iid.getImage().getScaledInstance(50, 50,  java.awt.Image.SCALE_SMOOTH);
+	        GermanSheppard = iid.getImage().getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
 	        iid = new ImageIcon(GermanSheppard);
 	        
 	   }
 	  
+	   
+	   
+	   @Override
+	   public void paintComponent(Graphics g) {
+		   super.paintComponent(g);
+		   
+//		   g.drawImage(GermanSheppard, 0, 0, null);
+		   doDrawing(g);
+	   }
+	   
+	   private void doDrawing(Graphics g) {
+		   
+		   
+		   if (isRunning) {
+	            for (int z = 0; z < dogs; z++) {
+	                if (z == 0) {
+	                    g.drawImage(GermanSheppard, x[z], y[z], this);
+	                } else {
+	                	g.drawImage(GermanSheppard, x[z], y[z], this);
+	                }
+	            }
+	            Toolkit.getDefaultToolkit().sync();
+		   } else {
+			   gameOver(g);
+		   }
+
+	   }
+	   private void gameOver(Graphics g) {
+	    	
+	        String msg = "Game Over";
+	        Font small = new Font("Helvetica", Font.ITALIC, 130);
+        FontMetrics metr = getFontMetrics(small);
 	
-
-	 @Override
-	   public void actionPerformed(ActionEvent e) {
-
-	        if (isRunning) {
-	            checkCollision();
-	            move();
-	        }
-	        repaint();
+	        g.setColor(Color.white);
+	        g.setFont(small);
+	        g.drawString(msg, (B_WIDTH - metr.stringWidth(msg)) / 5, B_HEIGHT / 2);
+	        
+	    
 	    }
-	 private void move() {
+	   
+	    
+//	    public static void main(String[] args) {
+//	    	
+//	    }
+	   
+	   
+	   private void move() {
 
 	        for (int z = dogs; z > 0; z--) {
 	            x[z] = x[(z - 1)];
@@ -116,7 +149,10 @@ public class DogPound extends JPanel implements ActionListener {
 	            y[0] += DOG_SIZE;
 	        }
 	    }
-	 private void checkCollision() {
+	   
+	   
+	   
+	   private void checkCollision() {
 
 	    	for (int z = dogs; z > 0; z--) {
 
@@ -146,7 +182,18 @@ public class DogPound extends JPanel implements ActionListener {
 	        }
 	    }
 	   
-	 private class TAdapter extends KeyAdapter {
+	   
+	   @Override
+	   public void actionPerformed(ActionEvent e) {
+
+	        if (isRunning) {
+	            checkCollision();
+	            move();
+	        }
+	        repaint();
+	    }
+	   
+	   private class TAdapter extends KeyAdapter {
 
 	        @Override
 	        public void keyPressed(KeyEvent e) {
@@ -181,44 +228,6 @@ public class DogPound extends JPanel implements ActionListener {
 	            	
 	            }
 	        }
-	    }
-	 @Override
-     public void paintComponent(Graphics g) {
-         super.paintComponent(g);
-         g.drawImage(background, 0, 0, null);
-         doDrawing(g);
-     }
-	 private void doDrawing(Graphics g) {
-		   
-		   
-		   if (isRunning) {
-	            for (int z = 0; z < dogs; z++) {
-	                if (z == 0) {
-	                    g.drawImage(GermanSheppard, x[z], y[z], this);
-	                } else {
-	                	g.drawImage(GermanSheppard, x[z], y[z], this);
-	                }
-	            }
-	            Toolkit.getDefaultToolkit().sync();
-		   }
-
- }
-	            //	   private void addKeyListener(TAdapter tAdapter) {
-	            			
-	            				private void initGame() {
-	            			
-	            		}
-				
-			//	private class TAdapter
-
-	        //    public TAdapter() {
-					
-
-			//	public void keyPressed(KeyEvent e) {
-
-	              //  int key = e.getKeyCode();
-				
-			}
-
-	    
-
+	   }
+}
+	   
