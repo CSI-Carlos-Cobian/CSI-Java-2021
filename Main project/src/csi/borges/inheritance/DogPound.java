@@ -44,10 +44,10 @@ public class DogPound extends JPanel implements ActionListener{
     
 
 	
-	private Image GermanSheppard; 
+//	private Image GermanSheppard; 
 	
 	  public DogPound() {
-	        
+	        dogs1.add(new GermanSheppard());
 	        initBoard();
 	    }
 	    
@@ -59,7 +59,7 @@ public class DogPound extends JPanel implements ActionListener{
 
 	        setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
 	        initSimulation();
-	        loadImages();
+//	        loadImages();
 	        
 	    }
 	   
@@ -74,13 +74,13 @@ public class DogPound extends JPanel implements ActionListener{
 	   }
 	   
 	   
-	   public void loadImages() {
-
-	        ImageIcon iid = new ImageIcon(getClass().getResource("icon.png"));
-	        GermanSheppard = iid.getImage().getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
-	        iid = new ImageIcon(GermanSheppard);
-	        
-	   }
+//	   public void loadImages() {
+//
+//	        ImageIcon iid = new ImageIcon(getClass().getResource("icon.png"));
+//	        GermanSheppard = iid.getImage().getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
+//	        iid = new ImageIcon(GermanSheppard);
+//	        
+//	   }
 	  
 	   
 	   
@@ -98,9 +98,9 @@ public class DogPound extends JPanel implements ActionListener{
 		   if (isRunning) {
 	            for (int z = 0; z < dogs; z++) {
 	                if (z == 0) {
-	                    g.drawImage(GermanSheppard, x[z], y[z], this);
+	                    g.drawImage(dogs1.get(0).icon.getImage(), x[z], y[z], this);
 	                } else {
-	                	g.drawImage(GermanSheppard, x[z], y[z], this);
+	                	g.drawImage(dogs1.get(0).icon.getImage(), x[z], y[z], this);
 	                }
 	            }
 	            Toolkit.getDefaultToolkit().sync();
