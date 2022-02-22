@@ -13,6 +13,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
@@ -21,7 +23,7 @@ import javax.swing.JPanel;
 
 public class DogPound extends JPanel implements ActionListener{
 	
-//	List<Dog> dogs1 = new ArrayList<Dog>();
+   List<Dog> dogs1 = new ArrayList<Dog>();
 	
 	private int B_WIDTH = 800;
 	private int B_HEIGHT = 800; 
@@ -52,7 +54,7 @@ public class DogPound extends JPanel implements ActionListener{
 	   private void initBoard() {
 
 	        addKeyListener(new TAdapter());
-	        setBackground(new Color(50, 150, 150));
+	        setBackground(new Color(201, 201, 46));
 	        setFocusable(true);
 
 	        setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
@@ -74,7 +76,7 @@ public class DogPound extends JPanel implements ActionListener{
 	   
 	   public void loadImages() {
 
-	        ImageIcon iid = new ImageIcon(getClass().getResource("GermanSheppard.png"));
+	        ImageIcon iid = new ImageIcon(getClass().getResource("icon.png"));
 	        GermanSheppard = iid.getImage().getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
 	        iid = new ImageIcon(GermanSheppard);
 	        
@@ -110,7 +112,7 @@ public class DogPound extends JPanel implements ActionListener{
 	   private void gameOver(Graphics g) {
 	    	
 	        String msg = "Game Over";
-	        Font small = new Font("Helvetica", Font.ITALIC, 130);
+	        Font small = new Font("Arcade Regular", Font.ITALIC, 20);
         FontMetrics metr = getFontMetrics(small);
 	
 	        g.setColor(Color.white);
