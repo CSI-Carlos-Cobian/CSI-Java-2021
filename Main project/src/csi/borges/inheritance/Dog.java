@@ -8,7 +8,7 @@ public class Dog {
 	boolean smelly;
 	boolean wild = false;
 	boolean gender = true;
-	private ImageIcon icon;
+ ImageIcon icon;
 	// int weight;
 
 //	constructors
