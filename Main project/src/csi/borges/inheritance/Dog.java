@@ -83,13 +83,13 @@ public class Dog {
 	}
 
 	public class Food {
-		public Food(String flavor, String color, boolean dogFood) {
+		public Food(String flavor, String color, boolean humanFood) {
 
 		}
 
 		String flavor;
 		String color;
-		boolean dogFood;
+		boolean humanFood;
 
 		public Food() {
 
