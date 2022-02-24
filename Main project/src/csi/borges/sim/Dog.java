@@ -21,7 +21,7 @@ public Dog(String hair, int size, boolean smelly, boolean wild, boolean gender, 
 	this.size = size;
 	this.wild = wild;
 	this.gender = gender;
-	this.icon = new ImageIcon(getClass().getResource(icon));
+	this.icon = new ImageIcon(new ImageIcon(getClass().getResource(icon)).getImage().getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH));;
 }
 
 public Dog() {
@@ -58,6 +58,9 @@ public void mate(Dog D) {
 }
 public void digest() {
 
+	return;
+}
+public void grow() {
 	return;
 }
 //classes
