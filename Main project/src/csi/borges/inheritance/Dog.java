@@ -8,7 +8,7 @@ public class Dog {
 	boolean smelly;
 	boolean wild = false;
 	boolean gender = true;
- ImageIcon icon;
+	ImageIcon icon;
 	// int weight;
 
 //	constructors
@@ -56,6 +56,7 @@ public class Dog {
 
 	public void mate(Dog D) {
 	}
+
 	public void digest() {
 
 		return;
