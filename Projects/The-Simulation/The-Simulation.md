@@ -14,7 +14,7 @@
 1. Create a package inside of your `MainProject` called:
    >*csi.lastname.sim*
 2. Create a class file named `Simulation`
-   1. Recycle the code used in `Board` within the Snake project. Change all instances of the word `Board` for `Simulation`
+   1. Recycle the code used in `Snake` within the Snake project. Change all instances of the word `Snake` for `Simulation`
    
 
 <br>
