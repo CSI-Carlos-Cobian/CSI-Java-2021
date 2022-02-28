@@ -3,12 +3,12 @@ import javax.swing.ImageIcon;
 
 
 
-public class GermanSheppard extends Dog {
+public class Boxer extends Dog {
 	
 	
 
-		public GermanSheppard() {
-			super("Golden Brown",88,true,false, true,"GermanSheppard.png");
+		public Boxer() {
+			super("Golden Brown",88,true,false, true,"Boxer.png");
 //			this.size = 88;
 //			this.smelly = true;
 //			this.wild = false;
