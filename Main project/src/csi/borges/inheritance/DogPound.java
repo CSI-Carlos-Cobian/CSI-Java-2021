@@ -47,7 +47,7 @@ public class DogPound extends JPanel implements ActionListener{
 //	private Image GermanSheppard; 
 	
 	  public DogPound() {
-	        dogs1.add(new GermanSheppard());
+	        dogs1.add(new Boxer ());
 	        initBoard();
 	    }
 	    
@@ -150,6 +150,7 @@ public class DogPound extends JPanel implements ActionListener{
 	        if (downDirection) {
 	            y[0] += DOG_SIZE;
 	        }
+	        
 	    }
 	   
 	   
