@@ -233,7 +233,7 @@ public class Board extends JPanel implements ActionListener {
             x[0] -= DOT_SIZE;
         }
 
-        if (rightDirection) {
+        if (rightDirection) { 
             x[0] += DOT_SIZE;
         }
 
