@@ -131,8 +131,8 @@ public class DogPound extends JPanel implements ActionListener{
 	   
 	   private void gameOver(Graphics g) {
 	    	
-	        String msg = "Game Over";
-	        Font small = new Font("Helvetica", Font.ITALIC, 130);
+	        String msg = "Woof woof";
+	        Font small = new Font("Rosecube", Font.ITALIC, 130);
 	        FontMetrics metr = getFontMetrics(small);
 	
 	        g.setColor(Color.white);
