@@ -1,5 +1,7 @@
 package csi.borges.inheritance;
 
+import java.awt.Point;
+
 import javax.swing.ImageIcon;
 
 public class Dog {
@@ -9,6 +11,7 @@ public class Dog {
 	boolean wild = false;
 	boolean gender = true;
 	ImageIcon icon;
+	Point location; 
 	// int weight;
 
 //	constructors
@@ -61,8 +64,15 @@ public class Dog {
 
 		return;
 	}
-//	classes
+	public Point getLocation() {
+		return location;
+	}
 
+	public void setLocation(Point location) {
+		this.location = location;
+	}
+//	classes
+	
 	public class Shit {
 		boolean smelly;
 		// int weight;
@@ -80,9 +90,24 @@ public class Dog {
 			// this.weight = weight;
 			this.size = size;
 			this.shape = shape;
+			
 		}
 	}
+	public class Noise {
+		int decibels;
+		boolean recurring;
+		
+		
+		public Noise() {
+			
+		}
 
+
+		public Noise(int decibels, boolean recurring) {
+			super();
+			this.decibels = decibels;
+			this.recurring = recurring;
+		}
 	public class Food {
 		public Food(String flavor, String color, boolean humanFood) {
 
@@ -98,18 +123,17 @@ public class Dog {
 
 	}
 
-	public class Noise {
-		public Noise(int i, boolean b) {
-
-		}
-
-		int decibels = 0;
-		boolean recurring = false;
+public Noise bark() {
+		
+		return new Noise();
 	}
-
-	public Noise bark() {
-		// TODO Auto-generated method stub
-		return null;
+	
+	public void mate(Dog d) {
+		
 	}
-
+	
+	public void grow() {
+		
+	}
+}
 }
