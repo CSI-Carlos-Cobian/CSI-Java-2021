@@ -80,8 +80,8 @@ public class Shit {
 		super();
 		this.smelly = smelly;
 		// this.weight = weight;
-		this.size = size;
-		this.shape = shape;
+		this.size = 30;
+		this.shape = "curved";
 	}
 }
 
