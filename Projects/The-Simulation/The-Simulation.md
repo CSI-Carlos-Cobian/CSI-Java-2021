@@ -114,3 +114,13 @@ We must define the data types `Food`, `Shit`, `Noise`. Create internal classes. 
 4. Paint all dogs within using the `paintComponent` function overload and a for-loop.
 
 <br>
+
+
+#### Design an algorithm to move your dog
+
+
+<br>
+
+#### Implement all of the functions defined above.
+
+<br>
