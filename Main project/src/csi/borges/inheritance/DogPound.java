@@ -1,33 +1,37 @@
 
 package csi.borges.inheritance;
 
-
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Point;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+import javax.swing.Timer;
+
 
 
 
 public class DogPound extends JPanel implements ActionListener{
 	
-   List<Dog> dogs1 = new ArrayList<Dog>();
+	List<Dog> dogs1 = new ArrayList<Dog>();
+	List<Dog.Shit> dogshits = new ArrayList<Dog.Shit>();
+//	List<int,int> dogshitLocation
 	
 	private int B_WIDTH = 800;
 	private int B_HEIGHT = 800; 
-	private int DOG_SIZE = 120;
+	private int DOG_SIZE = 10;
 	private int ALL_DOGS = 120;
 	
 	private final int x[] = new int[ALL_DOGS];
@@ -41,20 +45,27 @@ public class DogPound extends JPanel implements ActionListener{
     private boolean downDirection = false;
     private boolean isRunning = true;
     
+    private boolean isShit = true;
+    
+    private Timer timer;
+    private final int DELAY = 140;
+    
+    private int count; 
     
 
 	
-//	private Image GermanSheppard; 
+	private Image shepherd; 
+	private Image icon;
 	
 	  public DogPound() {
-	        dogs1.add(new Boxer ());
+	        dogs1.add(new Boxer());
 	        initBoard();
 	    }
 	    
 	   private void initBoard() {
 
 	        addKeyListener(new TAdapter());
-	        setBackground(new Color(201, 201, 46));
+	        setBackground(new Color(50, 150, 150));
 	        setFocusable(true);
 
 	        setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
@@ -65,37 +76,32 @@ public class DogPound extends JPanel implements ActionListener{
 	   
 	   private void initSimulation() {
 
-	        dogs = 3;
+	        dogs = 1;
 
 	        for (int z = 0; z < dogs; z++) {
 	            x[z] = 50 - z * 10;
 	            y[z] = 50;
 	        }
+	        
+	        timer = new Timer(DELAY, this);
+	        timer.start();
 	   }
 	   
-	   
-//	   public void loadImages() {
-//
-//	        ImageIcon iid = new ImageIcon(getClass().getResource("icon.png"));
-//	        GermanSheppard = iid.getImage().getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
-//	        iid = new ImageIcon(GermanSheppard);
-//	        
-//	   }
-	  
+
 	   
 	   
 	   @Override
 	   public void paintComponent(Graphics g) {
 		   super.paintComponent(g);
 		   
-//		   g.drawImage(GermanSheppard, 0, 0, null);
 		   doDrawing(g);
 	   }
 	   
 	   private void doDrawing(Graphics g) {
-		   
-		   
+		   		   
 		   if (isRunning) {
+			   
+			   
 	            for (int z = 0; z < dogs; z++) {
 	                if (z == 0) {
 	                    g.drawImage(dogs1.get(0).icon.getImage(), x[z], y[z], this);
@@ -103,17 +109,31 @@ public class DogPound extends JPanel implements ActionListener{
 	                	g.drawImage(dogs1.get(0).icon.getImage(), x[z], y[z], this);
 	                }
 	            }
+	            
+	            	
+//	            for (int z = 0; z < dogshits.size(); z++) {
+//	    	            
+//		            g.drawImage(dogshits.get(z).icon.getImage(), dogshits.get(z).getLocation().x,  dogshits.get(z).getLocation().y, null);
+//		                    
+//		           }
+	            
+	            
 	            Toolkit.getDefaultToolkit().sync();
 		   } else {
 			   gameOver(g);
 		   }
+		   
 
 	   }
+	   
+	   
+	   
+	   
 	   private void gameOver(Graphics g) {
 	    	
 	        String msg = "Game Over";
-	        Font small = new Font("Arcade Regular", Font.ITALIC, 20);
-        FontMetrics metr = getFontMetrics(small);
+	        Font small = new Font("Helvetica", Font.ITALIC, 130);
+	        FontMetrics metr = getFontMetrics(small);
 	
 	        g.setColor(Color.white);
 	        g.setFont(small);
@@ -126,7 +146,21 @@ public class DogPound extends JPanel implements ActionListener{
 //	    public static void main(String[] args) {
 //	    	
 //	    }
-	   
+//	   public void randomShit(Dog d, Graphics g) {
+////		   int z = dogs;
+//		  
+//		   Dog.Food f = (new Dog()).new Food();
+//		   Dog.Shit s = d.eat(f);
+//		   s.setLocation(new Point(x[0],y[0]));
+//		   dogshits.add(s);
+//		   
+//		   
+////		   d.eat(f).icon.getImage();
+//		 
+////		   g.drawImage(s.icon.getImage(), 0, 0, null);
+//		   
+//		   
+//	   }
 	   
 	   private void move() {
 
@@ -151,7 +185,40 @@ public class DogPound extends JPanel implements ActionListener{
 	            y[0] += DOG_SIZE;
 	        }
 	        
+	        count++;
+	        Random rd = new Random();
+	        Random rand = new Random();
+
+	      
+
+	        int randomNum = rand.nextInt((20 - 1) + 1) + 1;
+	        int randomNum1 = rand.nextInt((50 - 1) + 1) + 1;
+	       
+	        if(count % randomNum == 0) {
+	        	upDirection = rd.nextBoolean();
+		        rightDirection = rd.nextBoolean();
+		        leftDirection = rd.nextBoolean();
+		        downDirection = rd.nextBoolean();
+	        }
+	        
+//	        if(count % randomNum1 == 0) {
+//	        	randomShit(dogs1.get(0), getGraphics());
+//	        }
+	        
+	        if(upDirection == false && downDirection == false && leftDirection == false && rightDirection == false) {
+	        	rightDirection = false;
+	        }
+	        if(upDirection == true && downDirection == true && leftDirection == true && rightDirection == true) {
+	        	rightDirection = true;
+	        	upDirection = false;
+	        	downDirection = false;
+	        	leftDirection = false;
+	        }
+	        
+	       
+	 	   	
 	    }
+	   
 	   
 	   
 	   
@@ -163,25 +230,42 @@ public class DogPound extends JPanel implements ActionListener{
 	    	        isRunning = false;
 	    	    }
 	    	}
+	    	Random rd = new Random();
 
 	        if (y[0] >= B_HEIGHT) {
-	            isRunning = false;
+//	            isRunning = false;
+	        	upDirection = rd.nextBoolean();
+                rightDirection = rd.nextBoolean();
+                leftDirection = rd.nextBoolean();
+                downDirection = false;
 	        }
 
 	        if (y[0] < 0) {
-	            isRunning = false;
+//	            isRunning = false;
+	        	leftDirection = rd.nextBoolean();
+                upDirection = false;
+                downDirection = rd.nextBoolean();
+                rightDirection = rd.nextBoolean();
 	        }
 
 	        if (x[0] >= B_WIDTH) {
-	            isRunning = false;
+//	        	isRunning = false;
+	        	upDirection = rd.nextBoolean();
+                rightDirection = false;
+                leftDirection = rd.nextBoolean();
+                downDirection = rd.nextBoolean();
 	        }
 
 	        if (x[0] < 0) {
-	            isRunning = false;
+//	            isRunning = false;
+	        	leftDirection = false;
+                upDirection = rd.nextBoolean();
+                downDirection = rd.nextBoolean();
+                rightDirection = rd.nextBoolean();
 	        }
 	        
 	        if (!isRunning) {
-	            
+	            timer.stop();
 	        }
 	    }
 	   
@@ -231,6 +315,7 @@ public class DogPound extends JPanel implements ActionListener{
 	            	
 	            }
 	        }
-	   }
+	    }
+	
+
 }
-	   
