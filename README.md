@@ -10,12 +10,10 @@
 <br>
 
 # Course Description
-#### By understanding Git and GitHub you will acquire access to most of the code humanity has developed. Fundamental understanding of computer programming will allow you to visualize concepts unnatural to your brain. 
+#### By understanding Git and GitHub you will acquire access to most of the code humanity has developed. Fundamental understanding of computer programming may modify your perception. 
 
-2 meetings per cycle
-24 courses in semester
-48 classes total
-At least 300 points.
+3 meetings per cycle
+At least 400 points.
 
 ## Objectives
 * Understand Git version control and branching.
