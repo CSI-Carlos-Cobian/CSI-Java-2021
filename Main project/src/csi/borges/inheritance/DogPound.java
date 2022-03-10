@@ -47,7 +47,6 @@ public class DogPound extends JPanel implements ActionListener{
     private boolean isRunning = true;
     
     private boolean isShit = true;
-    private Image chocolate;
     private Timer timer;
     private final int DELAY = 140;
     
@@ -57,7 +56,7 @@ public class DogPound extends JPanel implements ActionListener{
 	
 	private Image Boxer; 
 	private Image ImageIcon;
-	
+	private Image chocolate;
 	  public DogPound() {
 	        dogs1.add(new Boxer());
 	        initBoard();
