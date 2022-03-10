@@ -22,7 +22,6 @@ public class Dog {
 		super();
 		this.hair = hair;
 		this.smelly = smelly;
-		// this.weight = weight;
 		this.size = size;
 		this.wild = wild;
 		this.gender = gender;
@@ -111,8 +110,12 @@ public class Dog {
 			this.recurring = recurring;
 		}
 	public class Food {
-		public Food(String flavor, String color, boolean humanFood) {
-
+		public Food(String flavor, String color, boolean humanFood, String icon) {
+			super();
+			this.flavor = hair;
+			this.color = color;
+			this.humanFood = humanFood;
+			this.icon = new ImageIcon(getClass().getResource(icon));
 		}
 
 		String flavor;
