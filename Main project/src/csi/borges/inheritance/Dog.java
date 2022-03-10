@@ -25,7 +25,7 @@ public class Dog {
 		this.size = size;
 		this.wild = wild;
 		this.gender = gender;
-		this.icon = new ImageIcon(getClass().getResource(icon));
+		this.icon = new ImageIcon(new ImageIcon(getClass().getResource(icon)).getImage().getScaledInstance(100, 100,  java.awt.Image.SCALE_SMOOTH));
 	}
 
 	public Dog() {
@@ -115,7 +115,7 @@ public class Dog {
 			this.flavor = hair;
 			this.color = color;
 			this.humanFood = humanFood;
-			this.icon = new ImageIcon(getClass().getResource(icon));
+			this.icon = new ImageIcon(new ImageIcon(getClass().getResource(icon)).getImage().getScaledInstance(50, 0,  java.awt.Image.SCALE_SMOOTH));
 		}
 
 		String flavor;
