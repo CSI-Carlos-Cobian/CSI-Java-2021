@@ -3,20 +3,19 @@ package csi.borges.inheritance;
 
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.Point;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
-import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
@@ -25,6 +24,7 @@ import javax.swing.Timer;
 
 public class DogPound extends JPanel implements ActionListener{
 	
+	private static final double RAND_POS = 0;
 	List<Dog> dogs1 = new ArrayList<Dog>();
 	List<Dog.Shit> dogshits = new ArrayList<Dog.Shit>();
 //	List<int,int> dogshitLocation
@@ -33,7 +33,8 @@ public class DogPound extends JPanel implements ActionListener{
 	private int B_HEIGHT = 800; 
 	private int DOG_SIZE = 10;
 	private int ALL_DOGS = 120;
-	
+	private int chocolate_x;
+    private int chocolate_y;
 	private final int x[] = new int[ALL_DOGS];
     private final int y[] = new int[ALL_DOGS];
 	
@@ -46,7 +47,7 @@ public class DogPound extends JPanel implements ActionListener{
     private boolean isRunning = true;
     
     private boolean isShit = true;
-    
+    private Image chocolate;
     private Timer timer;
     private final int DELAY = 140;
     
@@ -82,15 +83,20 @@ public class DogPound extends JPanel implements ActionListener{
 	            x[z] = 50 - z * 10;
 	            y[z] = 50;
 	        }
-	        
-	        timer = new Timer(DELAY, this);
-	        timer.start();
-	   }
-	   
+	        locatechocolate();
+
+	          timer = new Timer(DELAY, this);
+	          timer.start();
+	      }	   
 
 	   
 	   
-	   @Override
+	   private void locatechocolate() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
 	   public void paintComponent(Graphics g) {
 		   super.paintComponent(g);
 		   
@@ -105,6 +111,8 @@ public class DogPound extends JPanel implements ActionListener{
 	            for (int z = 0; z < dogs; z++) {
 	                if (z == 0) {
 	                    g.drawImage(dogs1.get(0).icon.getImage(), x[z], y[z], this);
+	            		g.drawImage(chocolate, chocolate_x, chocolate_y, this);
+
 	                } else {
 	                	g.drawImage(dogs1.get(0).icon.getImage(), x[z], y[z], this);
 	                }
@@ -161,7 +169,22 @@ public class DogPound extends JPanel implements ActionListener{
 //		   
 //		   
 //	   }
+	   private void checkChocolate() {
+
+	        if ((x[0] == chocolate_x) && (y[0] == chocolate_y)) {
+	            locatechocolate();
+	        }
+	    }
 	   
+	   private void locateChocolate() {
+
+	        int r = (int) (Math.random() * RAND_POS);
+	        chocolate_x = ((r * DOG_SIZE));
+
+	        r = (int) (Math.random() * RAND_POS);
+	        chocolate_y = ((r * DOG_SIZE));
+	    }
+	    
 	   private void move() {
 
 	        for (int z = dogs; z > 0; z--) {
@@ -274,6 +297,7 @@ public class DogPound extends JPanel implements ActionListener{
 	   public void actionPerformed(ActionEvent e) {
 
 	        if (isRunning) {
+	        	checkChocolate();
 	            checkCollision();
 	            move();
 	        }
