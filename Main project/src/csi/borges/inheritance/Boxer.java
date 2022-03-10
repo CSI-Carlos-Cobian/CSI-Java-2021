@@ -16,8 +16,7 @@ public class Boxer extends Dog {
 //			this.gender = true;
 //			this.icon = new ImageIcon(getClass().getResource("GermanSheppard.png"));
 		}
-	
-		@Override
+		
 		public Noise bark() {
 
 			return new Noise(120, true);
@@ -47,11 +46,6 @@ public class Boxer extends Dog {
 
 		return new Shit(true, 3, "Chocolate");
 	}
-
-		public Noise bark() {
-			
-			return new Noise();
-		}
 		
 		public void mate(Dog d) {
 			
