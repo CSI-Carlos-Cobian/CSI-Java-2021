@@ -118,6 +118,7 @@ public class Dog {
 		String flavor;
 		String color;
 		boolean humanFood;
+		ImageIcon icon;
 
 		public Food() {
 
