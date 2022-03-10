@@ -4,6 +4,8 @@ import java.awt.Point;
 
 import javax.swing.ImageIcon;
 
+import csi.borges.inheritance.Boxer.Food;
+
 public class Dog {
 	String hair;
 	int size;
