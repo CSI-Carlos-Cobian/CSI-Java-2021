@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
@@ -55,7 +56,7 @@ public class DogPound extends JPanel implements ActionListener{
 
 	
 	private Image Boxer; 
-	private Image ImageIcon;
+	private ImageIcon icon;
 	private Image chocolate;
 	  public DogPound() {
 	        dogs1.add(new Boxer());
