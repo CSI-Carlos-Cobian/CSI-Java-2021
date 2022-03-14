@@ -1,5 +1,6 @@
 package csi.borges.inheritance;
 
+import java.awt.Image;
 import java.awt.Point;
 
 import javax.swing.ImageIcon;
@@ -43,7 +44,8 @@ public class Dog {
 	}
 
 	public Shit eat(Food f) {
-
+if Food = chocolate;
+	Dog die= true;
 		return new Shit();
 	}
 
@@ -110,18 +112,18 @@ public class Dog {
 			this.recurring = recurring;
 		}
 	public class Food {
-		public Food(String flavor, String color, boolean humanFood, String icon) {
+		public Food(String flavor, String color, boolean humanFood, String chocolate) {
 			super();
-			this.flavor = hair;
+			this.flavor = flavor;
 			this.color = color;
 			this.humanFood = humanFood;
-			this.icon = new ImageIcon(new ImageIcon(getClass().getResource(icon)).getImage().getScaledInstance(50, 50,  java.awt.Image.SCALE_SMOOTH));
+			this.chocolate = new Image(new ImageIcon(getClass().getResource(chocolate)).getImage().getScaledInstance(50, 50,  java.awt.Image.SCALE_SMOOTH));
 		}
 
 		String flavor;
 		String color;
 		boolean humanFood;
-		ImageIcon icon;
+		private Image chocolate;
 
 		public Food() {
 
@@ -139,6 +141,15 @@ public Noise bark() {
 	}
 	
 	public void grow() {
+		
+	}
+	public class chocolate extends Food {
+		
+	}
+	public void chocolate() {
+
+	}
+public void die() {
 		
 	}
 }
