@@ -115,7 +115,7 @@ public class Dog {
 			this.flavor = hair;
 			this.color = color;
 			this.humanFood = humanFood;
-			this.icon = new ImageIcon(new ImageIcon(getClass().getResource(icon)).getImage().getScaledInstance(50, 0,  java.awt.Image.SCALE_SMOOTH));
+			this.icon = new ImageIcon(new ImageIcon(getClass().getResource(icon)).getImage().getScaledInstance(50, 50,  java.awt.Image.SCALE_SMOOTH));
 		}
 
 		String flavor;
