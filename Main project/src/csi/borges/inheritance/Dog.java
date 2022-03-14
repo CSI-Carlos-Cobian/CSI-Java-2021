@@ -42,21 +42,15 @@ public class Dog {
 		System.out.println("Tsssss");
 
 	}
+	public void chocolate() {
 
-	public Shit eat(Food f) {
-if Food = chocolate;
-	Dog die= true;
-		return new Shit();
+	}
+public void die() {
+		
 	}
 
-	public void die() {
-	}
-
-	public Noise bark(Noise n) {
-
-		return new Noise(n.decibels, n.recurring);
-	}
-
+public void grow() {
+}
 	void wagTail() {
 	}
 
@@ -70,6 +64,7 @@ if Food = chocolate;
 	public Point getLocation() {
 		return location;
 	}
+	
 
 	public void setLocation(Point location) {
 		this.location = location;
@@ -82,6 +77,7 @@ if Food = chocolate;
 		int size;
 		String shape;
 		private Food f;
+		private ImageIcon icon;
 
 		public Shit() {
 			return;
@@ -89,12 +85,25 @@ if Food = chocolate;
 
 		public Shit(boolean smelly, int size, String shape) {
 			super();
-			this.smelly = smelly;
+			this.smelly = true;
 			// this.weight = weight;
-			this.size = size;
-			this.shape = shape;
+			this.size = 30;
+			this.shape = "short";
+			this.icon = new ImageIcon(new ImageIcon(getClass().getResource("shit.png")).getImage().getScaledInstance(50, 50,  java.awt.Image.SCALE_SMOOTH));
 			
 		}
+		
+		public Shit eat(Food f) {
+			if food = chocolate;
+				Dog die;
+					return new Shit();
+				}
+
+				
+				public Noise bark(Noise n) {
+
+					return new Noise(n.decibels, n.recurring);
+				}
 	}
 	public class Noise {
 		int decibels;
@@ -117,13 +126,13 @@ if Food = chocolate;
 			this.flavor = flavor;
 			this.color = color;
 			this.humanFood = humanFood;
-			this.chocolate = new Image(new ImageIcon(getClass().getResource(chocolate)).getImage().getScaledInstance(50, 50,  java.awt.Image.SCALE_SMOOTH));
+			this.icon = new ImageIcon(new ImageIcon(getClass().getResource("chocolate.png")).getImage().getScaledInstance(50, 50,  java.awt.Image.SCALE_SMOOTH));
 		}
 
 		String flavor;
 		String color;
 		boolean humanFood;
-		private Image chocolate;
+		private ImageIcon icon;
 
 		public Food() {
 
@@ -136,21 +145,10 @@ public Noise bark() {
 		return new Noise();
 	}
 	
-	public void mate(Dog d) {
-		
-	}
 	
-	public void grow() {
-		
-	}
 	public class chocolate extends Food {
 		
 	}
-	public void chocolate() {
-
-	}
-public void die() {
-		
-	}
+	
 }
 }
