@@ -116,11 +116,23 @@ We must define the data types `Food`, `Shit`, `Noise`. Create internal classes. 
 <br>
 
 
-#### Design an algorithm to move your dog
+#### Design an algorithm to move your Dog around the canvas.
+* It should not leave the bounds.
+* It should move freely without getting stuck.
 
 
 <br>
 
-#### Implement all of the functions defined above.
+#### Design an algorithm to spawn food on the canvas.
+* If the dog is standing on the same box as the food, then it should call the `eat()` function and pass the food object as a parameter.
+* Upon digestion of this good, the Dog should `poop()`.
+* Make your Dog walk towards food. 
+
+<br>
+
+### Implement all of the functions defined above.
+* Define the rules for your dog's movement.
+* Spawn `Food`. When the `Dog` eats `Food` it should `shit()`.
+* The dog should show some text when it barks.
 
 <br>
