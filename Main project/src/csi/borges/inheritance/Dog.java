@@ -44,8 +44,8 @@ public class Dog {
 
 	}
 
-	public void chocolate() {
-
+	public Noise bark(Noise n) {
+		return new Noise(n.decibels, n.recurring);
 	}
 
 	public void die() {
@@ -61,9 +61,13 @@ public class Dog {
 	public void mate(Dog D) {
 	}
 
-	public void digest() {
+	public Shit eat(Food f) {
+		if (f.chocolate) {
+			this.die();
+			return null;
+		}
+		return new Shit();
 
-		return;
 	}
 
 	public Point getLocation() {
@@ -73,14 +77,14 @@ public class Dog {
 	public void setLocation(Point location) {
 		this.location = location;
 	}
-//	classes
 
+//	classes
+// Shit Class
 	public class Shit {
 		boolean smelly;
 		// int weight;
 		int size;
 		String shape;
-		private Food f;
 		private ImageIcon icon;
 
 		public Shit() {
@@ -98,20 +102,9 @@ public class Dog {
 
 		}
 
-//		public Shit eat(Food f) {
-//			if (f.ischocolate) {
-//				Dog die;
-//				return new Shit();
-//			}
-//
-//		}
-
-		public Noise bark(Noise n) {
-
-			return new Noise(n.decibels, n.recurring);
-		}
 	}
 
+// Noise Class
 	public class Noise {
 		int decibels;
 		boolean recurring;
@@ -126,38 +119,39 @@ public class Dog {
 			this.recurring = recurring;
 		}
 
-		public class Food {
-			private String chocolate;
-
-			public Food(String flavor, String color, boolean humanFood, String chocolate) {
-				super();
-				this.flavor = flavor;
-				this.color = color;
-				this.humanFood = humanFood;
-				this.chocolate = chocolate;
-				this.icon = new ImageIcon(new ImageIcon(getClass().getResource("chocolate.png")).getImage()
-						.getScaledInstance(50, 50, java.awt.Image.SCALE_SMOOTH));
-			}
-
-			String flavor;
-			String color;
-			boolean humanFood;
-			private ImageIcon icon;
-
-			public Food() {
-
-			}
-
-		}
-
 		public Noise bark() {
 
 			return new Noise();
 		}
 
-		public class chocolate extends Food {
+	}
+
+//	Food CLass
+	public class Food {
+		private boolean chocolate;
+		String flavor;
+		String color;
+		boolean humanFood;
+		private ImageIcon icon;
+
+		public Food(String flavor, String color, boolean humanFood, boolean chocolate) {
+			super();
+			this.flavor = flavor;
+			this.color = color;
+			this.humanFood = humanFood;
+			this.chocolate = chocolate;
+			this.icon = new ImageIcon(new ImageIcon(getClass().getResource("chocolate.png")).getImage()
+					.getScaledInstance(50, 50, java.awt.Image.SCALE_SMOOTH));
+		}
+
+		public Food() {
 
 		}
+
+//		public void digest() {
+//
+//			return new Shit();
+//		}
 
 	}
 }
