@@ -27,7 +27,11 @@ public class Boxer extends Dog {
 			
 		}
 		public class Food {
-			public Food(String flavor, String color, boolean humanFood) {
+			public Food(String flavor, String color, boolean humanFood, boolean ischocolate) {
+				this.flavor= flavor;
+				this.color= color;
+				this.humanFood= humanFood;
+				this.ischocolate = ischocolate; 
 				
 			}
 			public Food() {
@@ -36,6 +40,7 @@ public class Boxer extends Dog {
 			String flavor;
 			String color;
 			boolean humanFood;
+			boolean ischocolate;
 			
 			public Shit digest() {
 				
