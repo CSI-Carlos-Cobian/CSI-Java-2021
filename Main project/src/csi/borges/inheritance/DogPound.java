@@ -183,13 +183,15 @@ public class DogPound extends JPanel implements ActionListener{
 	    }
 	   
 	   private void locateChocolate() {
+	    	ischocolate = true;
+	    	int c = (int) (Math.random() * RAND_POS);
+	        int chocolate_x = ((c * DOG_SIZE));
 
-	        int r = (int) (Math.random() * RAND_POS);
-	        chocolate_x = ((r * DOG_SIZE));
-
-	        r = (int) (Math.random() * RAND_POS);
-	        chocolate_y = ((r * DOG_SIZE));
-	    }
+	        c = (int) (Math.random() * RAND_POS);
+	        int chocolate_y = ((c * DOG_SIZE));
+	        
+	        chocolate.add(new Chocolate(chocolate_x,chocolate_y));
+	        }
 	    
 	   private void move() {
 
