@@ -14,7 +14,7 @@ public class Dog {
 	boolean wild = false;
 	boolean gender = true;
 	ImageIcon icon;
-	Point location; 
+	Point location;
 	// int weight;
 
 //	constructors
@@ -26,7 +26,8 @@ public class Dog {
 		this.size = size;
 		this.wild = wild;
 		this.gender = gender;
-		this.icon = new ImageIcon(new ImageIcon(getClass().getResource(icon)).getImage().getScaledInstance(100, 100,  java.awt.Image.SCALE_SMOOTH));
+		this.icon = new ImageIcon(new ImageIcon(getClass().getResource(icon)).getImage().getScaledInstance(100, 100,
+				java.awt.Image.SCALE_SMOOTH));
 	}
 
 	public Dog() {
@@ -42,15 +43,18 @@ public class Dog {
 		System.out.println("Tsssss");
 
 	}
+
 	public void chocolate() {
 
 	}
-public void die() {
-		
+
+	public void die() {
+
 	}
 
-public void grow() {
-}
+	public void grow() {
+	}
+
 	void wagTail() {
 	}
 
@@ -61,16 +65,16 @@ public void grow() {
 
 		return;
 	}
+
 	public Point getLocation() {
 		return location;
 	}
-	
 
 	public void setLocation(Point location) {
 		this.location = location;
 	}
 //	classes
-	
+
 	public class Shit {
 		boolean smelly;
 		// int weight;
@@ -89,66 +93,71 @@ public void grow() {
 			// this.weight = weight;
 			this.size = 30;
 			this.shape = "short";
-			this.icon = new ImageIcon(new ImageIcon(getClass().getResource("shit.png")).getImage().getScaledInstance(50, 50,  java.awt.Image.SCALE_SMOOTH));
-			
+			this.icon = new ImageIcon(new ImageIcon(getClass().getResource("shit.png")).getImage().getScaledInstance(50,
+					50, java.awt.Image.SCALE_SMOOTH));
+
 		}
-		
-		public Shit eat(Food f) {
-			if food = chocolate;
-				Dog die;
-					return new Shit();
-				}
 
-				
-				public Noise bark(Noise n) {
+//		public Shit eat(Food f) {
+//			if (f.ischocolate) {
+//				Dog die;
+//				return new Shit();
+//			}
+//
+//		}
 
-					return new Noise(n.decibels, n.recurring);
-				}
+		public Noise bark(Noise n) {
+
+			return new Noise(n.decibels, n.recurring);
+		}
 	}
+
 	public class Noise {
 		int decibels;
 		boolean recurring;
-		
-		
-		public Noise() {
-			
-		}
 
+		public Noise() {
+
+		}
 
 		public Noise(int decibels, boolean recurring) {
 			super();
 			this.decibels = decibels;
 			this.recurring = recurring;
 		}
-	public class Food {
-		public Food(String flavor, String color, boolean humanFood, String chocolate) {
-			super();
-			this.flavor = flavor;
-			this.color = color;
-			this.humanFood = humanFood;
-			this.icon = new ImageIcon(new ImageIcon(getClass().getResource("chocolate.png")).getImage().getScaledInstance(50, 50,  java.awt.Image.SCALE_SMOOTH));
+
+		public class Food {
+			private String chocolate;
+
+			public Food(String flavor, String color, boolean humanFood, String chocolate) {
+				super();
+				this.flavor = flavor;
+				this.color = color;
+				this.humanFood = humanFood;
+				this.chocolate = chocolate;
+				this.icon = new ImageIcon(new ImageIcon(getClass().getResource("chocolate.png")).getImage()
+						.getScaledInstance(50, 50, java.awt.Image.SCALE_SMOOTH));
+			}
+
+			String flavor;
+			String color;
+			boolean humanFood;
+			private ImageIcon icon;
+
+			public Food() {
+
+			}
+
 		}
 
-		String flavor;
-		String color;
-		boolean humanFood;
-		private ImageIcon icon;
+		public Noise bark() {
 
-		public Food() {
+			return new Noise();
+		}
+
+		public class chocolate extends Food {
 
 		}
 
 	}
-
-public Noise bark() {
-		
-		return new Noise();
-	}
-	
-	
-	public class chocolate extends Food {
-		
-	}
-	
-}
 }
