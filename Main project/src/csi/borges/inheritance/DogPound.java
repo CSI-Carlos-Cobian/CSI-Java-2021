@@ -46,7 +46,7 @@ public class DogPound extends JPanel implements ActionListener{
     private boolean upDirection = false;
     private boolean downDirection = false;
     private boolean isRunning = true;
-    
+    private boolean ischocolate= true;
     private boolean isShit = true;
     private Timer timer;
     private final int DELAY = 140;
@@ -84,6 +84,7 @@ public class DogPound extends JPanel implements ActionListener{
 	            y[z] = 50;
 	        }
 	        locatechocolate();
+	        locateDog();
 
 	          timer = new Timer(DELAY, this);
 	          timer.start();
@@ -91,7 +92,12 @@ public class DogPound extends JPanel implements ActionListener{
 
 	   
 	   
-	   private void locatechocolate() {
+	   private void locateDog() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void locatechocolate() {
 		// TODO Auto-generated method stub
 		
 	}
