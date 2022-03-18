@@ -133,6 +133,7 @@ public class Dog {
 		String color;
 		boolean humanFood;
 		private ImageIcon icon;
+		Point point;
 
 		public Food(String flavor, String color, boolean humanFood, boolean chocolate) {
 			super();
