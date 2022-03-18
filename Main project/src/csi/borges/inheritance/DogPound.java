@@ -192,7 +192,6 @@ public class DogPound extends JPanel implements ActionListener{
 	        
 	        chocolate.add(new Chocolate(chocolate_x,chocolate_y));
 	        }
-	    
 	   private void move() {
 
 	        for (int z = dogs; z > 0; z--) {
