@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import javax.swing.ImageIcon;
+//import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
@@ -28,6 +28,7 @@ public class DogPound extends JPanel implements ActionListener{
 	private static final double RAND_POS = 0;
 	List<Dog> dogs1 = new ArrayList<Dog>();
 	List<Dog.Shit> dogshits = new ArrayList<Dog.Shit>();
+	List<Dog.Food> Chocolate = new ArrayList<Dog.Food>();
 //	List<int,int> dogshitLocation
 	
 	private int B_WIDTH = 800;
@@ -55,9 +56,9 @@ public class DogPound extends JPanel implements ActionListener{
     
 
 	
-	private Image Boxer; 
-	private ImageIcon icon;
-	private Image chocolate;
+//	private Image Boxer; 
+//	private ImageIcon icon;
+//	private Image chocolate;
 	  public DogPound() {
 	        dogs1.add(new Boxer());
 	        initBoard();
@@ -83,7 +84,7 @@ public class DogPound extends JPanel implements ActionListener{
 	            x[z] = 50 - z * 10;
 	            y[z] = 50;
 	        }
-	        locatechocolate();
+	        locateChocolate();
 	        locateDog();
 
 	          timer = new Timer(DELAY, this);
@@ -93,11 +94,6 @@ public class DogPound extends JPanel implements ActionListener{
 	   
 	   
 	   private void locateDog() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	private void locatechocolate() {
 		// TODO Auto-generated method stub
 		
 	}
@@ -117,7 +113,7 @@ public class DogPound extends JPanel implements ActionListener{
 	            for (int z = 0; z < dogs; z++) {
 	                if (z == 0) {
 	                    g.drawImage(dogs1.get(0).icon.getImage(), x[z], y[z], this);
-	            		g.drawImage(chocolate, chocolate_x, chocolate_y, this);
+	            		g.drawImage((Image) Chocolate, chocolate_x, chocolate_y, this);
 
 	                } else {
 	                	g.drawImage(dogs1.get(0).icon.getImage(), x[z], y[z], this);
@@ -178,7 +174,7 @@ public class DogPound extends JPanel implements ActionListener{
 	   private void checkChocolate() {
 
 	        if ((x[0] == chocolate_x) && (y[0] == chocolate_y)) {
-	            locatechocolate();
+	            locateChocolate();
 	        }
 	    }
 	   
@@ -190,7 +186,7 @@ public class DogPound extends JPanel implements ActionListener{
 	        c = (int) (Math.random() * RAND_POS);
 	        int chocolate_y = ((c * DOG_SIZE));
 	        
-	        chocolate.add(new Chocolate(chocolate_x,chocolate_y));
+	        Chocolate.add(new Chocolate(chocolate_x,chocolate_y));
 	        }
 	   private void move() {
 
