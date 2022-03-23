@@ -86,21 +86,26 @@ public class Dog {
 		// int weight;
 		int size;
 		String shape;
-		private ImageIcon icon;
+		ImageIcon icon;
 
 		public Shit() {
+			super();
+			this.smelly = true;
+			this.size = 30;
+			this.shape = "short";
+			this.icon = new ImageIcon(new ImageIcon(getClass().getResource("shit.png")).getImage().getScaledInstance(50,
+					50, java.awt.Image.SCALE_SMOOTH));			
+
 			return;
 		}
 
 		public Shit(boolean smelly, int size, String shape) {
 			super();
-			this.smelly = true;
+			this.smelly = smelly;
 			// this.weight = weight;
-			this.size = 30;
-			this.shape = "short";
-			this.icon = new ImageIcon(new ImageIcon(getClass().getResource("shit.png")).getImage().getScaledInstance(50,
-					50, java.awt.Image.SCALE_SMOOTH));
-
+			this.size = size;
+			this.shape = shape;
+			
 		}
 
 	}
