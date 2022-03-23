@@ -46,7 +46,7 @@ public class DogPound extends JPanel implements ActionListener{
     private boolean upDirection = false;
     private boolean downDirection = false;
     private boolean isRunning = true;
-    private boolean ischocolate= true;
+    private boolean isChocolate= true;
     private boolean isShit = true;
     private Timer timer;
     private final int DELAY = 140;
@@ -183,7 +183,7 @@ public class DogPound extends JPanel implements ActionListener{
 	    }
 	   
 	   private void locateChocolate() {
-	    	ischocolate = true;
+	    	isChocolate = true;
 	    	int c = (int) (Math.random() * RAND_POS);
 	        int chocolate_x = ((c * DOG_SIZE));
 
