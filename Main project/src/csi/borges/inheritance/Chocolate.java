@@ -10,4 +10,13 @@ public class Chocolate extends Dog.Food {
 //		this.x = chocolate_x;
 //		this.chocolate_y = chocolate_y;
 	}
+
+
+
+
+
+	public static void add(Chocolate chocolate) {
+		// TODO Auto-generated method stub
+		
+	}
 }
