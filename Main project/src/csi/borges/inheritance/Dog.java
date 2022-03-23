@@ -6,6 +6,7 @@ import java.awt.Point;
 import javax.swing.ImageIcon;
 
 import csi.borges.inheritance.Boxer.Food;
+import csi.borges.inheritance.Dog.Shit;
 
 public class Dog {
 	String hair;
@@ -128,12 +129,22 @@ public class Dog {
 
 //	Food CLass
 	public class Food {
-		private boolean chocolate;
+		boolean chocolate;
 		String flavor;
 		String color;
 		boolean humanFood;
-		private ImageIcon icon;
+		ImageIcon icon;
 		Point point;
+
+		public Food() {
+			super();
+			this.flavor = "sweet";
+			this.color = "brown";
+			this.humanFood = true;
+			this.chocolate = true;
+			this.icon = new ImageIcon(new ImageIcon(getClass().getResource("chocolate.png")).getImage()
+					.getScaledInstance(50, 50, java.awt.Image.SCALE_SMOOTH));
+		}
 
 		public Food(String flavor, String color, boolean humanFood, boolean chocolate) {
 			super();
@@ -141,18 +152,21 @@ public class Dog {
 			this.color = color;
 			this.humanFood = humanFood;
 			this.chocolate = chocolate;
-			this.icon = new ImageIcon(new ImageIcon(getClass().getResource("chocolate.png")).getImage()
-					.getScaledInstance(50, 50, java.awt.Image.SCALE_SMOOTH));
+		
+		}
+		public Point getLocation() {
+			return location;
 		}
 
-		public Food() {
-
+		public void setLocation(Point point) {
+			this.point = point;
 		}
+	
 
-//		public void digest() {
-//
-//			return new Shit();
-//		}
+	public Shit digest() {
+
+			return new Shit();
+		}
 
 	}
 }
