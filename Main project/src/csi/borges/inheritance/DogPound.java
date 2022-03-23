@@ -7,6 +7,7 @@ import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Point;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -28,7 +29,7 @@ public class DogPound extends JPanel implements ActionListener{
 	private static final double RAND_POS = 0;
 	List<Dog> dogs1 = new ArrayList<Dog>();
 	List<Dog.Shit> dogshits = new ArrayList<Dog.Shit>();
-	List<Dog.Food> Chocolate = new ArrayList<Dog.Food>();
+	List<Dog.Food> dogfoods = new ArrayList<Dog.Food>();
 //	List<int,int> dogshitLocation
 	
 	private int B_WIDTH = 800;
@@ -50,8 +51,24 @@ public class DogPound extends JPanel implements ActionListener{
     private Timer timer;
     private final int DELAY = 140;
     
-    private int count; 
+    private int count;
     
+    private Point point = setPoint(new Point(100, 100));
+    
+
+	
+	public Point getStartP() {
+		return point;
+	}
+
+	private Point setPoint(Point point) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Point setStartP(Point point) {
+		return this.point = point;
+	}
 
 	
 	private Image Boxer; 
@@ -87,6 +104,7 @@ public class DogPound extends JPanel implements ActionListener{
 
 	          timer = new Timer(DELAY, this);
 	          timer.start();
+	          locateChocolate();
 	      }	   
 
 	   
@@ -116,6 +134,7 @@ public class DogPound extends JPanel implements ActionListener{
 	            for (int z = 0; z < dogs; z++) {
 	                if (z == 0) {
 	                    g.drawImage(dogs1.get(0).icon.getImage(), x[z], y[z], this);
+	                    
 	            		g.drawImage(chocolate, chocolate_x, chocolate_y, this);
 
 	                } else {
