@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-//import javax.swing.ImageIcon;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
@@ -47,8 +47,6 @@ public class DogPound extends JPanel implements ActionListener{
     private boolean upDirection = false;
     private boolean downDirection = false;
     private boolean isRunning = true;
-    private boolean isChocolate= true;
-    private boolean isShit = true;
     private Timer timer;
     private final int DELAY = 140;
     
@@ -56,9 +54,9 @@ public class DogPound extends JPanel implements ActionListener{
     
 
 	
-//	private Image Boxer; 
-//	private ImageIcon icon;
-//	private Image chocolate;
+	private Image Boxer; 
+	private ImageIcon icon;
+	private Image chocolate;
 	  public DogPound() {
 	        dogs1.add(new Boxer());
 	        initBoard();
@@ -84,7 +82,7 @@ public class DogPound extends JPanel implements ActionListener{
 	            x[z] = 50 - z * 10;
 	            y[z] = 50;
 	        }
-	        locateChocolate();
+	        locatechocolate();
 	        locateDog();
 
 	          timer = new Timer(DELAY, this);
@@ -94,6 +92,11 @@ public class DogPound extends JPanel implements ActionListener{
 	   
 	   
 	   private void locateDog() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void locatechocolate() {
 		// TODO Auto-generated method stub
 		
 	}
@@ -113,7 +116,7 @@ public class DogPound extends JPanel implements ActionListener{
 	            for (int z = 0; z < dogs; z++) {
 	                if (z == 0) {
 	                    g.drawImage(dogs1.get(0).icon.getImage(), x[z], y[z], this);
-	            		g.drawImage((Image) Chocolate, chocolate_x, chocolate_y, this);
+	            		g.drawImage(chocolate, chocolate_x, chocolate_y, this);
 
 	                } else {
 	                	g.drawImage(dogs1.get(0).icon.getImage(), x[z], y[z], this);
@@ -174,19 +177,19 @@ public class DogPound extends JPanel implements ActionListener{
 	   private void checkChocolate() {
 
 	        if ((x[0] == chocolate_x) && (y[0] == chocolate_y)) {
-	            locateChocolate();
+	            locatechocolate();
 	        }
 	    }
 	   
 	   private void locateChocolate() {
-	    	isChocolate = true;
+	    	boolean isChocolate = true;
 	    	int c = (int) (Math.random() * RAND_POS);
 	        int chocolate_x = ((c * DOG_SIZE));
 
 	        c = (int) (Math.random() * RAND_POS);
 	        int chocolate_y = ((c * DOG_SIZE));
 	        
-	        Chocolate.add(new Chocolate(chocolate_x,chocolate_y));
+	        chocolate.add(new Chocolate(chocolate_x,chocolate_y));
 	        }
 	   private void move() {
 
