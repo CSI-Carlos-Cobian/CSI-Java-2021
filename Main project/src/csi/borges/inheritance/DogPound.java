@@ -50,23 +50,6 @@ public class DogPound extends JPanel implements ActionListener {
 
 	private int count;
 
-	private Point point = setPoint(new Point(100, 100));
-
-	public Point getStartP() {
-		return point;
-	}
-
-	public void setPoint(Point point) {
-		this.point = point;
-	}
-
-	public Point setStartP(Point point) {
-		return this.point = point;
-	}
-
-//	private Image Boxer; 
-//	private ImageIcon icon;
-//	private Image chocolate;
 	public DogPound() {
 		dogs1.add(new Boxer());
 		initBoard();
@@ -75,13 +58,11 @@ public class DogPound extends JPanel implements ActionListener {
 
 	private void initBoard() {
 
-		addKeyListener(new TAdapter());
 		setBackground(new Color(50, 150, 150));
 		setFocusable(true);
 
 		setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
 		initSimulation();
-//	        loadImages();
 
 	}
 
@@ -93,23 +74,12 @@ public class DogPound extends JPanel implements ActionListener {
 			x[z] = 50 - z * 10;
 			y[z] = 50;
 		}
-		locatechocolate();
-		locateDog();
 
 		timer = new Timer(DELAY, this);
 		timer.start();
-//	          locateChocolate();
-	}
-
-	private void locateDog() {
-		// TODO Auto-generated method stub
 
 	}
 
-	private void locatechocolate() {
-		// TODO Auto-generated method stub
-
-	}
 
 	@Override
 	public void paintComponent(Graphics g) {
@@ -121,17 +91,13 @@ public class DogPound extends JPanel implements ActionListener {
 	private void doDrawing(Graphics g) {
 
 		for (int z = 0; z < dogs; z++) {
-
 			g.drawImage(dogs1.get(z).icon.getImage(), x[z], y[z], this);
-
 		}
-		
+
 		for (int z = 0; z < dogfoods.size(); z++) {
-
-			g.drawImage(dogfoods.get(z).icon.getImage(), x[z], y[z], this);
-
+			g.drawImage(dogfoods.get(z).icon.getImage(),dogfoods.get(z).point.x , dogfoods.get(z).point.y, this);
 		}
-		
+
 		Toolkit.getDefaultToolkit().sync();
 
 	}
@@ -148,41 +114,34 @@ public class DogPound extends JPanel implements ActionListener {
 
 	}
 
-//	    public static void main(String[] args) {
-//	    	
-//	    }
-//	   public void randomShit(Dog d, Graphics g) {
-////		   int z = dogs;
-//		  
-//		   Dog.Food f = (new Dog()).new Food();
-//		   Dog.Shit s = d.eat(f);
-//		   s.setLocation(new Point(x[0],y[0]));
-//		   dogshits.add(s);
-//		   
-//		   
-////		   d.eat(f).icon.getImage();
-//		 
-////		   g.drawImage(s.icon.getImage(), 0, 0, null);
-//		   
-//		   
-//	   }
 	private void checkChocolate() {
 
 		if ((x[0] == chocolate_x) && (y[0] == chocolate_y)) {
-			locatechocolate();
+//			locatechocolate();
 		}
 	}
 
-//	   private void locateChocolate() {
-//	    	boolean isChocolate = true;
-//	    	int c = (int) (Math.random() * RAND_POS);
-//	        int chocolate_x = ((c * DOG_SIZE));
-//
-//	        c = (int) (Math.random() * RAND_POS);
-//	        int chocolate_y = ((c * DOG_SIZE));
-//	        
-//	     //   chocolate.add(new Chocolate(chocolate_x,chocolate_y));
-//	   //     }
+	private void locateFood() {
+	    	
+	    	
+	    	Random rand = new Random();
+	    	
+	    	boolean isChocolate = rand.nextBoolean();
+
+			int x = rand.nextInt(500);
+			int y = rand.nextInt(500);
+	    	
+			if(isChocolate) {
+				dogfoods.add(new Chocolate(new Point(x,y)));
+			} else {
+			dogfoods.add(new Dog().new Food(new Point(x,y)));
+			}
+			
+
+	   
+	        
+	     //   chocolate.add(new Chocolate(chocolate_x,chocolate_y));
+	        }
 	private void move() {
 
 		for (int z = dogs; z > 0; z--) {
@@ -219,10 +178,6 @@ public class DogPound extends JPanel implements ActionListener {
 			leftDirection = rd.nextBoolean();
 			downDirection = rd.nextBoolean();
 		}
-
-//	        if(count % randomNum1 == 0) {
-//	        	randomShit(dogs1.get(0), getGraphics());
-//	        }
 
 		if (upDirection == false && downDirection == false && leftDirection == false && rightDirection == false) {
 			rightDirection = false;
@@ -286,48 +241,18 @@ public class DogPound extends JPanel implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
-		if (isRunning) {
+			if(dogfoods.size()<5) {
+				locateFood();
+			}
+
+		
 			checkChocolate();
 			checkCollision();
 			move();
-		}
+		
 		repaint();
 	}
 
-	private class TAdapter extends KeyAdapter {
 
-		@Override
-		public void keyPressed(KeyEvent e) {
-
-			int key = e.getKeyCode();
-
-			if ((key == KeyEvent.VK_S) && (!upDirection)) {
-				downDirection = true;
-				rightDirection = false;
-				leftDirection = false;
-			}
-
-			if ((key == KeyEvent.VK_A) && (!rightDirection)) {
-				leftDirection = true;
-				upDirection = false;
-				downDirection = false;
-			}
-
-			if ((key == KeyEvent.VK_D) && (!leftDirection)) {
-				rightDirection = true;
-				upDirection = false;
-				downDirection = false;
-			}
-
-			if ((key == KeyEvent.VK_W) && (!downDirection)) {
-				upDirection = true;
-				rightDirection = false;
-				leftDirection = false;
-			}
-			if ((key == KeyEvent.VK_ENTER && (!isRunning))) {
-
-			}
-		}
-	}
 
 }
