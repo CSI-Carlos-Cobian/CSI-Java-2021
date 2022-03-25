@@ -21,160 +21,133 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
+public class DogPound extends JPanel implements ActionListener {
 
-
-
-public class DogPound extends JPanel implements ActionListener{
-	
 	private static final double RAND_POS = 0;
 	List<Dog> dogs1 = new ArrayList<Dog>();
 	List<Dog.Shit> dogshits = new ArrayList<Dog.Shit>();
 	List<Dog.Food> dogfoods = new ArrayList<Dog.Food>();
 //	List<int,int> dogshitLocation
-	
+
 	private int B_WIDTH = 800;
-	private int B_HEIGHT = 800; 
+	private int B_HEIGHT = 800;
 	private int DOG_SIZE = 10;
 	private int ALL_DOGS = 120;
 	private int chocolate_x;
-    private int chocolate_y;
+	private int chocolate_y;
 	private final int x[] = new int[ALL_DOGS];
-    private final int y[] = new int[ALL_DOGS];
-	
-    private int dogs;
-    
-    private boolean leftDirection = false;
-    private boolean rightDirection = true;
-    private boolean upDirection = false;
-    private boolean downDirection = false;
-    private boolean isRunning = true;
-    private Timer timer;
-    private final int DELAY = 140;
-    
-    private int count;
-    
-    private Point point = setPoint(new Point(100, 100));
-    
+	private final int y[] = new int[ALL_DOGS];
 
-	
+	private int dogs;
+
+	private boolean leftDirection = false;
+	private boolean rightDirection = true;
+	private boolean upDirection = false;
+	private boolean downDirection = false;
+	private boolean isRunning = true;
+	private Timer timer;
+	private final int DELAY = 140;
+
+	private int count;
+
+	private Point point = setPoint(new Point(100, 100));
+
 	public Point getStartP() {
 		return point;
 	}
 
-	private Point setPoint(Point point) {
-		// TODO Auto-generated method stub
-		return null;
+	public void setPoint(Point point) {
+		this.point = point;
 	}
 
 	public Point setStartP(Point point) {
 		return this.point = point;
 	}
 
-	
-	private Image Boxer; 
-	private ImageIcon icon;
-	private Image chocolate;
-	  public DogPound() {
-	        dogs1.add(new Boxer());
-	        initBoard();
-	    }
-	    
-	   private void initBoard() {
+//	private Image Boxer; 
+//	private ImageIcon icon;
+//	private Image chocolate;
+	public DogPound() {
+		dogs1.add(new Boxer());
+		initBoard();
 
-	        addKeyListener(new TAdapter());
-	        setBackground(new Color(50, 150, 150));
-	        setFocusable(true);
+	}
 
-	        setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
-	        initSimulation();
+	private void initBoard() {
+
+		addKeyListener(new TAdapter());
+		setBackground(new Color(50, 150, 150));
+		setFocusable(true);
+
+		setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
+		initSimulation();
 //	        loadImages();
-	        
-	    }
-	   
-	   private void initSimulation() {
 
-	        dogs = 1;
+	}
 
-	        for (int z = 0; z < dogs; z++) {
-	            x[z] = 50 - z * 10;
-	            y[z] = 50;
-	        }
-	        locatechocolate();
-	        locateDog();
+	private void initSimulation() {
 
-	          timer = new Timer(DELAY, this);
-	          timer.start();
-	          locateChocolate();
-	      }	   
+		dogs = 1;
 
-	   
-	   
-	   private void locateDog() {
+		for (int z = 0; z < dogs; z++) {
+			x[z] = 50 - z * 10;
+			y[z] = 50;
+		}
+		locatechocolate();
+		locateDog();
+
+		timer = new Timer(DELAY, this);
+		timer.start();
+//	          locateChocolate();
+	}
+
+	private void locateDog() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	private void locatechocolate() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
-	   public void paintComponent(Graphics g) {
-		   super.paintComponent(g);
-		   
-		   doDrawing(g);
-	   }
-	   
-	   private void doDrawing(Graphics g) {
-		   		   
-		   if (isRunning) {
-			   
-			   
-	            for (int z = 0; z < dogs; z++) {
-	                if (z == 0) {
-	                    g.drawImage(dogs1.get(0).icon.getImage(), x[z], y[z], this);
-	                    
-	            		g.drawImage(chocolate, chocolate_x, chocolate_y, this);
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
 
-	                } else {
-	                	g.drawImage(dogs1.get(0).icon.getImage(), x[z], y[z], this);
-	                }
-	            }
-	            
-	            	
-//	            for (int z = 0; z < dogshits.size(); z++) {
-//	    	            
-//		            g.drawImage(dogshits.get(z).icon.getImage(), dogshits.get(z).getLocation().x,  dogshits.get(z).getLocation().y, null);
-//		                    
-//		           }
-	            
-	            
-	            Toolkit.getDefaultToolkit().sync();
-		   } else {
-			   gameOver(g);
-		   }
-		   
+		doDrawing(g);
+	}
 
-	   }
-	   
-	   
-	   
-	   
-	   private void gameOver(Graphics g) {
-	    	
-	        String msg = "Game Over";
-	        Font small = new Font("Helvetica", Font.ITALIC, 130);
-	        FontMetrics metr = getFontMetrics(small);
-	
-	        g.setColor(Color.white);
-	        g.setFont(small);
-	        g.drawString(msg, (B_WIDTH - metr.stringWidth(msg)) / 5, B_HEIGHT / 2);
-	        
-	    
-	    }
-	   
-	    
+	private void doDrawing(Graphics g) {
+
+		for (int z = 0; z < dogs; z++) {
+
+			g.drawImage(dogs1.get(z).icon.getImage(), x[z], y[z], this);
+
+		}
+		
+		for (int z = 0; z < dogfoods.size(); z++) {
+
+			g.drawImage(dogfoods.get(z).icon.getImage(), x[z], y[z], this);
+
+		}
+		
+		Toolkit.getDefaultToolkit().sync();
+
+	}
+
+	private void gameOver(Graphics g) {
+
+		String msg = "Game Over";
+		Font small = new Font("Helvetica", Font.ITALIC, 130);
+		FontMetrics metr = getFontMetrics(small);
+
+		g.setColor(Color.white);
+		g.setFont(small);
+		g.drawString(msg, (B_WIDTH - metr.stringWidth(msg)) / 5, B_HEIGHT / 2);
+
+	}
+
 //	    public static void main(String[] args) {
 //	    	
 //	    }
@@ -193,178 +166,168 @@ public class DogPound extends JPanel implements ActionListener{
 //		   
 //		   
 //	   }
-	   private void checkChocolate() {
+	private void checkChocolate() {
 
-	        if ((x[0] == chocolate_x) && (y[0] == chocolate_y)) {
-	            locatechocolate();
-	        }
-	    }
-	   
-	   private void locateChocolate() {
-	    	boolean isChocolate = true;
-	    	int c = (int) (Math.random() * RAND_POS);
-	        int chocolate_x = ((c * DOG_SIZE));
+		if ((x[0] == chocolate_x) && (y[0] == chocolate_y)) {
+			locatechocolate();
+		}
+	}
 
-	        c = (int) (Math.random() * RAND_POS);
-	        int chocolate_y = ((c * DOG_SIZE));
-	        
-	        chocolate.add(new Chocolate(chocolate_x,chocolate_y));
-	        }
-	   private void move() {
+//	   private void locateChocolate() {
+//	    	boolean isChocolate = true;
+//	    	int c = (int) (Math.random() * RAND_POS);
+//	        int chocolate_x = ((c * DOG_SIZE));
+//
+//	        c = (int) (Math.random() * RAND_POS);
+//	        int chocolate_y = ((c * DOG_SIZE));
+//	        
+//	     //   chocolate.add(new Chocolate(chocolate_x,chocolate_y));
+//	   //     }
+	private void move() {
 
-	        for (int z = dogs; z > 0; z--) {
-	            x[z] = x[(z - 1)];
-	            y[z] = y[(z - 1)];
-	        }
+		for (int z = dogs; z > 0; z--) {
+			x[z] = x[(z - 1)];
+			y[z] = y[(z - 1)];
+		}
 
-	        if (leftDirection) {
-	            x[0] -= DOG_SIZE;
-	        }
+		if (leftDirection) {
+			x[0] -= DOG_SIZE;
+		}
 
-	        if (rightDirection) {
-	            x[0] += DOG_SIZE;
-	        }
+		if (rightDirection) {
+			x[0] += DOG_SIZE;
+		}
 
-	        if (upDirection) {
-	            y[0] -= DOG_SIZE;
-	        }
+		if (upDirection) {
+			y[0] -= DOG_SIZE;
+		}
 
-	        if (downDirection) {
-	            y[0] += DOG_SIZE;
-	        }
-	        
-	        count++;
-	        Random rd = new Random();
-	        Random rand = new Random();
+		if (downDirection) {
+			y[0] += DOG_SIZE;
+		}
 
-	      
+		count++;
+		Random rd = new Random();
+		Random rand = new Random();
 
-	        int randomNum = rand.nextInt((20 - 1) + 1) + 1;
-	        int randomNum1 = rand.nextInt((50 - 1) + 1) + 1;
-	       
-	        if(count % randomNum == 0) {
-	        	upDirection = rd.nextBoolean();
-		        rightDirection = rd.nextBoolean();
-		        leftDirection = rd.nextBoolean();
-		        downDirection = rd.nextBoolean();
-	        }
-	        
+		int randomNum = rand.nextInt((20 - 1) + 1) + 1;
+		int randomNum1 = rand.nextInt((50 - 1) + 1) + 1;
+
+		if (count % randomNum == 0) {
+			upDirection = rd.nextBoolean();
+			rightDirection = rd.nextBoolean();
+			leftDirection = rd.nextBoolean();
+			downDirection = rd.nextBoolean();
+		}
+
 //	        if(count % randomNum1 == 0) {
 //	        	randomShit(dogs1.get(0), getGraphics());
 //	        }
-	        
-	        if(upDirection == false && downDirection == false && leftDirection == false && rightDirection == false) {
-	        	rightDirection = false;
-	        }
-	        if(upDirection == true && downDirection == true && leftDirection == true && rightDirection == true) {
-	        	rightDirection = true;
-	        	upDirection = false;
-	        	downDirection = false;
-	        	leftDirection = false;
-	        }
-	        
-	       
-	 	   	
-	    }
-	   
-	   
-	   
-	   
-	   private void checkCollision() {
 
-	    	for (int z = dogs; z > 0; z--) {
+		if (upDirection == false && downDirection == false && leftDirection == false && rightDirection == false) {
+			rightDirection = false;
+		}
+		if (upDirection == true && downDirection == true && leftDirection == true && rightDirection == true) {
+			rightDirection = true;
+			upDirection = false;
+			downDirection = false;
+			leftDirection = false;
+		}
 
-	    	    if ((z > 4) && (x[0] == x[z]) && (y[0] == y[z])) {
-	    	        isRunning = false;
-	    	    }
-	    	}
-	    	Random rd = new Random();
+	}
 
-	        if (y[0] >= B_HEIGHT) {
+	private void checkCollision() {
+
+		for (int z = dogs; z > 0; z--) {
+
+			if ((z > 4) && (x[0] == x[z]) && (y[0] == y[z])) {
+				isRunning = false;
+			}
+		}
+		Random rd = new Random();
+
+		if (y[0] >= B_HEIGHT) {
 //	            isRunning = false;
-	        	upDirection = rd.nextBoolean();
-                rightDirection = rd.nextBoolean();
-                leftDirection = rd.nextBoolean();
-                downDirection = false;
-	        }
+			upDirection = rd.nextBoolean();
+			rightDirection = rd.nextBoolean();
+			leftDirection = rd.nextBoolean();
+			downDirection = false;
+		}
 
-	        if (y[0] < 0) {
+		if (y[0] < 0) {
 //	            isRunning = false;
-	        	leftDirection = rd.nextBoolean();
-                upDirection = false;
-                downDirection = rd.nextBoolean();
-                rightDirection = rd.nextBoolean();
-	        }
+			leftDirection = rd.nextBoolean();
+			upDirection = false;
+			downDirection = rd.nextBoolean();
+			rightDirection = rd.nextBoolean();
+		}
 
-	        if (x[0] >= B_WIDTH) {
+		if (x[0] >= B_WIDTH) {
 //	        	isRunning = false;
-	        	upDirection = rd.nextBoolean();
-                rightDirection = false;
-                leftDirection = rd.nextBoolean();
-                downDirection = rd.nextBoolean();
-	        }
+			upDirection = rd.nextBoolean();
+			rightDirection = false;
+			leftDirection = rd.nextBoolean();
+			downDirection = rd.nextBoolean();
+		}
 
-	        if (x[0] < 0) {
+		if (x[0] < 0) {
 //	            isRunning = false;
-	        	leftDirection = false;
-                upDirection = rd.nextBoolean();
-                downDirection = rd.nextBoolean();
-                rightDirection = rd.nextBoolean();
-	        }
-	        
-	        if (!isRunning) {
-	            timer.stop();
-	        }
-	    }
-	   
-	   
-	   @Override
-	   public void actionPerformed(ActionEvent e) {
+			leftDirection = false;
+			upDirection = rd.nextBoolean();
+			downDirection = rd.nextBoolean();
+			rightDirection = rd.nextBoolean();
+		}
 
-	        if (isRunning) {
-	        	checkChocolate();
-	            checkCollision();
-	            move();
-	        }
-	        repaint();
-	    }
-	   
-	   private class TAdapter extends KeyAdapter {
+		if (!isRunning) {
+			timer.stop();
+		}
+	}
 
-	        @Override
-	        public void keyPressed(KeyEvent e) {
+	@Override
+	public void actionPerformed(ActionEvent e) {
 
-	            int key = e.getKeyCode();
-	            
-	            if ((key == KeyEvent.VK_S) && (!upDirection)) {
-	                downDirection = true;
-	                rightDirection = false;
-	                leftDirection = false;
-	            }
-	            
-	            if ((key == KeyEvent.VK_A) && (!rightDirection)) {
-	                leftDirection = true;
-	                upDirection = false;
-	                downDirection = false;
-	            }
+		if (isRunning) {
+			checkChocolate();
+			checkCollision();
+			move();
+		}
+		repaint();
+	}
 
-	            if ((key == KeyEvent.VK_D) && (!leftDirection)) {
-	                rightDirection = true;
-	                upDirection = false;
-	                downDirection = false;
-	            }
+	private class TAdapter extends KeyAdapter {
 
-	            if ((key == KeyEvent.VK_W) && (!downDirection)) {
-	                upDirection = true;
-	                rightDirection = false;
-	                leftDirection = false;
-	            } 
-	            if ((key == KeyEvent.VK_ENTER && (!isRunning))) {
-	            	
-	            	
-	            }
-	        }
-	    }
-	
+		@Override
+		public void keyPressed(KeyEvent e) {
+
+			int key = e.getKeyCode();
+
+			if ((key == KeyEvent.VK_S) && (!upDirection)) {
+				downDirection = true;
+				rightDirection = false;
+				leftDirection = false;
+			}
+
+			if ((key == KeyEvent.VK_A) && (!rightDirection)) {
+				leftDirection = true;
+				upDirection = false;
+				downDirection = false;
+			}
+
+			if ((key == KeyEvent.VK_D) && (!leftDirection)) {
+				rightDirection = true;
+				upDirection = false;
+				downDirection = false;
+			}
+
+			if ((key == KeyEvent.VK_W) && (!downDirection)) {
+				upDirection = true;
+				rightDirection = false;
+				leftDirection = false;
+			}
+			if ((key == KeyEvent.VK_ENTER && (!isRunning))) {
+
+			}
+		}
+	}
 
 }
