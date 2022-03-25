@@ -94,7 +94,7 @@ public class Dog {
 			this.size = 30;
 			this.shape = "short";
 			this.icon = new ImageIcon(new ImageIcon(getClass().getResource("shit.png")).getImage().getScaledInstance(50,
-					50, java.awt.Image.SCALE_SMOOTH));			
+					50, java.awt.Image.SCALE_SMOOTH));
 
 			return;
 		}
@@ -105,7 +105,7 @@ public class Dog {
 			// this.weight = weight;
 			this.size = size;
 			this.shape = shape;
-			
+
 		}
 
 	}
@@ -141,12 +141,13 @@ public class Dog {
 		ImageIcon icon;
 		Point point;
 
-		public Food() {
+		public Food(Point p) {
 			super();
 			this.flavor = "sweet";
 			this.color = "brown";
 			this.humanFood = true;
-			this.chocolate = true; 
+			this.chocolate = false;
+			this.point = p;
 			this.icon = new ImageIcon(new ImageIcon(getClass().getResource("chocolate.png")).getImage()
 					.getScaledInstance(50, 50, java.awt.Image.SCALE_SMOOTH));
 		}
@@ -157,8 +158,9 @@ public class Dog {
 			this.color = color;
 			this.humanFood = humanFood;
 			this.chocolate = chocolate;
-			this.point= point; 
+			this.point = point;
 		}
+
 		public Point getLocation() {
 			return location;
 		}
@@ -166,9 +168,8 @@ public class Dog {
 		public void setLocation(Point point) {
 			this.point = point;
 		}
-	
 
-	public Shit digest() {
+		public Shit digest() {
 
 			return new Shit();
 		}
