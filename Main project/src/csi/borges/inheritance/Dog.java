@@ -146,18 +146,18 @@ public class Dog {
 			this.flavor = "sweet";
 			this.color = "brown";
 			this.humanFood = true;
-			this.chocolate = true;
+			this.chocolate = true; 
 			this.icon = new ImageIcon(new ImageIcon(getClass().getResource("chocolate.png")).getImage()
 					.getScaledInstance(50, 50, java.awt.Image.SCALE_SMOOTH));
 		}
 
-		public Food(String flavor, String color, boolean humanFood, boolean chocolate) {
+		public Food(String flavor, String color, boolean humanFood, boolean chocolate, Point point) {
 			super();
 			this.flavor = flavor;
 			this.color = color;
 			this.humanFood = humanFood;
 			this.chocolate = chocolate;
-		
+			this.point= point; 
 		}
 		public Point getLocation() {
 			return location;
