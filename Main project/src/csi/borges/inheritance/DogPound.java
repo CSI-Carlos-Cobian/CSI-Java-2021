@@ -21,6 +21,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
+import csi.borges.inheritance.Dog.Shit;
+
 public class DogPound extends JPanel implements ActionListener {
 
 	private static final double RAND_POS = 0;
@@ -47,10 +49,14 @@ public class DogPound extends JPanel implements ActionListener {
 	private boolean upDirection = false;
 	private boolean downDirection = false;
 	private boolean isRunning = true;
+	private boolean isShit = true;
+	private boolean shit= true;
 	private Timer timer;
 	private final int DELAY = 140;
 
 	private int count;
+	private int shit_x;
+	private int shit_y;
 
 	public DogPound() {
 		dogs1.add(new Boxer());
@@ -146,12 +152,24 @@ public class DogPound extends JPanel implements ActionListener {
 			} else {
 			dogfoods.add(new Dog().new Food(new Point(x,y)));
 			}
-			
+	}
+			private void locateDogshits() {
+		    	
+		    	
+		    	Random rand = new Random();
+		    	
+		    	boolean isShit = rand.nextBoolean();
 
-	   
-	        
-	     //   chocolate.add(new Chocolate(chocolate_x,chocolate_y));
-	        }
+				int x = rand.nextInt(500);
+				int y = rand.nextInt(500);
+		    	
+				if(isShit) {
+					dogshits.add(new Shit(new Point(x,y)));
+				} else {
+				dogshits.add(new Dog().new Shit(new Point(x,y)));
+				}
+			}
+			
 	private void move() {
 
 		for (int z = dogs; z > 0; z--) {
@@ -251,18 +269,46 @@ public class DogPound extends JPanel implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
-			if(dogfoods.size()<5) {
+			if(isRunning) {
 				locateFood();
+				locateDogshits();
 			}
-
-		
+			
 			checkChocolate();
+			checkDogshits();
 			checkCollision();
 			move();
 		
 		repaint();
 	}
 
+	
+	 public class Shit extends Dog.Shit {
 
+			private int shit_x;
+			private int shit_y;
+			private boolean shit;
+			
+			
+			public Shit(Point p) {
+				new Dog().super(p);
+				this.shit =true;
+				 
+			}
+			public Shit digest() {
+				new Dog().die();
+				return null;
+			}
+			
+		   public Shit(int shit_x, int shit_y) {
+			   super();
+			   this.shit_x = shit_x;
+			   this.shit_y = shit_y;
+		   }
+	 } 
+				
+				
+				
+			
 
 }
