@@ -35,6 +35,8 @@ public class DogPound extends JPanel implements ActionListener {
 	private int ALL_DOGS = 120;
 	private int chocolate_x;
 	private int chocolate_y;
+	private int dogshits_x;
+	private int dogshits_y;
 	private final int x[] = new int[ALL_DOGS];
 	private final int y[] = new int[ALL_DOGS];
 
@@ -122,7 +124,13 @@ public class DogPound extends JPanel implements ActionListener {
 //			locatechocolate();
 		}
 	}
+	
+	private void checkDogshits() {
 
+		if ((x[0] == dogshits_x) && (y[0] == dogshits_y)) {
+
+		}
+	}
 	private void locateFood() {
 	    	
 	    	
