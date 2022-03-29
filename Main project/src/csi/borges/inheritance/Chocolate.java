@@ -13,7 +13,7 @@ public class Chocolate extends Dog.Food {
 		this.chocolate=true;
 	}
 	
-	@Override
+	
 	public Shit digest() {
 		new Dog().die();
 		return null;
