@@ -87,6 +87,7 @@ public class Dog {
 		int size;
 		String shape;
 		ImageIcon icon;
+		private Point location;
 
 		public Shit() {
 			super();
@@ -104,11 +105,26 @@ public class Dog {
 			this.smelly = smelly;
 			// this.weight = weight;
 			this.size = size;
-			this.shape = shape;
+			this.shape = shape;	 
+			}
+
+			public Point getLocation() {
+				return location;
+			}
+
+			public void setLocation(Point location) {
+				this.location = location;
+			}
+			
+			public Shit digest() {
+
+				return new Shit();
+			}
 
 		}
+	
 
-	}
+	
 
 // Noise Class
 	public class Noise {
@@ -169,10 +185,7 @@ public class Dog {
 			this.point = point;
 		}
 
-		public Shit digest() {
-
-			return new Shit();
-		}
-
+		
 	}
 }
+
