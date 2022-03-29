@@ -48,8 +48,9 @@ public class Boxer extends Dog {
 			}
 		}
 	public Shit eat() {
+		return null;
 
-		return new Shit(true, 3, "Chocolate");
+	//	return new Shit(true, 3, "Chocolate");
 	}
 		
 		public void mate(Dog d) {
