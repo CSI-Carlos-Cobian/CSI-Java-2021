@@ -97,7 +97,9 @@ public class DogPound extends JPanel implements ActionListener {
 		for (int z = 0; z < dogfoods.size(); z++) {
 			g.drawImage(dogfoods.get(z).icon.getImage(),dogfoods.get(z).point.x , dogfoods.get(z).point.y, this);
 		}
-
+		for (int z = 0; z < dogshits.size(); z++) {
+			g.drawImage(dogshits.get(z).icon.getImage(),dogshits.get(z).point.x , dogshits.get(z).point.y, this);
+		}
 		Toolkit.getDefaultToolkit().sync();
 
 	}
