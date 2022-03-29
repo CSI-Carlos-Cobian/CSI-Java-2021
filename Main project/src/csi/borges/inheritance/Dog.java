@@ -16,6 +16,7 @@ public class Dog {
 	boolean gender = true;
 	ImageIcon icon;
 	Point location;
+	Point point;
 	// int weight;
 
 //	constructors
@@ -87,33 +88,38 @@ public class Dog {
 		int size;
 		String shape;
 		ImageIcon icon;
-		private Point location;
+		Point point;
 
-		public Shit() {
+		public Shit(Point p) {
 			super();
 			this.smelly = true;
 			this.size = 30;
 			this.shape = "short";
+			this.point = p;
 			this.icon = new ImageIcon(new ImageIcon(getClass().getResource("shit.png")).getImage().getScaledInstance(50,
 					50, java.awt.Image.SCALE_SMOOTH));
 
 			return;
 		}
 
-		public Shit(boolean smelly, int size, String shape) {
+		public Shit(boolean smelly, int size, String shape, Point point) {
 			super();
 			this.smelly = smelly;
 			// this.weight = weight;
 			this.size = size;
 			this.shape = shape;	 
-			}
+			this.point= point;			}
+
+			public Shit() {
+			// TODO Auto-generated constructor stub
+		}
 
 			public Point getLocation() {
 				return location;
 			}
 
-			public void setLocation(Point location) {
-				this.location = location;
+			public void setLocation(Point point) {
+				this.point = point;
 			}
 			
 			public Shit digest() {
